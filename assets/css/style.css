@@ -1,0 +1,346 @@
+/* =========================================================
+   KAVYA AGRAWAL — ACADEMIC WEBSITE
+   Main stylesheet
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. BASIC RESET
+   --------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #ffffff;
+  color: #243447;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   2. TYPOGRAPHY
+   --------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Source Serif 4", Georgia, serif;
+  color: #0b2341;
+  line-height: 1.25;
+}
+
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+
+h2 {
+  font-size: 2.1rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+
+h3 {
+  font-size: 1.45rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+a {
+  color: #006f73;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   3. HEADER
+   --------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom: 1px solid #e4e8ec;
+
+  backdrop-filter: blur(8px);
+}
+
+
+.nav-container {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  padding: 1.1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+
+.site-title {
+  font-family: "Source Serif 4", Georgia, serif;
+
+  font-size: 1.55rem;
+  font-weight: 600;
+
+  color: #0b2341;
+
+  white-space: nowrap;
+}
+
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+   4. NAVIGATION
+   --------------------------------------------------------- */
+
+.site-navigation {
+  display: flex;
+  align-items: center;
+
+  gap: 1.15rem;
+
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+
+.site-navigation a {
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  color: #34495e;
+
+  letter-spacing: 0.02em;
+}
+
+
+.site-navigation a:hover {
+  color: #006f73;
+  text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+   5. MAIN CONTENT
+   --------------------------------------------------------- */
+
+.site-main {
+  min-height: 70vh;
+}
+
+
+.content-container {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 4rem 2rem 5rem;
+}
+
+
+/* ---------------------------------------------------------
+   6. LISTS
+   --------------------------------------------------------- */
+
+ul,
+ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+
+/* ---------------------------------------------------------
+   7. HORIZONTAL RULE
+   --------------------------------------------------------- */
+
+hr {
+  border: 0;
+
+  border-top: 1px solid #dfe5ea;
+
+  margin: 3rem 0;
+}
+
+
+/* ---------------------------------------------------------
+   8. FOOTER
+   --------------------------------------------------------- */
+
+.site-footer {
+  background: #0b2341;
+
+  color: #e8eef3;
+
+  padding: 3rem 2rem 1.5rem;
+}
+
+
+.footer-container {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3rem;
+}
+
+
+.site-footer h3 {
+  color: #ffffff;
+
+  margin-top: 0;
+}
+
+
+.site-footer p {
+  color: #d7e0e8;
+
+  font-size: 0.92rem;
+}
+
+
+.site-footer a {
+  color: #ffffff;
+}
+
+
+.footer-bottom {
+  max-width: 1100px;
+
+  margin: 2.5rem auto 0;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  font-size: 0.8rem;
+}
+
+
+/* ---------------------------------------------------------
+   9. MOBILE RESPONSIVENESS
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .nav-container {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+
+  .site-navigation {
+    justify-content: flex-start;
+
+    gap: 0.8rem 1rem;
+  }
+
+
+  .content-container {
+    padding: 3rem 1.3rem 4rem;
+  }
+
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   10. SMALL MOBILE SCREENS
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .site-navigation a {
+    font-size: 0.76rem;
+  }
+
+
+  .content-container {
+    padding-top: 2.5rem;
+  }
+
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+}
