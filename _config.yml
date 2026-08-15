@@ -1,0 +1,49 @@
+title: "Kavya Agrawal"
+description: "Academic portfolio of Kavya Agrawal — Doctoral Researcher in Geospatial Data Science and Earth System Science."
+author: "Kavya Agrawal"
+
+url: "https://kavyaagrawal-02.github.io"
+baseurl: ""
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+permalink: pretty
+
+timezone: Asia/Kolkata
+
+lang: en
+
+social:
+  email: "kavya.agrawal@terisas.ac.in"
+  personal_email: "kavyaagrawal58@gmail.com"
+
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Research"
+    url: "/research/"
+  - title: "Publications"
+    url: "/publications/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Teaching"
+    url: "/teaching/"
+  - title: "Conferences"
+    url: "/conferences/"
+  - title: "Training"
+    url: "/training/"
+  - title: "Academic Service"
+    url: "/service/"
+  - title: "Awards"
+    url: "/awards/"
+  - title: "CV"
+    url: "/cv/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Contact"
+    url: "/contact/"
