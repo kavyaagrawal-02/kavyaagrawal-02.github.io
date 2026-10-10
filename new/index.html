@@ -1,445 +1,299 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-band="false">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kavya Agrawal</title>
-<meta name="description" content="Kavya Agrawal, PhD scholar at TERI School of Advanced Studies, New Delhi. Follow one drop of water from orbit to a village tap through her research on groundwater contamination, remote sensing and machine learning.">
+<meta name="description" content="Kavya Agrawal, PhD scholar at TERI School of Advanced Studies, New Delhi: groundwater contamination, remote sensing, GIS and machine learning.">
 <meta property="og:title" content="Kavya Agrawal">
-<meta property="og:description" content="Groundwater, remote sensing and machine learning: follow one drop of water from orbit to a village tap.">
-<meta property="og:image" content="https://kavyaagrawal-02.github.io/new/assets/img/scene-true.jpg">
+<meta property="og:description" content="PhD scholar in groundwater, remote sensing and machine learning, TERI SAS, New Delhi.">
+<meta property="og:image" content="https://kavyaagrawal-02.github.io/new/assets/img/kavya-portrait-hero.jpg">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Caveat:wght@500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/journey.css">
+<script>try{var b=localStorage.getItem('band');if(b)document.documentElement.dataset.band=b;}catch(e){}</script>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<a class="skip" href="#glacier">Skip to content</a>
-
-<header class="bar">
-  <a class="me" href="#orbit">Kavya Agrawal</a>
-  <nav aria-label="Stages of the journey"><ol>
-    <li><a href="#orbit">Orbit</a></li><li><a href="#glacier">Glacier</a></li><li><a href="#river">River</a></li>
-    <li><a href="#ground">Ground</a></li><li><a href="#tap">Tap</a></li><li><a href="#sky">Sky</a></li>
-  </ol></nav>
+<a class="skip" href="#summary">Skip to content</a>
+<button class="panel-toggle" type="button" aria-controls="panel" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5zm-10 9 10 5 10-5M2 16l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Layers</button>
+<nav class="panel" id="panel" aria-label="Layers">
+  <a class="me" href="#summary">Kavya Agrawal<small>PhD scholar, TERI SAS</small></a>
+  <div class="search"><label class="vh" for="q">Search the site</label><input id="q" type="search" placeholder="Search the site" autocomplete="off"><ul class="results" id="results"></ul></div>
+  <h2><span>Layers</span><span>15</span></h2>
+  <ul class="layers"><li class="layer" data-for="summary"><input type="checkbox" checked aria-label="Show Summary" data-toggle="summary"><span class="sw" style="background:#E2B341"></span><a href="#summary">Summary</a></li><li class="layer" data-for="education"><input type="checkbox" checked aria-label="Show Education" data-toggle="education"><span class="sw" style="background:#B98E64"></span><a href="#education">Education</a></li><li class="layer" data-for="research"><input type="checkbox" checked aria-label="Show Research" data-toggle="research"><span class="sw" style="background:#63C3D6"></span><a href="#research">Research</a></li><li class="layer" data-for="teaching"><input type="checkbox" checked aria-label="Show Teaching" data-toggle="teaching"><span class="sw" style="background:#5B9E58"></span><a href="#teaching">Teaching</a></li><li class="layer" data-for="projects"><input type="checkbox" checked aria-label="Show Projects" data-toggle="projects"><span class="sw" style="background:#C98A4E"></span><a href="#projects">Projects</a></li><li class="layer" data-for="publications"><input type="checkbox" checked aria-label="Show Publications" data-toggle="publications"><span class="sw" style="background:#7DC2E8"></span><a href="#publications">Publications</a></li><li class="layer" data-for="skills"><input type="checkbox" checked aria-label="Show Skills" data-toggle="skills"><span class="sw" style="background:#9C8772"></span><a href="#skills">Skills</a></li><li class="layer" data-for="conferences"><input type="checkbox" checked aria-label="Show Conferences & presentations" data-toggle="conferences"><span class="sw" style="background:#D58DB6"></span><a href="#conferences">Conferences & presentations</a></li><li class="layer" data-for="talks"><input type="checkbox" checked aria-label="Show Expert talks, seminars & workshops" data-toggle="talks"><span class="sw" style="background:#8FB9A8"></span><a href="#talks">Expert talks, seminars & workshops</a></li><li class="layer" data-for="training"><input type="checkbox" checked aria-label="Show Training & schools" data-toggle="training"><span class="sw" style="background:#F0B45A"></span><a href="#training">Training & schools</a></li><li class="layer" data-for="rapporteur"><input type="checkbox" checked aria-label="Show Rapporteurship & policy" data-toggle="rapporteur"><span class="sw" style="background:#6C8FD6"></span><a href="#rapporteur">Rapporteurship & policy</a></li><li class="layer" data-for="positions"><input type="checkbox" checked aria-label="Show Positions of responsibility" data-toggle="positions"><span class="sw" style="background:#B9A6F0"></span><a href="#positions">Positions of responsibility</a></li><li class="layer" data-for="awards"><input type="checkbox" checked aria-label="Show Awards & achievements" data-toggle="awards"><span class="sw" style="background:#FFD166"></span><a href="#awards">Awards & achievements</a></li><li class="layer" data-for="beyond"><input type="checkbox" checked aria-label="Show Beyond the CV" data-toggle="beyond"><span class="sw" style="background:#E07A6C"></span><a href="#beyond">Beyond the CV</a></li><li class="layer" data-for="contact"><input type="checkbox" checked aria-label="Show Contact" data-toggle="contact"><span class="sw" style="background:#1F6F80"></span><a href="#contact">Contact</a></li></ul>
+  <div class="bands" role="group" aria-label="Satellite band (colour theme)">
+    <button type="button" data-band="true" aria-pressed="false">True colour</button>
+    <button type="button" data-band="false" aria-pressed="false">False colour</button>
+    <button type="button" data-band="thermal" aria-pressed="false">Thermal</button>
+  </div>
+  <p class="band-label">Band: switches the colour theme</p>
+</nav>
+<a class="plain-btn" href="cv.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z M14 2v6h6 M9 13h8 M9 17h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Read the plain CV</a>
+<div class="meter" aria-hidden="true"><svg viewBox="0 0 30 42"><defs><clipPath id="dc"><path d="M15 2c0 0-12 15-12 24a12 12 0 0 0 24 0C27 17 15 2 15 2z"/></clipPath></defs><rect id="drop-fill" x="0" y="40" width="30" height="1" fill="var(--accent)" clip-path="url(#dc)"/><path d="M15 2c0 0-12 15-12 24a12 12 0 0 0 24 0C27 17 15 2 15 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><span id="m-name">Summary</span><span class="c" id="m-coords">28°32′N 77°09′E</span></span></div>
+<main id="main">
+<section class="chapter" id="summary" data-name="Summary" data-coords="28°32′N 77°09′E" aria-label="Summary"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 01</span><span>28°32′N 77°09′E</span><span class='n'>TERI SAS, New Delhi</span></p>
 </header>
-
-<a class="plain-btn" href="cv.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c0 0-6.5 8-6.5 12.2a6.5 6.5 0 0 0 13 0C18.5 10.5 12 2.5 12 2.5z" fill="#2C7D8C"/><path d="M9 15.5a3 3 0 0 0 3 3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>Read the plain CV</a>
-
-<div class="drop-meter" aria-hidden="true">
-  <svg viewBox="0 0 30 42">
-    <defs><clipPath id="dropclip"><path d="M15 2c0 0-12 15-12 24a12 12 0 0 0 24 0C27 17 15 2 15 2z"/></clipPath></defs>
-    <rect id="drop-fill" x="0" y="40" width="30" height="1" fill="#2C7D8C" clip-path="url(#dropclip)"/>
-    <path d="M15 2c0 0-12 15-12 24a12 12 0 0 0 24 0C27 17 15 2 15 2z" fill="none" stroke="currentColor" stroke-width="2"/>
-  </svg>
-  <span class="txt"><span class="stage">Orbit</span><span class="depth">705 km up</span></span>
+<div class="here">
+  <div>
+    <h1>Kavya<br>Agrawal</h1>
+    <p class="tagline">PhD scholar in groundwater, remote sensing and machine learning</p>
+    <p>I am a PhD scholar in Natural and Applied Sciences at the TERI School of Advanced Studies, New Delhi, working where environmental systems, human activity and technology meet. My doctoral research predicts and assesses groundwater contamination across India, bringing together hydrogeochemistry, remote sensing, GIS and multi-source environmental data.</p>
+    <p>I work on uranium, fluoride and arsenic, using machine learning, deep learning and spatial modelling to understand contamination patterns, what controls them, and where the risk is highest. I'm also interested in population exposure, groundwater governance, climate and cryosphere systems and water security, and I'm always open to new questions, methods and collaborations.</p>
+    <p class="muted" style="font-size:.95rem">Supervisor: Prof. Chander Kumar Singh. Co-supervisor: Dr. Adwitiya Sinha.</p>
+    <div class="links"><a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a><a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en">Google Scholar</a><a href="https://orcid.org/0009-0009-1032-2541">ORCID</a><a href="https://www.researchgate.net/profile/Kavya-Agrawal-4">ResearchGate</a><a href="https://www.linkedin.com/in/kavya-agrawal02/">LinkedIn</a><a href="https://github.com/kavyaagrawal-02">GitHub</a></div>
+  </div>
+  <div class="mapbox" role="img" aria-label="Map-style graphic: Kavya's portrait as a pin at TERI SAS, New Delhi, surrounded by her research keywords set like place names">
+    <canvas id="here-map" aria-hidden="true"></canvas>
+    <span class="place l1" style="left:50%;top:12%">Groundwater quality</span><span class="place l1" style="left:18%;top:30%">Uranium</span><span class="place l1" style="left:82%;top:33%">Fluoride</span><span class="place l1" style="left:50%;top:86%">Arsenic</span><span class="place l2" style="left:22%;top:62%">Remote sensing</span><span class="place l2" style="left:84%;top:60%">GIS</span><span class="place l2" style="left:76%;top:76%">Machine learning</span><span class="place l2" style="left:27%;top:76%">Population exposure</span><span class="place l2" style="left:50%;top:72%">Google Earth Engine</span><span class="place l2" style="left:50%;top:95%">Groundwater governance</span><span class="place l3" style="left:13%;top:46%">AutoML</span><span class="place l3" style="left:85%;top:47%">Explainable AI</span><span class="place l3" style="left:16%;top:88%">Downscaling</span><span class="place l3" style="left:85%;top:88%">Cryosphere</span><span class="place l3" style="left:23%;top:18%">Hydrogeochemistry</span><span class="place l3" style="left:79%;top:18%">Water security</span>
+    <div class="pin"><div class="head"><img src="assets/img/kavya-portrait-hero.jpg" alt=""></div></div>
+    <div class="pin-label">You are here<small>28°32′N 77°09′E</small></div>
+  </div>
 </div>
-
-<main>
-<!-- 0 ORBIT -->
-<section id="orbit" data-stage="Orbit" data-depth="705 km up" data-tone="dark" data-bg="#08131C" aria-label="Introduction">
+<div class="summary-grid">
+  <div><h3 class="sub" style="margin-top:0">News</h3><ul class="news"><li><span class="d">Jun 2026</span><p>Started teaching <em>Principles of Remote Sensing</em> (NRG169) and <em>Principles of GIS and GNSS</em> (NRG176) in the MSc Geoinformatics programme.</p></li><li><span class="d">Apr 2026</span><p>Won First Position (oral presentation) and the Best Paper Award at ICSSR EHP NEXUS 2026, Gautam Buddha University, for my work on uranium risk.</p></li><li><span class="d">Mar 2026</span><p>Rapporteur at the National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction (TERI SAS with NRSC, ISRO).</p></li><li><span class="d">Feb 2026</span><p>Delegate at the World Sustainable Development Summit 2026, Silver Jubilee edition.</p></li><li><span class="d">Jan 2026</span><p>Completed my PhD comprehensive examination, and submitted <em>Predicting Uranium Occurrences in Groundwater throughout India</em> to a journal.</p></li></ul></div>
+  <aside class="currently"><h3>Currently, 2025–26</h3><dl>
+    <div><dt>Research</dt><dd>Uranium, fluoride, arsenic and downscaling of environmental predictors</dd></div>
+    <div><dt>Teaching</dt><dd>Principles of Remote Sensing; Principles of GIS and GNSS (MSc Geoinformatics)</dd></div>
+    <div><dt>Service</dt><dd>Judge at Programme LEAD, the Sustainability Hackathon and KnoxCode</dd></div>
+    <div><dt>Policy and academic engagement</dt><dd>WSDS 2025 and 2026, Water as a Commons workshop, National Geospatial Technology workshop</dd></div>
+    <div><dt>Capacity building</dt><dd>QGreenland, UAV and drones, geospatial forest-fire management, winter school</dd></div>
+  </dl></aside>
+</div></section>
+<section class="chapter" id="education" data-name="Education" data-coords="27°36′N 78°03′E to 28°32′N 77°09′E" aria-label="Education"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 02</span><span>27°36′N 78°03′E to 28°32′N 77°09′E</span><span class='n'>Hathras to New Delhi</span></p>
+<h2>Education</h2><p class="lede">Read it like a rock column: the oldest layer at the bottom, the newest on top.</p></header>
+<div class="strata">
+  <div class="column"><div class="stratum" style="background:#DCCFA8;--tex:repeating-linear-gradient(0deg, rgba(0,0,0,.25) 0 1px, transparent 1px 7px);min-height:210px">
+<span class="ylabel">2024 to now</span><span class="cgpa">CGPA 9.0</span><span class="yrs">2024 to now</span><h3>PhD, Natural &amp; Applied Sciences</h3><p>TERI School of Advanced Studies, New Delhi</p><p style="margin-top:.5rem"><em>Development of an Adaptable Machine Learning Based Framework for Multi-Contaminant Prediction</em></p>
+<p>Full-time, registered 1 February 2024. Comprehensive examination completed 28 January 2026. Coursework CGPA 9.0.</p>
+<div class="grains"><span>Research and Publication Ethics: A</span><span>Research Methodology: A</span><span>Environmental Statistics: A</span><span>Digital Image Processing &amp; Information Extraction: A</span></div><span class="rock">Fresh alluvium, still being deposited</span></div><div class="stratum" style="background:#CDAE7E;--tex:radial-gradient(rgba(0,0,0,.35) 1px, transparent 1.3px);min-height:140px">
+<span class="ylabel">2021–2023</span><span class="cgpa">CGPA 7.60</span><span class="yrs">2021–2023</span><h3>MA Geography</h3><p>Dr. B.R. Ambedkar University, Agra</p><span class="rock">Sandstone</span></div><div class="stratum" style="background:#BF9670;--tex:radial-gradient(ellipse 6px 2px, rgba(0,0,0,.25) 50%, transparent 52%);min-height:200px">
+<span class="ylabel">2018–2021</span><span class="cgpa">CGPA 7.86</span><span class="yrs">2018–2021</span><h3>BA (Honours) Geography</h3><p>University of Delhi</p><span class="rock">Clay with mineral grains</span></div><div class="stratum" style="background:#AE9A84;--tex:radial-gradient(circle 4px, rgba(0,0,0,.28) 60%, transparent 64%);min-height:140px">
+<span class="ylabel">2016–2018</span><span class="cgpa">CGPA 9.80</span><span class="yrs">2016–2018</span><h3>Senior Secondary School</h3><p>Delhi Public School, Aligarh</p><span class="rock">Gravel</span></div><div class="stratum" style="background:#A9A49B;--tex:repeating-linear-gradient(45deg, rgba(0,0,0,.22) 0 1px, transparent 1px 9px), repeating-linear-gradient(-45deg, rgba(0,0,0,.22) 0 1px, transparent 1px 9px);min-height:140px">
+<span class="ylabel">2014–2016</span><span class="cgpa">CGPA 9.20</span><span class="yrs">2014–2016</span><h3>Secondary School</h3><p>St. Francis Inter College, Hathras</p><span class="rock">Bedrock</span></div></div>
+  <aside class="sample"><h3>Core sample: subjects in my geography degrees</h3><ul><li>Geomorphology</li><li>Climatology &amp; Oceanography</li><li>Cartographic Techniques</li><li>Thematic Cartography</li><li>Remote Sensing &amp; GIS</li><li>Statistical Methods in Geography</li><li>Field Work &amp; Research Methodology</li><li>Academic Writing &amp; Composition</li><li>Geography of India</li><li>Human Geography</li><li>Disaster Management</li><li>Media &amp; Communication Skills</li><li>History of Geographical Thought</li><li>Social Geography</li><li>Political Geography</li><li>Economic Geography</li><li>Agricultural Geography</li><li>Population &amp; Settlement Geography</li><li>Environmental Geography</li><li>Regional Planning &amp; Development</li></ul></aside>
+</div></section>
+<section class="chapter" id="research" data-name="Research" data-coords="22°N 79°E" aria-label="Research"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 03</span><span>22°N 79°E</span><span class='n'>India, national scale</span></p>
+<h2>Research</h2><p class="lede">My PhD asks how far we can predict groundwater contamination across a country as large and varied as India, and what the predictions mean for the people who drink the water.</p></header>
+<div class="orbit" id="orbit">
   <div class="orbit-pin">
-    <canvas id="scene" aria-label="Illustrative satellite scene of mountains, a river and farmland, which sharpens as you scroll from coarse to fine resolution" role="img"></canvas>
-    <div class="orbit-shade"></div>
-    <div class="orbit-text"><div class="wrap">
-      <h1>Kavya<br>Agrawal</h1>
-      <p class="role">PhD scholar in groundwater, remote sensing and machine learning</p>
-      <p>I use satellites and machine learning to predict where groundwater in India is unsafe to drink, and who is drinking it. I'm doing my PhD at the TERI School of Advanced Studies, New Delhi.</p>
-      <p class="hint">Scroll down to zoom in from orbit and follow one drop of water.</p>
-    </div></div>
-    <div class="bands" role="group" aria-label="Satellite band">
-      <button type="button" data-band="true" aria-pressed="true">True colour</button>
-      <button type="button" data-band="false" aria-pressed="false">False colour</button>
-      <button type="button" data-band="thermal" aria-pressed="false">Thermal</button>
-    </div>
-    <div class="readout" aria-live="off">
-      <span class="px">111 km</span>
-      <span class="ds">GRACE, water storage</span>
-      <span class="note">Pixel size. Illustrative scene, not real data.</span>
-    </div>
-    <p class="orbit-end">Ground level. Now follow one drop of water, from the mountains to a village tap.</p>
+    <canvas id="scene" role="img" aria-label="Illustrative satellite scene that sharpens from coarse to fine pixels as you scroll"></canvas>
+    <div class="shade"></div>
+    <div class="txt"><h3>Scales I work across</h3><p>Scroll to zoom in. The pixel size steps down through datasets I use, from 111 km down to 30 m.</p></div>
+    <div class="readout"><span class="px">111 km</span><span class="ds">GRACE, water storage</span><span class="note">Pixel size. Illustrative scene, not real data.</span></div>
   </div>
-</section>
-
-<!-- 1 GLACIER -->
-<section id="glacier" data-stage="Glacier" data-depth="5,000 m up" data-tone="light" data-bg="#E9F2F4">
-  <svg class="ridge" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
-  <path d="M0 140 L0 92 L90 60 L150 84 L240 22 L300 70 L370 48 L460 100 L540 40 L610 66 L700 6 L770 58 L850 36 L930 88 L1010 30 L1090 74 L1170 44 L1250 96 L1330 52 L1440 80 L1440 140 Z" fill="#E9F2F4"/>
-  <path d="M240 22 L262 40 L250 38 L232 46 Z M700 6 L728 30 L712 26 L690 34 Z M1010 30 L1034 50 L1020 46 L1000 54 Z" fill="#ffffff"/>
-</svg>
-  <div class="wrap">
-    <p class="stage-name">1. Where the drop begins</p>
-    <h2>Snow, ice and mountain heat</h2>
-    <div class="glacier-grid">
-      <div>
-        <p>Most of the water in North India's rivers starts as snow and ice in the Himalaya. That's where my research started too: measuring how fast the mountains are warming, and where the ground stays frozen.</p>
-        <div class="paper-card">
-          <span class="kind">Published, Journal of Mountain Science, 2023</span>
-          <h3>Evaluating spatial and elevation-wise daytime/nighttime LST trends across the Indus River Basin</h3>
-          <p>Mal, S., <strong>Agrawal, K.</strong>, Rani, S. et al. <em>J. Mt. Sci.</em> 20, 3154–3172.</p>
-          <p><a href="https://doi.org/10.1007/s11629-023-8157-8">Read the paper (doi.org/10.1007/s11629-023-8157-8)</a></p>
-        </div>
-        <ul class="ice-list">
-          <li><strong>Permafrost in the Indus Basin.</strong> Identifying and mapping frozen ground from about twenty years of air temperature, solar radiation, snow and precipitation estimates in Google Earth Engine.</li>
-          <li><strong>Snow cover in Indian basins.</strong> How snow cover is changing across the country's river basins.</li>
-        </ul>
-        <p class="someday">Someday: permafrost, glaciers and ice across High Mountain Asia, the Arctic and Antarctica.</p>
-      </div>
-      <figure class="glacier-fig" style="margin:0">
-        <img src="assets/img/indus-study-area.png" alt="Study area map of the Indus River Basin with elevation, rivers and major cities" loading="lazy">
-        <figcaption>The Indus River Basin, study area of the 2023 paper.</figcaption>
-      </figure>
-    </div>
+</div>
+<div class="framework">
+  <div>
+    <p>My thesis, <em>Development of an Adaptable Machine Learning Based Framework for Multi-Contaminant Prediction</em>, builds a national-scale framework for predicting groundwater contamination and assessing its risk.</p>
+    <p>It brings together groundwater observations and hydrochemistry with remote sensing and GIS layers on climate, hydrology, terrain, soil, geology, land use, human modification and population. The aims run from prediction and risk mapping to checking uncertainty and robustness, understanding environmental controls, estimating exposure, and supporting governance decisions.</p>
   </div>
+  <p class="sup">Supervisor: Prof. Chander Kumar Singh<br>Co-supervisor: Dr. Adwitiya Sinha<br><br>Element tiles are contaminants (with atomic numbers). Dashed tiles are methods and earlier work.</p>
+</div>
+<h3 class="sub">Research lines, joining the PhD over time</h3>
+<div class="tiles" role="group" aria-label="Research lines"><button class="tile method" type="button" style="--tc:#B9A6F0" data-tile="cr" aria-expanded="false" aria-controls="tile-detail">
+<span class="z">method</span><span class="yr">2023</span><span class="sym">LST</span><span class="nm">Land surface temperature and cryosphere</span></button><button class="tile" type="button" style="--tc:#D58DB6" data-tile="as" aria-expanded="false" aria-controls="tile-detail">
+<span class="z">33</span><span class="yr">2024</span><span class="sym">As</span><span class="nm">Arsenic</span></button><button class="tile" type="button" style="--tc:#C9DB34" data-tile="u" aria-expanded="true" aria-controls="tile-detail">
+<span class="z">92</span><span class="yr">2025</span><span class="sym">U</span><span class="nm">Uranium</span></button><button class="tile" type="button" style="--tc:#7DC2E8" data-tile="f" aria-expanded="false" aria-controls="tile-detail">
+<span class="z">9</span><span class="yr">2026</span><span class="sym">F</span><span class="nm">Fluoride</span></button><button class="tile method" type="button" style="--tc:#F0B45A" data-tile="ds" aria-expanded="false" aria-controls="tile-detail">
+<span class="z">method</span><span class="yr">2026</span><span class="sym">DS</span><span class="nm">Downscaling satellite predictors</span></button></div>
+<svg class="river-svg" viewBox="0 0 1000 178" aria-hidden="true"><path class="stem" d="M60 120 L324 120" stroke-dasharray="2 14" style="stroke-width:6"/><path class="stem" d="M324 120 L940 120"/><text class="lbl" x="324" y="146">PhD begins, Feb 2024</text><path class="trib" stroke="#B9A6F0" d="M100 0 C 100 70, 84 60, 84 116"/><path class="trib" stroke="#D58DB6" d="M300 0 C 300 70, 427 60, 427 116"/><path class="trib" stroke="#C9DB34" d="M500 0 C 500 70, 610 60, 610 116"/><path class="trib" stroke="#7DC2E8" d="M700 0 C 700 70, 793 60, 793 116"/><path class="trib" stroke="#F0B45A" d="M900 0 C 900 70, 823 60, 823 116"/><text x="60" y="170" text-anchor="middle">2023</text><text x="304" y="170" text-anchor="middle">2024</text><text x="549" y="170" text-anchor="middle">2025</text><text x="793" y="170" text-anchor="middle">2026</text></svg>
+<div class="detail" id="tile-detail" style="--tc:#C9DB34" aria-live="polite"><div><span class="k">Uranium</span><h3>Predicting Uranium Occurrences in Groundwater throughout India</h3><p>A national-scale model of where uranium occurs in India's groundwater, built from groundwater observations and environmental predictors and checked against an independent validation dataset. The predictions feed into spatial risk classes, estimates of how many people may be exposed, and governance indicators that show where monitoring and action are most needed.</p></div><dl><div><dt>Methods</dt><dd>Automated machine learning (AutoGluon ensemble), independent validation, spatial risk classes, population exposure, groundwater governance indicators</dd></div><div><dt>Status</dt><dd>Research paper submitted to a journal (Sep 2025 to Jan 2026)</dd></div><div><dt>Recognition</dt><dd>Presented as <em>An ML-based Uranium Risk Assessment for Urban Groundwater Governance and Population Exposure in India</em>: First Position and Best Paper Award, ICSSR EHP NEXUS 2026</dd></div></dl></div>
+<h3 class="sub">The data behind the models</h3>
+<p class="muted">Native resolutions of some of the datasets in my predictor stacks. Part of the work is bringing them onto one grid without losing a single groundwater observation.</p>
+<div class="scalebar"><svg viewBox="0 0 1000 292" role="img" aria-label="Logarithmic scale bar of dataset resolutions, from SRTM at 30 metres to GRACE at about 111 kilometres"><rect class="a" x="40.0" y="150" width="213.9" height="12"/><rect class="b" x="253.9" y="150" width="213.9" height="12"/><rect class="a" x="467.8" y="150" width="213.9" height="12"/><rect class="b" x="681.7" y="150" width="213.9" height="12"/><rect class="a" x="895.6" y="150" width="64.4" height="12"/><text class="unit" x="40.0" y="186" text-anchor="middle">10 m</text><text class="unit" x="253.9" y="186" text-anchor="middle">100 m</text><text class="unit" x="467.8" y="186" text-anchor="middle">1 km</text><text class="unit" x="681.7" y="186" text-anchor="middle">10 km</text><text class="unit" x="895.6" y="186" text-anchor="middle">100 km</text><line class="lead" x1="142.1" y1="36" x2="142.1" y2="150"/><circle class="dot" cx="142.1" cy="150" r="3.5"/><text x="142.1" y="30" text-anchor="middle">SRTM</text><line class="lead" x1="142.1" y1="162" x2="142.1" y2="204"/><circle class="dot" cx="142.1" cy="162" r="3.5"/><text x="142.1" y="218" text-anchor="middle">JRC Surface Water</text><line class="lead" x1="247.2" y1="70" x2="247.2" y2="150"/><circle class="dot" cx="247.2" cy="150" r="3.5"/><text x="247.2" y="64" text-anchor="middle">MERIT Hydro</text><line class="lead" x1="253.9" y1="162" x2="253.9" y2="230"/><circle class="dot" cx="253.9" cy="162" r="3.5"/><text x="253.9" y="244" text-anchor="middle">GHSL Built</text><line class="lead" x1="332.1" y1="104" x2="332.1" y2="150"/><circle class="dot" cx="332.1" cy="150" r="3.5"/><text x="332.1" y="98" text-anchor="middle">OpenLandMap soils</text><line class="lead" x1="460.8" y1="162" x2="460.8" y2="256"/><circle class="dot" cx="460.8" cy="162" r="3.5"/><text x="460.8" y="270" text-anchor="middle">MODIS LST, NDVI</text><line class="lead" x1="467.8" y1="36" x2="467.8" y2="150"/><circle class="dot" cx="467.8" cy="150" r="3.5"/><text x="467.8" y="30" text-anchor="middle">GPW population</text><line class="lead" x1="610.3" y1="162" x2="610.3" y2="204"/><circle class="dot" cx="610.3" cy="162" r="3.5"/><text x="610.3" y="218" text-anchor="middle">TerraClimate</text><line class="lead" x1="627.3" y1="70" x2="627.3" y2="150"/><circle class="dot" cx="627.3" cy="150" r="3.5"/><text x="627.3" y="64" text-anchor="middle">CHIRPS</text><line class="lead" x1="691.7" y1="162" x2="691.7" y2="230"/><circle class="dot" cx="691.7" cy="162" r="3.5"/><text x="691.7" y="244" text-anchor="middle">ERA5-Land</text><line class="lead" x1="776.8" y1="104" x2="776.8" y2="150"/><circle class="dot" cx="776.8" cy="150" r="3.5"/><text x="776.8" y="98" text-anchor="middle">GLDAS</text><line class="lead" x1="905.6" y1="162" x2="905.6" y2="256"/><circle class="dot" cx="905.6" cy="162" r="3.5"/><text x="905.6" y="270" text-anchor="middle">GRACE</text></svg></div>
+<h3 class="sub">Figures</h3>
+<div class="figs">
+  <figure class="fig"><img src="assets/img/lst-trends.png" alt="Violin plots of daytime, nighttime and mean LST trends by season across the Indus River Basin" loading="lazy"><figcaption>Seasonal LST trends across the Indus River Basin (Journal of Mountain Science, 2023).</figcaption></figure>
+  <figure class="fig"><img src="assets/img/indus-study-area.png" alt="Study area map of the Indus River Basin with elevation, rivers and major cities" loading="lazy"><figcaption>The Indus River Basin study area.</figcaption></figure>
+</div>
+<h3 class="sub">Questions I'd like to explore</h3>
+<ul class="explore"><li>Permafrost identification and modelling</li><li>Glacier, ice and snow mapping</li><li>Climate change impacts</li><li>High Mountain Asia and the Himalaya</li><li>The Arctic and Antarctica</li><li>Remote sensing for history and archaeology</li></ul>
 </section>
-
-<!-- 2 RIVER -->
-<section id="river" data-stage="River" data-depth="Down in the plains" data-tone="light" data-bg="#DCE8E2">
-  <svg class="river-line" viewBox="0 0 360 2400" preserveAspectRatio="none" aria-hidden="true">
-  <path d="M180 0 C 330 200, 30 360, 180 600 S 330 1000, 180 1200 S 20 1600, 190 1800 S 340 2200, 180 2400" stroke-width="30" opacity=".25"/>
-  <path d="M180 0 C 330 200, 30 360, 180 600 S 330 1000, 180 1200 S 20 1600, 190 1800 S 340 2200, 180 2400" stroke-width="12" opacity=".9"/>
-</svg>
-  <div class="wrap">
-    <div class="intro">
-      <p class="stage-name">2. Downstream</p>
-      <h2>Towns along the way</h2>
-      <p>The drop flows down through the plains of Uttar Pradesh to Delhi, the same way I did. Each stop is a postcard from a school or university.</p>
+<section class="chapter" id="teaching" data-name="Teaching" data-coords="28°32′N 77°09′E" aria-label="Teaching"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 04</span><span>28°32′N 77°09′E</span><span class='n'>MSc Geoinformatics, TERI SAS</span></p>
+<h2>Teaching</h2><p class="lede">Course teaching in the MSc Geoinformatics programme at TERI SAS.</p></header>
+<div class="semesters" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+  <div class="s">Jul–Dec 2025<span class="bar" style="background:#7DC2E8">NRG169 practicals, 32 hours</span></div>
+  <div class="s">Jan–May 2026<span class="bar" style="background:var(--line);color:var(--ink)">Comprehensive exam, Jan 2026</span></div>
+  <div class="s">Jun–Dec 2026<span class="bar" style="background:#7DC2E8">NRG169 Remote Sensing</span><span class="bar" style="background:#9CCB8A">NRG176 GIS and GNSS</span></div>
+</div>
+<div class="manuals">
+  <article class="manual"><span class="code">NRG169</span><h3>Principles of Remote Sensing</h3>
+<table><tr><td>Programme</td><td>MSc Geoinformatics, TERI SAS</td></tr><tr><td>Credits</td><td>4</td></tr><tr><td>Contact hours</td><td>60</td></tr><tr><td>In the lab</td><td>Landsat 8/9 imagery, ERDAS Imagine, image enhancement, urban, vegetation and geomorphology analysis</td></tr></table>
+<div class="ltp" role="img" aria-label="Lecture 42 hours, tutorial 2 hours, practical 32 hours"><i style="flex:42;background:#1F6F80"></i><i style="flex:2;background:#8A5A2B"></i><i style="flex:32;background:#5B9E58"></i></div>
+<div class="ltp-key"><span><b style="background:#1F6F80"></b>Lecture 42</span><span><b style="background:#8A5A2B"></b>Tutorial 2</span><span><b style="background:#5B9E58"></b>Practical 32</span></div>
+<ul class="runs"><li>Jun–Dec 2026: course teaching</li><li>Jul–Dec 2025: taught the 32 practical learning hours</li></ul></article>
+  <article class="manual"><span class="code">NRG176</span><h3>Principles of GIS and GNSS</h3>
+<table><tr><td>Programme</td><td>MSc Geoinformatics, TERI SAS</td></tr><tr><td>Credits</td><td>4</td></tr><tr><td>Contact hours</td><td>60</td></tr><tr><td>In the lab</td><td>GPS and GNSS, satellite navigation, georeferencing, ArcGIS Pro</td></tr></table>
+<div class="ltp" role="img" aria-label="Lecture 42 hours, tutorial 2 hours, practical 32 hours"><i style="flex:42;background:#1F6F80"></i><i style="flex:2;background:#8A5A2B"></i><i style="flex:32;background:#5B9E58"></i></div>
+<div class="ltp-key"><span><b style="background:#1F6F80"></b>Lecture 42</span><span><b style="background:#8A5A2B"></b>Tutorial 2</span><span><b style="background:#5B9E58"></b>Practical 32</span></div>
+<ul class="runs"><li>Jun–Dec 2026: course teaching</li></ul></article>
+</div>
+<h3 class="sub">Try it: what a satellite band shows</h3>
+<div class="demo">
+  <div class="demo-img"><img id="demo-img" src="assets/img/scene-true.jpg" alt="Illustrative satellite scene in true colour" loading="lazy"></div>
+  <div>
+    <div class="demo-btns" role="group" aria-label="Band">
+      <button type="button" data-demo="true" aria-pressed="true">True colour</button>
+      <button type="button" data-demo="false" aria-pressed="false">False colour</button>
+      <button type="button" data-demo="thermal" aria-pressed="false">Thermal</button>
     </div>
-    <p class="flip-hint">Tap a postcard to turn it over.</p>
-    <ol class="cards" style="padding:0;margin-top:1.5rem">
-      <li><button class="postcard" type="button" aria-pressed="false" aria-label="Hathras, 2014–2016. Turn the postcard over">
-  <span class="inner">
-    <span class="face front" style="background:linear-gradient(150deg,#E0892E,#B5541F)">
-      <span class="greet">Greetings from</span>
-      <span class="stamp" aria-hidden="true"><i style="background:#B5541F">HRS<small>INDIA</small></i></span>
-      <svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#ffffff">
-  <defs><path id="pm1" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm1" startOffset="0">HATHRAS ✦ HATHRAS ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2016</text>
-</svg>
-      <span class="town">Hathras</span>
-      <span class="yrs">2014–2016</span>
-    </span>
-    <span class="face back">
-      <span class="msg">Secondary school at St. Francis Inter College, CGPA 9.20. The start of four years of top-3 ranks in the English Olympiads, and a Merit Award in 2016.</span>
-      <span class="addr"><ul><li>St. Francis Inter College</li><li>Secondary school</li><li>CGPA 9.20</li></ul><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#1E3C46">
-  <defs><path id="pm2" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm2" startOffset="0">HATHRAS ✦ HATHRAS ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2016</text>
-</svg></span>
-    </span>
-  </span>
-</button></li><li><button class="postcard" type="button" aria-pressed="false" aria-label="Aligarh, 2016–2018. Turn the postcard over">
-  <span class="inner">
-    <span class="face front" style="background:linear-gradient(150deg,#3F7FA3,#24506B)">
-      <span class="greet">Greetings from</span>
-      <span class="stamp" aria-hidden="true"><i style="background:#24506B">ALJN<small>INDIA</small></i></span>
-      <svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#ffffff">
-  <defs><path id="pm3" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm3" startOffset="0">ALIGARH ✦ ALIGARH ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2018</text>
-</svg>
-      <span class="town">Aligarh</span>
-      <span class="yrs">2016–2018</span>
-    </span>
-    <span class="face back">
-      <span class="msg">Senior secondary at Delhi Public School, CGPA 9.80. Won the State Child Scientist Award at the National Science Congress in 2018.</span>
-      <span class="addr"><ul><li>Delhi Public School</li><li>Senior secondary</li><li>CGPA 9.80</li></ul><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#1E3C46">
-  <defs><path id="pm4" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm4" startOffset="0">ALIGARH ✦ ALIGARH ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2018</text>
-</svg></span>
-    </span>
-  </span>
-</button></li><li><button class="postcard" type="button" aria-pressed="false" aria-label="Delhi, 2018–2021. Turn the postcard over">
-  <span class="inner">
-    <span class="face front" style="background:linear-gradient(150deg,#9A4A6E,#62284A)">
-      <span class="greet">Greetings from</span>
-      <span class="stamp" aria-hidden="true"><i style="background:#62284A">DLI<small>INDIA</small></i></span>
-      <svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#ffffff">
-  <defs><path id="pm5" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm5" startOffset="0">DELHI ✦ DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2021</text>
-</svg>
-      <span class="town">Delhi</span>
-      <span class="yrs">2018–2021</span>
-    </span>
-    <span class="face back">
-      <span class="msg">BA (Hons) Geography at the University of Delhi. Editor-in-Chief of the Geography Association, ran the college magazine Vani, NSS volunteer. My first GIS maps: Delhi's forests, sprawl and land use.</span>
-      <span class="addr"><ul><li>University of Delhi</li><li>BA (Hons) Geography</li><li>CGPA 7.86</li></ul><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#1E3C46">
-  <defs><path id="pm6" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm6" startOffset="0">DELHI ✦ DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2021</text>
-</svg></span>
-    </span>
-  </span>
-</button></li><li><button class="postcard" type="button" aria-pressed="false" aria-label="Agra, 2021–2023. Turn the postcard over">
-  <span class="inner">
-    <span class="face front" style="background:linear-gradient(150deg,#3B8B78,#1F5A4B)">
-      <span class="greet">Greetings from</span>
-      <span class="stamp" aria-hidden="true"><i style="background:#1F5A4B">AGC<small>INDIA</small></i></span>
-      <svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#ffffff">
-  <defs><path id="pm7" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm7" startOffset="0">AGRA ✦ AGRA ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2023</text>
-</svg>
-      <span class="town">Agra</span>
-      <span class="yrs">2021–2023</span>
-    </span>
-    <span class="face back">
-      <span class="msg">MA Geography at Dr. B.R. Ambedkar University. Five conference papers in 2022, and my first journal paper, on temperature trends across the Indus Basin.</span>
-      <span class="addr"><ul><li>Dr. B.R. Ambedkar University</li><li>MA Geography</li><li>CGPA 7.60</li></ul><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#1E3C46">
-  <defs><path id="pm8" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm8" startOffset="0">AGRA ✦ AGRA ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2023</text>
-</svg></span>
-    </span>
-  </span>
-</button></li><li><button class="postcard" type="button" aria-pressed="false" aria-label="New Delhi, 2024 to now. Turn the postcard over">
-  <span class="inner">
-    <span class="face front" style="background:linear-gradient(150deg,#2A5C9A,#163762)">
-      <span class="greet">Greetings from</span>
-      <span class="stamp" aria-hidden="true"><i style="background:#163762">NDLS<small>INDIA</small></i></span>
-      <svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#ffffff">
-  <defs><path id="pm9" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm9" startOffset="0">NEW DELHI ✦ NEW DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2026</text>
-</svg>
-      <span class="town">New Delhi</span>
-      <span class="yrs">2024 to now</span>
-    </span>
-    <span class="face back">
-      <span class="msg">PhD at TERI School of Advanced Studies. Coursework CGPA 9.0; comprehensive exam cleared in January 2026. Now predicting groundwater contamination across India.</span>
-      <span class="addr"><ul><li>TERI School of Advanced Studies</li><li>PhD, Natural & Applied Sciences</li><li>Coursework CGPA 9.0</li></ul><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:#1E3C46">
-  <defs><path id="pm10" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm10" startOffset="0">NEW DELHI ✦ NEW DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">2026</text>
-</svg></span>
-    </span>
-  </span>
-</button></li>
-    </ol>
+    <h3 id="demo-h">True colour</h3>
+    <p id="demo-p">Red, green and blue light, roughly what your eyes would see from orbit. Fields look green, bare soil brown, water dark.</p>
+    <p class="muted" style="font-size:.85rem">Students learn to switch between band combinations like this in the remote sensing lab. The scene is generated for illustration.</p>
   </div>
+</div>
+<h3 class="sub">An example from the lab</h3>
+<figure class="fig" style="max-width:760px"><img src="assets/img/delhi-lulc.png" alt="Land use and land cover classification of South West Delhi from Landsat 8, October 2019" loading="lazy"><figcaption>Land use and land cover of South West Delhi, Landsat 8, October 2019.</figcaption></figure>
 </section>
-
-<!-- 3 GROUND -->
-<section id="ground" data-stage="Ground" data-depth="Below the water table" data-tone="dark" data-bg="#5E4A30">
-  <div class="wrap">
-    <p class="stage-name lead">3. Into the ground</p>
-    <h2 class="lead">What the drop picks up</h2>
-    <p class="lead">As water seeps down through soil and rock it dissolves minerals. Some of them are harmful. My PhD, <em>Development of an Adaptable Machine Learning Based Framework for Multi-Contaminant Prediction</em>, predicts where across India groundwater carries too much uranium, fluoride or arsenic. It combines groundwater samples with satellite, climate, terrain, soil and population data.</p>
-    <p class="lead" style="font-size:.98rem;opacity:.85">Supervisor: Prof. Chander Kumar Singh. Co-supervisor: Dr. Adwitiya Sinha.</p>
-
-    <div class="watertable"><span>Water table</span></div>
-
-    <h3 style="font-size:1.6rem">Sampling stations</h3>
-    <p>Each line of my research, labelled like a water sample.</p>
-    <div class="stations">
-      <article class="label" style="--c:var(--u)">
-        <div class="row1"><span>Station U-01</span><span class="status award">Best Paper Award 2026</span></div>
-        <div class="el"><b>U</b><h3>Uranium in groundwater throughout India</h3></div>
-        <p>A national-scale AutoML model of where uranium occurs, turned into maps of risk, population exposure and groundwater governance priority.</p>
-        <dl><dt>Method</dt><dd>AutoGluon ensemble, independent validation</dd><dt>Status</dt><dd><span class="status">Submitted to journal</span></dd></dl>
-      </article>
-      <article class="label" style="--c:var(--f)">
-        <div class="row1"><span>Station F-02</span><span>2026</span></div>
-        <div class="el"><b>F</b><h3>Fluoride and spatial resolution</h3></div>
-        <p>Benchmarking deep learning models for India-wide fluoride prediction, and testing how the resolution of predictors (native, 500 m, 1 km, 5 km) changes the answer.</p>
-        <dl><dt>Threshold</dt><dd>1.5 mg/L</dd><dt>Status</dt><dd><span class="status">In progress</span></dd></dl>
-      </article>
-      <article class="label" style="--c:var(--as)">
-        <div class="row1"><span>Station As-03</span><span>2024–25</span></div>
-        <div class="el"><b>As</b><h3>Arsenic in the Middle Gangetic Plain</h3></div>
-        <p>Distribution, speciation and controls on arsenic mobilisation, with pH, iron, redox potential and sulfate as key factors.</p>
-        <dl><dt>Shared at</dt><dd>As2024 congress, Bhubaneswar</dd><dt>Status</dt><dd><span class="status">Presented</span></dd></dl>
-      </article>
-      <article class="label" style="--c:var(--ds)">
-        <div class="row1"><span>Station DS-04</span><span>2026</span></div>
-        <div class="el"><b>↕</b><h3>Downscaling satellite predictors</h3></div>
-        <p>A physically informed way to move environmental data between coarse and fine resolutions without faking detail, piloted on CHIRPS rainfall over Punjab.</p>
-        <dl><dt>Checks</dt><dd>Moran's I, semivariograms, aggregation consistency</dd><dt>Status</dt><dd><span class="status">In progress</span></dd></dl>
-      </article>
-    </div>
-
-    <h3 style="font-size:1.6rem;margin-top:4rem">Borehole log: my toolkit</h3>
-    <div class="borehole">
-      <div class="core" aria-hidden="true">
-        <div style="background:#C2A878"></div><div style="background:#9C8358"></div><div style="background:#6F7A6A"></div><div style="background:#3D6670"></div>
-      </div>
-      <ol class="layers">
-        <li><h3>Earth observation and GIS</h3><p>Google Earth Engine (JavaScript), ArcGIS Pro, QGIS, ERDAS Imagine. Landsat, Sentinel, MODIS, VIIRS, SRTM, GRACE, CHIRPS, ERA5-Land and more.</p></li>
-        <li><h3>Machine learning</h3><p>Python and pandas, AutoGluon, LightGBM, Random Forest, deep learning, SHAP and LIME for explaining models.</p></li>
-        <li><h3>Spatial statistics</h3><p>Mann–Kendall and Theil–Sen trends, time-series modelling, Moran's I, semivariograms, independent validation.</p></li>
-        <li><h3>Careful data</h3><p>Provenance tracking, duplicate and sentinel-value audits, coordinate checks, resolution harmonisation, never silently dropping an observation.</p></li>
-      </ol>
-    </div>
-
-    <h3 style="font-size:1.6rem;margin-top:4rem">Papers</h3>
-    <ul class="papers">
-      <li><span class="yr">2023</span><div><h3>Evaluating spatial and elevation-wise daytime/nighttime LST trends across the Indus River Basin. <em>Journal of Mountain Science</em>.</h3></div></li>
-      <li><span class="yr">Submitted</span><div><h3>Predicting Uranium Occurrences in Groundwater throughout India.</h3></div></li>
-      <li><span class="yr">In progress</span><div><h3>Comparing and Benchmarking Deep Learning Models for Predicting Groundwater Contamination caused by Fluoride with the effects of Spatial Resolution on Prediction.</h3></div></li>
-      <li><span class="yr">In progress</span><div><h3>A Physically Informed Framework for Multi-Resolution Downscaling and Upscaling of Environmental Predictors (Satellite Data).</h3></div></li>
-    </ul>
+<section class="chapter" id="projects" data-name="Projects" data-coords="28°37′N 77°13′E" aria-label="Projects"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 05</span><span>28°37′N 77°13′E</span><span class='n'>Delhi and beyond</span></p>
+<h2>Projects</h2><p class="lede">Postgraduate and undergraduate projects, laid out like a map-sheet index. Filter by theme, then open a sheet to pull out its card.</p></header>
+<div class="filters" role="group" aria-label="Filter projects by theme"><button type="button" data-f="all" aria-pressed="true">All 15</button><button type="button" data-f="urban" aria-pressed="false">Urban and land</button><button type="button" data-f="society" aria-pressed="false">Society and migration</button><button type="button" data-f="water" aria-pressed="false">Water</button><button type="button" data-f="hazard" aria-pressed="false">Disaster and risk</button><button type="button" data-f="culture" aria-pressed="false">Culture and history</button><button type="button" data-f="ice" aria-pressed="false">Snow and ice</button></div>
+<div class="sheets"><div class="sheet" data-theme="society" style="--tcol:#D58DB6"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 1</span><i>Society and migration</i></span><h3>Measuring the Problems and Emotions of Urban-Ward Migrants: A Case Study of Construction Workers in Delhi</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>A case study of the everyday problems and emotional experiences of construction workers who migrated to Delhi.</div></div><div class="sheet" data-theme="urban" style="--tcol:#C98A4E"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 2</span><i>Urban and land</i></span><h3>Monitoring the Effects of Light Pollution &amp; Evaluating the Effectiveness of Indian Regulations</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>Tracking the effects of light pollution and assessing how well Indian regulations deal with it.</div></div><div class="sheet" data-theme="hazard" style="--tcol:#E07A6C"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 3</span><i>Disaster and risk</i></span><h3>Community Awareness, Participation, &amp; CCDRR: Reflections from North-West India</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>How community awareness and participation shape community-centred disaster risk reduction in North-West India.</div></div><div class="sheet" data-theme="society" style="--tcol:#D58DB6"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 4</span><i>Society and migration</i></span><h3>Experience of Migrant College Students During COVID-19 Pandemic</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>Field evidence on what migrant college students went through during the pandemic, presented at two conferences in 2022.</div></div><div class="sheet" data-theme="water" style="--tcol:#63C3D6"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 5</span><i>Water</i></span><h3>Analyzing the Possibilities and Prospects of 24/7 Water Supply in Delhi, India</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>Whether round-the-clock piped water is possible for Delhi, and what it would take. Published in the Journal of Indian Water Works Association.</div></div><div class="sheet" data-theme="culture" style="--tcol:#B9A6F0"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 6</span><i>Culture and history</i></span><h3>Geography of Ramayana</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>A geographical reading of the places and landscapes in the Ramayana.</div></div><div class="sheet" data-theme="culture" style="--tcol:#B9A6F0"><button type="button" aria-expanded="false"><span class="no"><span>Sheet PG 7</span><i>Culture and history</i></span><h3>Digital Enhancement of Physical Space and Connective Turn in the Tourism Industry during and Post-COVID-19 Period</h3></button>
+<div class="card"><small>Postgraduate, 2021–2023</small>How digital technology reshaped tourist spaces during and after COVID-19, presented at the Delhi School of Economics in 2022.</div></div><div class="sheet" data-theme="urban" style="--tcol:#C98A4E"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 1</span><i>Urban and land</i></span><h3>Forest Monitoring &amp; Urban Sprawl Analysis Using GIS in Delhi</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>Mapping Delhi's forest cover and the spread of the city with GIS.</div></div><div class="sheet" data-theme="urban" style="--tcol:#C98A4E"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 2</span><i>Urban and land</i></span><h3>LULC Change Detection for 20 Years in South-West Delhi</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>Twenty years of land use and land cover change in South-West Delhi, from satellite imagery.</div></div><div class="sheet" data-theme="society" style="--tcol:#D58DB6"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 3</span><i>Society and migration</i></span><h3>Social Indicators &amp; Status Analysis of Jammu &amp; Kashmir</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>An analysis of social indicators and development status across Jammu and Kashmir.</div></div><div class="sheet" data-theme="society" style="--tcol:#D58DB6"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 4</span><i>Society and migration</i></span><h3>Socio-Economic Impact of COVID-19 in Delhi</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>The social and economic effects of COVID-19 on Delhi.</div></div><div class="sheet" data-theme="ice" style="--tcol:#7DC2E8"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 5</span><i>Snow and ice</i></span><h3>Snow Cover &amp; Changes in Indian Basins</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>How snow cover is changing across India's river basins.</div></div><div class="sheet" data-theme="hazard" style="--tcol:#E07A6C"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 6</span><i>Disaster and risk</i></span><h3>HRVC Analysis of Jim Corbett</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>A hazard, risk, vulnerability and capacity (HRVC) analysis of the Jim Corbett area.</div></div><div class="sheet" data-theme="society" style="--tcol:#D58DB6"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 7</span><i>Society and migration</i></span><h3>Studying Human Trafficking in Delhi through Remote Sensing</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>Exploring what remote sensing can add to the study of human trafficking in Delhi.</div></div><div class="sheet" data-theme="urban" style="--tcol:#C98A4E"><button type="button" aria-expanded="false"><span class="no"><span>Sheet UG 8</span><i>Urban and land</i></span><h3>Understanding Ansal Plaza Mall of South Delhi as a Gendered Landscape: A Temporal Study</h3></button>
+<div class="card"><small>Undergraduate, 2018–2021</small>A study over time of a South Delhi shopping mall as a gendered landscape.</div></div></div></section>
+<section class="chapter" id="publications" data-name="Publications" data-coords="28°32′N 77°09′E" aria-label="Publications"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 06</span><span>28°32′N 77°09′E</span><span class='n'>Journals</span></p>
+<h2>Publications</h2><p class="lede">Every paper moves along the same pipeline. Published work sits at the end.</p></header>
+<div class="pipeline">
+  <div class="stage"><h3><b>1</b>Drafting</h3>
+    <div class="pcard"><b>Fluoride</b>Comparing and Benchmarking Deep Learning Models for Predicting Groundwater Contamination caused by Fluoride with the effects of Spatial Resolution on Prediction</div>
+    <div class="pcard"><b>Downscaling</b>A Physically Informed Framework for Multi-Resolution Downscaling and Upscaling of Environmental Predictors (Satellite Data)</div></div>
+  <div class="stage"><h3><b>2</b>Submitted</h3>
+    <div class="pcard"><b>Uranium</b>Predicting Uranium Occurrences in Groundwater throughout India</div></div>
+  <div class="stage"><h3><b>3</b>Under review</h3><p class="empty">The next stop for the papers on the left.</p></div>
+  <div class="stage"><h3><b>4</b>Published</h3>
+    <div class="pcard"><b>2023</b>LST trends across the Indus River Basin, <em>Journal of Mountain Science</em></div>
+    <div class="pcard"><b>2023</b>24/7 water supply in Delhi, <em>Journal of Indian Water Works Association</em></div></div>
+</div>
+<!-- To add a published paper: copy one <article class="pubcard"> block below and edit it. -->
+<div class="published">
+  <article class="pubcard"><div class="figure"><img src="assets/img/lst-trends.png" alt="LST trend figure from the paper" loading="lazy"></div>
+    <div class="txt"><span class="tag">Journal of Mountain Science, November 2023</span><h3>Evaluating spatial and elevation-wise daytime/nighttime LST trends across the Indus River Basin</h3>
+    <p>Mal, S., <strong>Agrawal, K.</strong>, Rani, S. et al. <em>J. Mt. Sci.</em> 20, 3154–3172.</p>
+    <p><a href="https://doi.org/10.1007/s11629-023-8157-8">doi.org/10.1007/s11629-023-8157-8</a></p></div></article>
+  <article class="pubcard"><div class="figure type"><span>24/7 water for Delhi?</span><small>Journal of Indian Water Works Association, UGC-CARE Group I</small></div>
+    <div class="txt"><span class="tag">Journal of Indian Water Works Association, 2023</span><h3>Analyzing the Possibilities and Prospects of 24/7 Water Supply in Delhi, India</h3>
+    <p>Sanu, S. K., Chandrakanta, <strong>Agrawal, K.</strong>, Sharma, V. R., &amp; Bajaj, A. <em>Journal of Indian Water Works Association</em>, LV(1). ISSN 0970-275X.</p></div></article>
+</div>
+<p class="links"><a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en">Google Scholar</a><a href="https://orcid.org/0009-0009-1032-2541">ORCID 0009-0009-1032-2541</a><a href="https://www.researchgate.net/profile/Kavya-Agrawal-4">ResearchGate</a></p>
+</section>
+<section class="chapter" id="skills" data-name="Skills" data-coords="28°32′N 77°09′E" aria-label="Skills"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 07</span><span>28°32′N 77°09′E</span><span class='n'>Toolkit</span></p>
+<h2>Skills</h2><p class="lede">A borehole through my toolkit. Each layer has its own legend symbol; untick a layer to fold it away.</p></header>
+<div class="bore"><div class="core" style="display:flex;flex-direction:column" aria-hidden="true"><i style="--c:#C2A878;flex:5" data-core="0"></i><i style="--c:#9C8358;flex:10" data-core="1"></i><i style="--c:#6F7A6A;flex:11" data-core="2"></i><i style="--c:#4F7F86;flex:24" data-core="3"></i><i style="--c:#3D6670;flex:14" data-core="4"></i><i style="--c:#2E5260;flex:15" data-core="5"></i><i style="--c:#24414C;flex:6" data-core="6"></i><i style="--c:#1A2F38;flex:6" data-core="7"></i></div><ul class="slayers"><li class="slayer" data-layer="0"><div class="row"><label><input type="checkbox" checked data-skill="0"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><rect x="3" y="3" width="16" height="16" fill="#C2A878"/></svg><h3>GIS and remote sensing software</h3></label></div>
+<ul class="items"><li>ArcGIS / ArcGIS Pro</li><li>QGIS</li><li>Google Earth Engine</li><li>Google Earth</li><li>ERDAS Imagine</li></ul></li><li class="slayer" data-layer="1"><div class="row"><label><input type="checkbox" checked data-skill="1"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2 L20 19 L2 19 Z" fill="#9C8358"/></svg><h3>Programming and machine learning</h3></label></div>
+<ul class="items"><li>Python</li><li>JavaScript (Earth Engine)</li><li>pandas</li><li>Machine learning</li><li>Deep learning</li><li>AutoML (AutoGluon)</li><li>Random Forest</li><li>LightGBM</li><li>SHAP</li><li>LIME</li></ul></li><li class="slayer" data-layer="2"><div class="row"><label><input type="checkbox" checked data-skill="2"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8" fill="#6F7A6A"/></svg><h3>Spatial analysis and statistics</h3></label></div>
+<ul class="items"><li>Spatial data analysis and visualisation</li><li>Time-series modelling</li><li>Trend analysis</li><li>Mann–Kendall test</li><li>Theil–Sen slope</li><li>Moran's I</li><li>Semivariograms</li><li>Image enhancement and feature extraction</li><li>Orthorectification and mosaicking</li><li>DEM processing</li><li>Satellite image acquisition and processing</li></ul></li><li class="slayer" data-layer="3"><div class="row"><label><input type="checkbox" checked data-skill="3"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><path d="M1 8 q5 -6 10 0 t10 0 M1 15 q5 -6 10 0 t10 0" stroke="#4F7F86" stroke-width="3" fill="none"/></svg><h3>Earth observation and environmental data</h3></label></div>
+<ul class="items"><li>Landsat 8/9</li><li>Sentinel</li><li>MODIS Terra/Aqua</li><li>VIIRS</li><li>FIRMS</li><li>CHIRPS</li><li>IMD</li><li>ERA5-Land</li><li>TerraClimate</li><li>GLDAS</li><li>GRACE</li><li>SRTM</li><li>MERIT Hydro</li><li>JRC Global Surface Water</li><li>OpenLandMap soils</li><li>GPW</li><li>GHM</li><li>GHSL</li><li>SMOD</li><li>LCZ</li><li>CSP Global Human Modification</li><li>CGWB groundwater observations</li><li>Literature-derived water quality data</li><li>pH, EC, Ca, Mg, Na, K, HCO₃, Cl, SO₄, NO₃, F, PO₄, U</li></ul></li><li class="slayer" data-layer="4"><div class="row"><label><input type="checkbox" checked data-skill="4"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 1 L21 11 L11 21 L1 11 Z" fill="#3D6670"/></svg><h3>Parameters I work with</h3></label></div>
+<ul class="items"><li>MAAT</li><li>BMAT</li><li>PISR</li><li>Land surface temperature</li><li>NDVI / NDBI</li><li>Night-time light</li><li>Snow estimates</li><li>Precipitation</li><li>Slope and DEM</li><li>Temperature, aerosols, solar radiation</li><li>Cryosphere parameters</li><li>Forest monitoring</li><li>Urban sprawl</li><li>Land-use and environmental history</li></ul></li><li class="slayer" data-layer="5"><div class="row"><label><input type="checkbox" checked data-skill="5"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 2 H16 L21 11 L16 20 H6 L1 11 Z" fill="#2E5260"/></svg><h3>Data quality and QA/QC</h3></label></div>
+<ul class="items"><li>Duplicate detection and preservation rules</li><li>Administrative-name standardisation</li><li>Coordinate validation and geometry reconstruction</li><li>Sentinel and missing values</li><li>Provenance and data lineage</li><li>Unit verification</li><li>Temporal and spatial compatibility</li><li>Resolution harmonisation</li><li>Independent validation</li><li>Masked-pixel handling</li><li>Consistent exposure denominators</li><li>Correlation versus causation</li><li>Ground truth, transferability, uncertainty, physical plausibility</li><li>True downscaling versus resampling</li><li>Geogenic versus environmental controls</li></ul></li><li class="slayer" data-layer="6"><div class="row"><label><input type="checkbox" checked data-skill="6"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><path d="M8 1 h6 v7 h7 v6 h-7 v7 h-6 v-7 h-7 v-6 h7 z" fill="#24414C"/></svg><h3>Research and field</h3></label></div>
+<ul class="items"><li>Field and survey-based research</li><li>Socio-environmental data analysis</li><li>Groundwater and drinking-water quality assessment</li><li>Disaster risk reduction and resilience</li><li>Climate–water–environment interactions</li><li>Sustainability and climate policy</li></ul></li><li class="slayer" data-layer="7"><div class="row"><label><input type="checkbox" checked data-skill="7"><svg class="legend" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 1 l3 7 7 .5 -5.5 4.5 2 7 -6.5 -4 -6.5 4 2 -7 -5.5 -4.5 7 -.5z" fill="#1A2F38"/></svg><h3>Professional</h3></label></div>
+<ul class="items"><li>Academic writing and conference presentations</li><li>Scientific communication and reporting</li><li>Editorial and content development</li><li>Rapporteurship and policy-session documentation</li><li>Academic coordination and event support</li><li>Interdisciplinary collaboration</li></ul></li></ul></div></section>
+<section class="chapter" id="conferences" data-name="Conferences & presentations" data-coords="28°25′N 77°32′E" aria-label="Conferences"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 08</span><span>28°25′N 77°32′E</span><span class='n'>Latest: Gautam Buddha University</span></p>
+<h2>Conferences and paper presentations</h2><p class="lede">Seven presentations since 2022, each badge postmarked with its city and date.</p></header><div class="badges"><article class="badge won"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p1" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p1">GREATER NOIDA ✦ GREATER NOIDA ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">IV.2026</text></svg><span class="ev">ICSSR EHP NEXUS 2026</span><span class="who">Kavya Agrawal</span><h3>Machine-Learning-Based Uranium Risk Assessment, Population Exposure and Groundwater Governance</h3><span class="where">Track 10: AI and Predictive Analytics, Gautam Buddha University, 27–28 April 2026</span><span class="ribbon">First Position and Best Paper Award</span></article><article class="badge"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p2" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p2">BHUBANESWAR ✦ BHUBANESWAR ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">X.2024</text></svg><span class="ev">As2024</span><span class="who">Kavya Agrawal</span><h3>Distribution, Speciation and Controls on As Mobilization in the Groundwater in Aquifers of the Middle Gangetic Plain, India</h3><span class="where">9th International Congress &amp; Exhibition on Arsenic in the Environment, KIIT Deemed to be University, Bhubaneswar, 20–24 October 2024</span></article><article class="badge"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p3" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p3">MAHENDRAGARH ✦ MAHENDRAGARH ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">XI.2022</text></svg><span class="ev">IGU Thematic Conference</span><span class="who">Kavya Agrawal</span><h3>Problems and Prospects of Delhi's Drinking Water Supply</h3><span class="where">Sustainability, Future Earth and Humanities, Central University of Haryana, Mahendragarh, 24–25 November 2022</span></article><article class="badge"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p4" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p4">GURUGRAM ✦ GURUGRAM ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">VII.2022</text></svg><span class="ev">National Seminar, ICPR</span><span class="who">Kavya Agrawal</span><h3>Educational Relevance of Ramayana in Modern India</h3><span class="where">Promoting Human Values and Culture for Peaceful Co-Existence, Amity University Haryana, 22 July 2022</span></article><article class="badge"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p5" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p5">DELHI ✦ DELHI ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">V.2022</text></svg><span class="ev">Geography and the Digital</span><span class="who">Kavya Agrawal</span><h3>Digital Enhancement of Physical Space and Connective Turn in Tourism Industry during and Post-COVID-19 Period</h3><span class="where">Department of Geography, Delhi School of Economics, University of Delhi, 23–25 May 2022</span></article><article class="badge"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p6" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p6">NEW DELHI ✦ NEW DELHI ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">V.2022</text></svg><span class="ev">Jamia International Conference on Education 2022</span><span class="who">Kavya Agrawal</span><h3>Migrant College Students during Covid Pandemic: Evidence from the Field</h3><span class="where">Faculty of Education, Jamia Millia Islamia, New Delhi, 6–8 May 2022</span></article><article class="badge"><svg class="pm" viewBox="0 0 80 80" aria-hidden="true"><defs><path id="p7" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
+<circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="40" cy="40" r="19" fill="none" stroke="currentColor" stroke-width="1.2"/>
+<text fill="currentColor"><textPath href="#p7">DELHI ✦ DELHI ✦</textPath></text>
+<text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">IV.2022</text></svg><span class="ev">Disaster Risk Reduction and Resilient Habitat</span><span class="who">Kavya Agrawal</span><h3>Migrant College Students during Covid Pandemic: Evidence from the Field</h3><span class="where">Centre for Disaster Management Studies, Shaheed Bhagat Singh College, University of Delhi, 5–6 April 2022</span></article></div></section>
+<section class="chapter" id="talks" data-name="Expert talks, seminars & workshops" data-coords="28°37′N 77°13′E" aria-label="Talks attended"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 09</span><span>28°37′N 77°13′E</span><span class='n'>New Delhi</span></p>
+<h2>Expert talks, seminars and workshops attended</h2><p class="lede">Entries from my field notebook, each with one thing I took away.</p></header><div class="notebook"><div class="entry"><span class="d">16–20 Mar 2026</span><div><h3>National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction</h3><p>TERI SAS with NRSC, ISRO. Participant, volunteer and rapporteur.</p><p class="take">Satellite data is most useful when it reaches disaster and climate planners.</p></div></div><div class="entry"><span class="d">26–27 Feb 2026</span><div><h3>Water as a Commons, Water Governance Working Group</h3><p>With the Ostrom Workshop, Indiana University Bloomington and IU India Gateway; Yamuna River field visit with INTACH Delhi.</p><p class="take">Water is shared, so its governance has to be shared too.</p></div></div><div class="entry"><span class="d">21 Feb 2026</span><div><h3>Ambition to Action: Climathon</h3><p>Delhi Climate Innovation Week, Climate Career &amp; Sustainability Expo, Innovate X Delhi.</p><p class="take">Climate ideas need a path from pitch to practice.</p></div></div><div class="entry"><span class="d">13 Feb 2026</span><div><h3>Soil Carbon Sequestration as a Climate Mitigation Mechanism</h3><p>Guest lecture by Ms. Violeta Martinkė, Project Development Lead, InSoil.</p><p class="take">Soil can store carbon, but scaling it needs careful measurement.</p></div></div><div class="entry"><span class="d">17 Oct 2025</span><div><h3>Strengthening Multilateralism on the Road to COP30 and Beyond</h3><p>Act4Earth Dialogue, virtual.</p><p class="take">Global climate goals depend on countries working together.</p></div></div><div class="entry"><span class="d">7 Oct 2025</span><div><h3>DHI Urban Water Solutions</h3><p>Expert talk by Mr. Morten Just Kjølby, Product Portfolio Manager for MIKE+, DHI Denmark, at TERI SAS.</p><p class="take">City water systems can be modelled before problems reach the street.</p></div></div><div class="entry"><span class="d">16 Sep 2025</span><div><h3>Marine Resources for Sustainable Development</h3><p>Science Summit 2025.</p><p class="take">The ocean is part of the water story too.</p></div></div><div class="entry"><span class="d">5–7 Aug 2025</span><div><h3>QGreenland Educator Workshop</h3><p>Virtual. Designing teaching activities with QGreenland data.</p><p class="take">Polar data can be brought into any classroom.</p></div></div><div class="entry"><span class="d">25 Jul 2025</span><div><h3>Roots to Resilience Seminar</h3><p>TERI SAS with UNEP, UNESCO and Akashvani.</p><p class="take">Resilience starts with communities and ecosystems.</p></div></div><div class="entry"><span class="d">5–7 Mar 2025</span><div><h3>World Sustainable Development Summit 2025</h3><p>New Delhi. Partnerships for Accelerating Sustainable Development and Climate Solutions.</p><p class="take">Partnerships decide how fast climate solutions move.</p></div></div><div class="entry"><span class="d">24 Oct 2024</span><div><h3>Groundwater and sustainable development</h3><p>Lecture by Professor John A. Cherry, Lee Kuan Yew Water Prize recipient.</p><p class="take">Groundwater is slow to pollute and slower to clean, so protecting it comes first.</p></div></div><div class="entry"><span class="d"></span><div><h3>Climate Skills: Seeds for Transition</h3><p>TERI SAS and TERI with the British Council and HSBC Bank.</p><p class="take">Every green transition needs people with the right skills.</p></div></div></div></section>
+<section class="chapter" id="training" data-name="Training & schools" data-coords="28°33′N 77°20′E" aria-label="Training"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 10</span><span>28°33′N 77°20′E</span><span class='n'>Amity University, Noida</span></p>
+<h2>Training, capacity building and schools</h2><p class="lede">Three programmes, three patches. Select a patch to read its certificate details.</p></header>
+<div class="patches"><button class="patch" type="button" data-patch="uav" aria-expanded="true" aria-controls="cert"><span class="emb" style="--pc:#5B9E58"><span>UAV and drones<small>Dec 2024</small></span></span><span class="cap">Capacity Building Workshop on UAV/Drone Applications in Agriculture and Natural Resource Management</span></button><button class="patch" type="button" data-patch="winter" aria-expanded="false" aria-controls="cert"><span class="emb" style="--pc:#1F6F80"><span>Winter School<small>Nov–Dec 2024</small></span></span><span class="cap">21-day Winter School Capacity Building Program in Geospatial Science and Technology</span></button><button class="patch" type="button" data-patch="fire" aria-expanded="false" aria-controls="cert"><span class="emb" style="--pc:#B23A2C"><span>Forest fire<small>Mar 2024</small></span></span><span class="cap">Harnessing Geospatial Technology for Forest Fire Disaster Management: Mapping, Monitoring and Mitigation</span></button></div>
+<div class="cert" id="cert" aria-live="polite"><span class="t">Certificate of participation</span><h3>Capacity Building Workshop on UAV/Drone Applications in Agriculture and Natural Resource Management</h3><p>10–12 December 2024. TERI SAS in collaboration with IIT BHU, IIT Roorkee, Namami Gange, Hokkaido University, GLP Earth, GLP Japan, Abhipsa Foundation and Kambil.</p></div></section>
+<section class="chapter" id="rapporteur" data-name="Rapporteurship & policy" data-coords="28°36′N 77°10′E" aria-label="Rapporteurship"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 11</span><span>28°36′N 77°10′E</span><span class='n'>World Sustainable Development Summit</span></p>
+<h2>Rapporteurship and academic and policy engagement</h2><p class="lede">Recording what was said in high-level sessions, and taking part as a delegate.</p></header><div class="minutes"><article class="minute"><div class="doc"><span>Minutes of session</span><span>16–20 March 2026</span></div><h3>National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction</h3>
+<table><tr><td>Role</td><td>Rapporteur</td></tr><tr><td>Event</td><td>TERI School of Advanced Studies with NRSC, ISRO</td></tr><tr><td>Date</td><td>16–20 March 2026</td></tr></table></article><article class="minute"><div class="doc"><span>Minutes of session</span><span>5–7 March 2025</span></div><h3>Ministerial Session: NDC 3.0 and Multilateralism on the Road to COP30 and COP33</h3>
+<table><tr><td>Role</td><td>Rapporteur</td></tr><tr><td>Event</td><td>World Sustainable Development Summit 2025, TERI</td></tr><tr><td>Date</td><td>5–7 March 2025</td></tr></table><p class="theme">Theme: Partnerships for Accelerating Sustainable Development and Climate Solutions</p></article><article class="minute"><div class="doc"><span>Minutes of session</span><span>5–7 March 2025</span></div><h3>High-Level Plenary on Achieving Sustainable Development through Integrated Action</h3>
+<table><tr><td>Role</td><td>Rapporteur</td></tr><tr><td>Event</td><td>World Sustainable Development Summit 2025, TERI</td></tr><tr><td>Date</td><td>5–7 March 2025</td></tr></table><p class="theme">Theme: Partnerships for Accelerating Sustainable Development and Climate Solutions</p></article><article class="minute"><div class="doc"><span>Minutes of session</span><span>25–27 February 2026</span></div><h3>World Sustainable Development Summit 2026, Silver Jubilee edition</h3>
+<table><tr><td>Role</td><td>Delegate</td></tr><tr><td>Event</td><td>Taj Palace, Chanakyapuri, New Delhi</td></tr><tr><td>Date</td><td>25–27 February 2026</td></tr></table><p class="theme">Theme: Transformations: Vision, Voices, and Values for Sustainable Development and Climate Action</p></article></div></section>
+<section class="chapter" id="positions" data-name="Positions of responsibility" data-coords="28°32′N 77°09′E" aria-label="Positions"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 12</span><span>28°32′N 77°09′E</span><span class='n'>TERI SAS and University of Delhi</span></p>
+<h2>Positions of responsibility</h2></header>
+<div class="idcards"><article class="idcard"><div class="top"><span>Programme LEAD 2026</span><span>2026</span></div><div class="body"><span class="face" aria-hidden="true">PL</span><div><h3>Facilitator and Judge</h3><p>TERI SAS. Sustainable City Design Challenge for students of classes 9–12.</p></div></div></article><article class="idcard"><div class="top"><span>Sustainability Hackathon 2025</span><span>2025</span></div><div class="body"><span class="face" aria-hidden="true">SH</span><div><h3>Judge and Panel Member</h3><p>TERI SAS. Evaluated school and undergraduate sustainability proposals, 18–19 November 2025.</p></div></div></article><article class="idcard"><div class="top"><span>KnoxCode 2025</span><span>2025</span></div><div class="body"><span class="face" aria-hidden="true">KC</span><div><h3>Judge</h3><p>Geospatial Innovation Challenge by GeoknoX, TERI SAS, at Aahwaan Fest 2025. GIS, remote sensing, raster analysis and geospatial storytelling.</p></div></div></article></div>
+<div class="masthead"><div class="mh">Editor's corner<small>University of Delhi, 2018–2021</small></div>
+<ul><li><b>Editor-in-Chief</b><span>Geography Association, University of Delhi, 2018–2021</span></li>
+<li><b>Magazine Coordinator</b><span><em>Vani</em>, Shaheed Bhagat Singh College, 2018–2020</span></li>
+<li><b>English Editor</b><span><em>Vani</em>, Shaheed Bhagat Singh College, 2019</span></li></ul></div></section>
+<section class="chapter" id="awards" data-name="Awards & achievements" data-coords="28°25′N 77°32′E" aria-label="Awards"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 13</span><span>28°25′N 77°32′E</span><span class='n'>Latest: Gautam Buddha University</span></p>
+<h2>Awards and achievements</h2><p class="lede">The newest and biggest at the front of the shelf.</p></header>
+<div class="shelf">
+  <div class="trophy"><svg viewBox="0 0 100 130" aria-hidden="true"><path class="silver" d="M22 8 h56 v28 a28 28 0 0 1 -56 0 z"/><path d="M22 14 h-12 a14 14 0 0 0 14 24 M78 14 h12 a14 14 0 0 1 -14 24" fill="none" stroke-width="5" stroke="#8F9AA1"/>
+<rect class="silver-d" x="44" y="62" width="12" height="22"/><rect class="silver" x="30" y="84" width="40" height="10" rx="2"/><rect class="wood" x="22" y="96" width="56" height="26" rx="3"/></svg><div class="plaque"><b>2nd rank, Map Making Competition</b><span>Amity University, 2025</span></div></div>
+  <div class="trophy big"><svg viewBox="0 0 100 130" aria-hidden="true"><path class="gold" d="M22 8 h56 v28 a28 28 0 0 1 -56 0 z"/><path d="M22 14 h-12 a14 14 0 0 0 14 24 M78 14 h12 a14 14 0 0 1 -14 24" fill="none" stroke-width="5" stroke="#B98A24"/>
+<rect class="gold-d" x="44" y="62" width="12" height="22"/><rect class="gold" x="30" y="84" width="40" height="10" rx="2"/><rect class="wood" x="22" y="96" width="56" height="26" rx="3"/><path d="M50 20 l4 9 10 1 -8 6 3 10 -9 -6 -9 6 3 -10 -8 -6 10 -1z" fill="#fff" opacity=".7"/></svg><div class="plaque"><b>First Position and Best Paper Award</b><span>ICSSR EHP NEXUS 2026, Gautam Buddha University</span></div></div>
+  <div class="trophy"><svg viewBox="0 0 100 130" aria-hidden="true"><rect x="18" y="30" width="64" height="80" rx="3" fill="#F4EBD6"/><rect x="12" y="24" width="76" height="12" rx="6" fill="#D8C49A"/><rect x="12" y="104" width="76" height="12" rx="6" fill="#D8C49A"/><path d="M28 50 h44 M28 62 h44 M28 74 h30" stroke="#8A5A2B" stroke-width="3"/><circle cx="66" cy="90" r="9" fill="#B23A2C"/></svg><div class="plaque"><b>PhD coursework CGPA 9.0/10</b><span>TERI SAS</span></div></div>
+</div>
+<div class="shelf">
+  <div class="trophy"><svg viewBox="0 0 100 130" aria-hidden="true"><path d="M32 4 L50 50 L68 4 Z" fill="#1F6F80"/><path d="M40 4 L50 40 L60 4 Z" fill="#B23A2C"/><circle class="gold-d" cx="50" cy="82" r="32"/><circle class="gold" cx="50" cy="82" r="25"/><path d="M50 66 l4 9 10 1 -8 6 3 10 -9 -6 -9 6 3 -10 -8 -6 10 -1z" fill="#fff" opacity=".6"/></svg><div class="plaque"><b>State Child Scientist Award</b><span>National Science Congress, 2018</span></div></div>
+  <div class="trophy"><svg viewBox="0 0 100 130" aria-hidden="true"><path d="M32 4 L50 50 L68 4 Z" fill="#1F6F80"/><path d="M40 4 L50 40 L60 4 Z" fill="#B23A2C"/><circle class="silver-d" cx="50" cy="82" r="32"/><circle class="silver" cx="50" cy="82" r="25"/><path d="M50 66 l4 9 10 1 -8 6 3 10 -9 -6 -9 6 3 -10 -8 -6 10 -1z" fill="#fff" opacity=".6"/></svg><div class="plaque"><b>Top 3 in English Olympiads</b><span>British Olympiad Foundation, 2015–2018, four years running</span></div></div>
+  <div class="trophy"><svg viewBox="0 0 100 130" aria-hidden="true"><path d="M32 4 L50 50 L68 4 Z" fill="#1F6F80"/><path d="M40 4 L50 40 L60 4 Z" fill="#B23A2C"/><circle class="bronze-d" cx="50" cy="82" r="32"/><circle class="bronze" cx="50" cy="82" r="25"/><path d="M50 66 l4 9 10 1 -8 6 3 10 -9 -6 -9 6 3 -10 -8 -6 10 -1z" fill="#fff" opacity=".6"/></svg><div class="plaque"><b>Merit Awards</b><span>2016 and 2018</span></div></div>
+  <div class="trophy"><svg viewBox="0 0 100 130" aria-hidden="true"><path class="bronze" d="M22 8 h56 v28 a28 28 0 0 1 -56 0 z"/><path d="M22 14 h-12 a14 14 0 0 0 14 24 M78 14 h12 a14 14 0 0 1 -14 24" fill="none" stroke-width="5" stroke="#94602F"/>
+<rect class="bronze-d" x="44" y="62" width="12" height="22"/><rect class="bronze" x="30" y="84" width="40" height="10" rx="2"/><rect class="wood" x="22" y="96" width="56" height="26" rx="3"/></svg><div class="plaque"><b>20 cultural and general knowledge awards</b><span>Various organisations, including prizes in dance</span></div></div>
+</div></section>
+<section class="chapter" id="beyond" data-name="Beyond the CV" data-coords="Off the map" aria-label="Beyond the CV"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 14</span><span>Beyond the neatline</span><span class='n'>Off the map</span></p>
+<h2>Beyond the CV</h2><p class="lede">Where old mapmakers drew sea monsters, I keep my hobbies.</p></header>
+<div class="offmap"><p class="here-be">Here be coins, stamps, stories and a badminton racket</p><div class="tray"><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="29" r="20" fill="#C9A044"/><circle cx="27" cy="29" r="15" fill="none" stroke="#8E6B22" stroke-width="2"/><text x="27" y="35" text-anchor="middle" font-size="16" font-weight="700" fill="#5A4210">₹</text></svg><span>Old coins</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="8" y="9" width="38" height="40" fill="#fff" stroke="#B23A2C" stroke-width="2" stroke-dasharray="3 2"/><rect x="14" y="15" width="26" height="22" fill="#1F6F80"/><circle cx="37" cy="40" r="9" fill="none" stroke="#2A1E14" stroke-width="1.5"/></svg><span>Stamps</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M6 12 q11 -5 21 2 q10 -7 21 -2 v32 q-11 -5 -21 2 q-10 -7 -21 -2z" fill="#F4EBD6" stroke="#6B4A2E" stroke-width="2"/><path d="M27 14 v32" stroke="#6B4A2E" stroke-width="2"/></svg><span>Historic stories</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="6" y="16" width="42" height="28" rx="4" fill="#2A1E14"/><rect x="18" y="11" width="14" height="7" rx="2" fill="#2A1E14"/><circle cx="27" cy="30" r="9" fill="#6FA8C8" stroke="#E9DFC9" stroke-width="2"/></svg><span>Photography</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="29" r="20" fill="#F4EBD6" stroke="#2A1E14" stroke-width="2"/><path d="M27 12 l5 17 -5 17 -5 -17z" fill="#B23A2C"/><path d="M27 29 l5 0 -5 17z" fill="#2A1E14"/></svg><span>Travelling</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M20 34 l7 -24 7 24z" fill="#fff" stroke="#2A1E14" stroke-width="1.5"/><path d="M22 28 h10 M24 20 h6" stroke="#2A1E14" stroke-width="1"/><circle cx="27" cy="40" r="7" fill="#C9A044"/></svg><span>Badminton</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M12 22 q15 10 30 0" stroke="#8E6B22" stroke-width="3" fill="none"/><circle cx="16" cy="32" r="5" fill="#C9A044"/><circle cx="27" cy="36" r="5" fill="#C9A044"/><circle cx="38" cy="32" r="5" fill="#C9A044"/></svg><span>Dance</span></div><div class="cell"><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M14 44 l4 -12 22 -22 8 8 -22 22z" fill="#1F6F80"/><path d="M14 44 l4 -12 8 8z" fill="#F4EBD6"/><path d="M8 48 h38" stroke="#2A1E14" stroke-width="2"/></svg><span>Writing</span></div></div></div>
+<div class="beyond-grid">
+  <div><h3 class="sub" style="margin-top:0">Volunteering</h3><ul><li>Volunteer, SWAPO NGO, since 2016</li><li>National Service Scheme (NSS), 2019–2021</li><li>Coordination of Volunteers, Vasundhara, 2018–2019</li><li>Personal blogging and content writing, 2018–2023</li></ul></div>
+  <div><h3 class="sub" style="margin-top:0">Places I want to research</h3><ul><li>The Himalaya and High Mountain Asia</li><li>The Arctic</li><li>Antarctica</li><li>Historic and archaeological landscapes, from space</li></ul></div>
+</div></section>
+<section class="chapter" id="contact" data-name="Contact" data-coords="28°32′N 77°09′E" aria-label="Contact"><header class="ch-head"><p class="coords" style="margin:0"><span class="n">Layer 15</span><span>28°32′N 77°09′E</span><span class='n'>Vasant Kunj, New Delhi</span></p>
+<h2>Contact</h2></header>
+<div class="postcard-back">
+  <div class="stamps"><a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en" style="--sc:#4F7F86">Google Scholar</a><a href="https://orcid.org/0009-0009-1032-2541" style="--sc:#5B9E58">ORCID</a><a href="https://www.researchgate.net/profile/Kavya-Agrawal-4" style="--sc:#2A8E86">Research Gate</a><a href="https://www.linkedin.com/in/kavya-agrawal02/" style="--sc:#1F5E9E">LinkedIn</a><a href="https://github.com/kavyaagrawal-02" style="--sc:#2A1E26">GitHub</a></div>
+  <p class="msg">Thanks for visiting! If you work on groundwater, remote sensing or anything in between, I'd love to hear from you. I'm open to collaborations.<br><br>Kavya</p>
+  <div class="addr">
+    <div class="line"><a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a><button class="copy" type="button" data-copy="kavya.agrawal@terisas.ac.in">Copy</button></div>
+    <div class="line"><a href="mailto:kavyateriuniversity@gmail.com">kavyateriuniversity@gmail.com</a><button class="copy" type="button" data-copy="kavyateriuniversity@gmail.com">Copy</button></div>
+    <div class="line">Department of Natural &amp; Applied Sciences</div>
+    <div class="line">TERI School of Advanced Studies, Vasant Kunj Institutional Area</div>
+    <div class="line">New Delhi 110070, India</div>
   </div>
-</section>
-
-<!-- 4 TAP -->
-<section id="tap" data-stage="Tap" data-depth="At the surface" data-tone="light" data-bg="#E4E9E1">
-  <div class="wrap">
-    <p class="stage-name">4. At the tap</p>
-    <h2>Who drinks it, and what to do about it</h2>
-    <div class="tap-grid">
-      <div class="tap-art"><svg viewBox="0 0 200 300" aria-hidden="true">
-  <rect x="10" y="20" width="22" height="70" rx="4" fill="#8A9A96"/>
-  <path d="M32 40 h70 a26 26 0 0 1 26 26 v24 h-30 v-18 a6 6 0 0 0 -6 -6 h-60 z" fill="#A9B7B3"/>
-  <rect x="58" y="14" width="22" height="26" rx="3" fill="#8A9A96"/>
-  <rect x="44" y="8" width="50" height="10" rx="5" fill="#2C7D8C"/>
-  <rect x="96" y="90" width="34" height="10" rx="3" fill="#8A9A96"/>
-  <path class="fall" d="M113 112 c0 0 -9 12 -9 18 a9 9 0 0 0 18 0 c0 -6 -9 -18 -9 -18z" fill="#2C7D8C"/>
-  <ellipse cx="113" cy="282" rx="60" ry="8" fill="#C9D0C5"/>
-</svg></div>
-      <div>
-        <div class="tap-block">
-          <p>A contamination map matters only once it reaches the people who drink the water and the people who manage it. So my models end in estimates of population exposure and indicators of where groundwater governance should act first.</p>
-        </div>
-        <div class="tap-block">
-          <h3 style="font-size:1.6rem;margin-bottom:.6rem">Teaching</h3>
-          <div class="course"><span class="when">Jun–Dec 2026</span><div><h3>Principles of GIS and GNSS (NRG176)</h3><p>MSc Geoinformatics, TERI SAS. 4 credits, 60 hours.</p></div></div>
-          <div class="course"><span class="when">Jun–Dec 2026</span><div><h3>Principles of Remote Sensing (NRG169)</h3><p>MSc Geoinformatics, TERI SAS. 4 credits, 60 hours.</p></div></div>
-          <div class="course"><span class="when">Jul–Dec 2025</span><div><h3>Principles of Remote Sensing (NRG169)</h3><p>Taught the 32 hours of practical lab sessions.</p></div></div>
-        </div>
-        <div class="tap-block">
-          <h3 style="font-size:1.6rem;margin-bottom:.2rem">Sharing it further</h3>
-          <ul class="roles">
-            <li><b>Rapporteur</b>, National Workshop on Geospatial Technology for Climate Action, TERI SAS with NRSC, ISRO, 2026</li>
-            <li><b>Rapporteur</b>, Ministerial Session and High-Level Plenary, World Sustainable Development Summit 2025</li>
-            <li><b>Delegate</b>, World Sustainable Development Summit 2026</li>
-            <li><b>Facilitator and judge</b>, Programme LEAD 2026, Sustainable City Design Challenge</li>
-            <li><b>Judge</b>, TERI SAS Sustainability Hackathon 2025</li>
-            <li><b>Judge</b>, KnoxCode 2025 Geospatial Innovation Challenge</li>
-          </ul>
-          <p style="margin-top:1rem"><a href="cv.html#rapporteur">All rapporteurship, summits, training and lectures in the plain CV</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5 SKY -->
-<section id="sky" data-stage="Sky" data-depth="Evaporating" data-tone="light" data-bg="#EEF5F8">
-  <div class="wrap">
-    <p class="stage-name">5. Back into the air</p>
-    <h2>And the cycle starts again</h2>
-
-    <div class="sky-block">
-      <h3 style="font-size:1.6rem">Awards</h3>
-      <div class="vapour">
-        <div class="bubble big"><span class="yr">2026</span><h3>First Position and Best Paper Award</h3><p>ICSSR EHP NEXUS 2026, Gautam Buddha University</p></div>
-        <div class="bubble"><span class="yr">2025</span><h3>2nd rank, Map Making Competition</h3><p>Amity University</p></div>
-        <div class="bubble"><span class="yr">2018</span><h3>State Child Scientist Award</h3><p>National Science Congress</p></div>
-        <div class="bubble"><span class="yr">2015–2018</span><h3>Top 3 in English Olympiads, four years running</h3><p>British Olympiad Foundation</p></div>
-        <div class="bubble"><span class="yr">2016, 2018</span><h3>Merit Awards</h3><p>And 20 cultural and general knowledge awards, including prizes in dance</p></div>
-      </div>
-    </div>
-
-    <div class="sky-block">
-      <h3 style="font-size:1.6rem">Talks, postmarked</h3>
-      <ul class="marks"><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm11" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm11" startOffset="0">GREATER NOIDA ✦ GREATER NOIDA ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">IV.2026</text>
-</svg><div><h3>Machine-learning-based uranium risk assessment, population exposure and groundwater governance</h3><p>ICSSR EHP NEXUS 2026, Gautam Buddha University. First position and Best Paper Award.</p></div></li><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm12" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm12" startOffset="0">BHUBANESWAR ✦ BHUBANESWAR ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">X.2024</text>
-</svg><div><h3>Controls on arsenic mobilisation in aquifers of the Middle Gangetic Plain</h3><p>As2024, 9th International Congress on Arsenic in the Environment, KIIT.</p></div></li><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm13" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm13" startOffset="0">MAHENDRAGARH ✦ MAHENDRAGARH ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">XI.2022</text>
-</svg><div><h3>Problems and prospects of Delhi's drinking water supply</h3><p>IGU Thematic Conference, Central University of Haryana.</p></div></li><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm14" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm14" startOffset="0">GURUGRAM ✦ GURUGRAM ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">VII.2022</text>
-</svg><div><h3>Educational relevance of Ramayana in modern India</h3><p>National Seminar, Amity University Haryana (ICPR).</p></div></li><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm15" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm15" startOffset="0">DELHI ✦ DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">V.2022</text>
-</svg><div><h3>Digital enhancement of physical space in tourism during and after COVID-19</h3><p>Geography and the Digital, Delhi School of Economics.</p></div></li><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm16" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm16" startOffset="0">NEW DELHI ✦ NEW DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">V.2022</text>
-</svg><div><h3>Migrant college students during the Covid pandemic</h3><p>Jamia International Conference on Education 2022, Jamia Millia Islamia.</p></div></li><li><svg class="postmark" viewBox="0 0 80 80" aria-hidden="true" style="color:currentColor">
-  <defs><path id="pm17" d="M40,40 m-27,0 a27,27 0 1,1 54,0 a27,27 0 1,1 -54,0"/></defs>
-  <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="2"/>
-  <circle cx="40" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text fill="currentColor"><textPath href="#pm17" startOffset="0">DELHI ✦ DELHI ✦</textPath></text>
-  <text x="40" y="43" text-anchor="middle" fill="currentColor" style="font-size:9px">IV.2022</text>
-</svg><div><h3>Migrant college students during the Covid pandemic</h3><p>Disaster Risk Reduction and Resilient Habitat, SBS College, University of Delhi.</p></div></li></ul>
-    </div>
-
-    <div class="sky-block">
-      <h3 style="font-size:1.6rem">Off the map</h3>
-      <ul class="hobbies">
-        <li>collecting old coins</li><li>and stamps</li><li>historic stories</li><li>photography</li><li>travelling</li><li>badminton</li><li>dance</li><li>writing</li>
-      </ul>
-    </div>
-
-    <div class="contact">
-      <div>
-        <h3 style="font-size:1.6rem">Say hello</h3>
-        <p style="margin:.4rem 0 0">Department of Natural &amp; Applied Sciences, TERI School of Advanced Studies, Vasant Kunj Institutional Area, New Delhi 110070</p>
-        <ul>
-          <li><a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a></li>
-          <li><a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0009-0009-1032-2541">ORCID</a></li>
-          <li><a href="https://www.researchgate.net/profile/Kavya-Agrawal-4">ResearchGate</a></li>
-          <li><a href="https://www.linkedin.com/in/kavya-agrawal02/">LinkedIn</a></li>
-          <li><a href="https://github.com/kavyaagrawal-02">GitHub</a></li>
-        </ul>
-      </div>
-      <button class="coin" type="button" aria-label="Back to the top">
-        <span class="c-inner"><span class="side a"><span>₹</span><small>KAVYA</small></span><span class="side b">Back to<br>orbit</span></span>
-      </button>
-    </div>
-    <p class="foot-note">The opening satellite scene is generated for illustration and does not show a real place.</p>
-  </div>
-</section>
+</div>
+<div class="locator">
+  <svg viewBox="0 0 180 180" role="img" aria-label="Locator: TERI SAS at 28°32′N 77°09′E">
+    <rect width="180" height="180" rx="12" fill="var(--bg-2)"/>
+    <g stroke="var(--line)" fill="none"><circle cx="90" cy="90" r="25"/><circle cx="90" cy="90" r="50"/><circle cx="90" cy="90" r="75"/><path d="M90 6 V174 M6 90 H174"/></g>
+    <path d="M90 92 c0 0 -16 -18 -16 -30 a16 16 0 0 1 32 0 c0 12 -16 30 -16 30z" fill="var(--hot)"/><circle cx="90" cy="62" r="6" fill="var(--surface)"/>
+    <text x="90" y="116" text-anchor="middle" style="font:600 11px var(--display);fill:var(--ink)">TERI SAS</text>
+    <text x="90" y="131" text-anchor="middle" style="font:10px var(--display);fill:var(--ink-soft)">28°32′N 77°09′E</text>
+  </svg>
+  <p>Find me at the Department of Natural &amp; Applied Sciences, TERI School of Advanced Studies, in Vasant Kunj, South West Delhi.</p>
+</div></section>
 </main>
-<script src="assets/journey.js"></script>
+<footer class="foot"><div class="wrap"><span>Kavya Agrawal, PhD scholar, TERI School of Advanced Studies, New Delhi</span><span><a href="cv.html">Plain CV</a> &nbsp; <a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a> &nbsp; Updated October 2026</span></div></footer>
+<script>window.DETAILS={"u": {"k": "Uranium", "t": "Predicting Uranium Occurrences in Groundwater throughout India", "p": "A national-scale model of where uranium occurs in India's groundwater, built from groundwater observations and environmental predictors and checked against an independent validation dataset. The predictions feed into spatial risk classes, estimates of how many people may be exposed, and governance indicators that show where monitoring and action are most needed.", "d": [["Methods", "Automated machine learning (AutoGluon ensemble), independent validation, spatial risk classes, population exposure, groundwater governance indicators"], ["Status", "Research paper submitted to a journal (Sep 2025 to Jan 2026)"], ["Recognition", "Presented as <em>An ML-based Uranium Risk Assessment for Urban Groundwater Governance and Population Exposure in India</em>: First Position and Best Paper Award, ICSSR EHP NEXUS 2026"]], "c": "#C9DB34"}, "f": {"k": "Fluoride", "t": "Comparing and Benchmarking Deep Learning Models for Predicting Groundwater Contamination caused by Fluoride with the effects of Spatial Resolution on Prediction", "p": "India-wide fluoride prediction that asks two questions: which deep learning models work best, and how much the resolution of the environmental predictors changes the answer. Predictor stacks are built in Google Earth Engine at native resolution and at 500 m, 1 km and 5 km, while every groundwater observation is kept in the data.", "d": [["Methods", "Deep learning benchmarking, multi-resolution predictor stacks (means for continuous data, majority for categories, aspect as northness and eastness), 1.5 mg/L threshold"], ["Status", "Research paper in progress, since January 2026"]], "c": "#7DC2E8"}, "as": {"k": "Arsenic", "t": "Distribution, Speciation and Controls on As Mobilization in the Groundwater in Aquifers of the Middle Gangetic Plain, India", "p": "How arsenic is distributed in the aquifers of the Middle Gangetic Plain, which forms it takes, and what releases it into groundwater. The work looks at geogenic and hydrogeochemical controls such as pH, iron, redox potential and sulfate, and uses explainable AI to check that model results make physical sense.", "d": [["Methods", "Hydrogeochemistry, explainable AI (SHAP, LIME), attention to temporal transferability and physical plausibility"], ["Status", "Presented at As2024, the 9th International Congress on Arsenic in the Environment, Bhubaneswar (Jul 2024 to Apr 2025)"]], "c": "#D58DB6"}, "ds": {"k": "Downscaling", "t": "A Physically Informed Framework for Multi-Resolution Downscaling and Upscaling of Environmental Predictors (Satellite Data)", "p": "Moving satellite data between coarse and fine resolutions without inventing detail. A pilot on CHIRPS rainfall over Punjab (2013\u20132022, about 5.6 km) targets 5 km, 1 km and 500 m, using sub-pixel fractions and conservation-based aggregation, with machine learning to tell genuine downscaling apart from simple resampling.", "d": [["Methods", "Sub-pixel fractions, conservation-based aggregation, ML prediction; validated with Moran's I, semivariograms and aggregation consistency"], ["Engineering", "Two-step aggregation and chunked hybrid Python processing to work around Google Earth Engine memory limits"], ["Status", "Research paper in progress, since February 2026"]], "c": "#F0B45A"}, "cr": {"k": "Cryosphere", "t": "Mountains, snow and ice: where my research began", "p": "Before groundwater, I studied the climate of the Indus River Basin and the Himalaya: how daytime and nighttime land surface temperatures are changing with elevation, where permafrost is likely, and how snow cover is changing in Indian basins.", "d": [["Published", "Mal, S., <strong>Agrawal, K.</strong>, Rani, S. et al. (2023). Evaluating spatial and elevation-wise daytime/nighttime LST trends across the Indus River Basin. <em>Journal of Mountain Science</em> 20, 3154\u20133172. <a href=\"https://doi.org/10.1007/s11629-023-8157-8\">DOI</a>"], ["Permafrost", "Identification and mapping in the Indus Basin from about 20 years of MAAT, PISR, BMAT, snow and precipitation estimates in Google Earth Engine"], ["Snow cover", "Snow cover and changes in Indian basins"], ["Methods", "Google Earth Engine (JavaScript), ArcGIS, time-series and trend analysis (Mann\u2013Kendall, Theil\u2013Sen)"]], "c": "#B9A6F0"}};window.PATCHES={"uav": {"t": "Capacity Building Workshop on UAV/Drone Applications in Agriculture and Natural Resource Management", "w": "10\u201312 December 2024. TERI SAS in collaboration with IIT BHU, IIT Roorkee, Namami Gange, Hokkaido University, GLP Earth, GLP Japan, Abhipsa Foundation and Kambil."}, "winter": {"t": "21-day Winter School Capacity Building Program in Geospatial Science and Technology", "w": "18 November to 7 December 2024. Amity University, Noida, supported by the National Geospatial Program, Department of Science and Technology, Government of India."}, "fire": {"t": "Harnessing Geospatial Technology for Forest Fire Disaster Management: Mapping, Monitoring and Mitigation", "w": "One-week capacity building programme, 11\u201315 March 2024, Amity University, Noida."}};</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
