@@ -23,7 +23,25 @@ CONTOUR = """<svg class="contour" viewBox="0 0 1200 28" preserveAspectRatio="non
 DL = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0-3-3m3 3 3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
 
+def sectionize(html):
+    import re
+    def rep(m):
+        attrs, h2, rest = m.group(1), m.group(2), m.group(3)
+        return f'<section{attrs} data-sec><div class="sec-label"><h2>{h2}</h2></div><div class="sec-body">{rest}</div></section>'
+    return re.sub(r'<section((?:(?!class="(?:hero|beyond)")[^>])*)><h2>(.*?)</h2>(.*?)</section>', rep, html, flags=re.S)
+
+
+SOCIAL = [("mailto:" + L["teri"], "Email", '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg>'),
+          (L["linkedin"], "LinkedIn", '<span>in</span>'),
+          (L["scholar"], "Google Scholar", '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.5v4c1.5 1.6 3.4 2.4 5.5 2.4s4-.8 5.5-2.4v-4"/></svg>'),
+          (L["orcid"], "ORCID", '<span>iD</span>'),
+          (L["researchgate"], "ResearchGate", '<span>RG</span>'),
+          (L["github"], "GitHub", '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12"/></svg>')]
+SOCIAL_HTML = "".join(f'<a class="soc" href="{h}" aria-label="{n}" title="{n}">{i}</a>' for h, n, i in SOCIAL)
+
+
 def page(fname, title, desc, body, pre="", post="", mcls=""):
+    body = sectionize(body)
     cur = ' aria-current="page"'
     nav = "".join(f'<li><a href="{f}"{cur if f == fname else ""}>{n}</a></li>' for f, n in PAGES)
     html = f"""<!doctype html>
@@ -42,12 +60,13 @@ def page(fname, title, desc, body, pre="", post="", mcls=""):
 <link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="{"home" if fname == "index.html" else ""}">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="name" href="index.html">Kavya Agrawal</a>
     <nav aria-label="Main"><ul class="nav">{nav}</ul></nav>
+    <div class="socials" aria-label="Contact and profiles">{SOCIAL_HTML}</div>
   </div>
   <div class="wrap">{CONTOUR}</div>
 </header>
@@ -65,6 +84,9 @@ document.querySelectorAll('.feature .photos img, .gallery img, .zoomable').forEa
 function open(){{im.src=i.currentSrc||i.src;im.alt=i.alt;cap.textContent=i.alt;d.showModal();}}
 i.addEventListener('click',open);i.addEventListener('keydown',function(e){{if(e.key==='Enter'||e.key===' '){{e.preventDefault();open();}}}});}});
 d.addEventListener('click',function(e){{if(e.target===d||e.target.classList.contains('lb-close'))d.close();}});}})();
+document.querySelectorAll('[data-tabs]').forEach(function(t){{var b=[].slice.call(t.querySelectorAll('[role=tab]'));
+function sel(x){{b.forEach(function(o){{var on=o===x;o.setAttribute('aria-selected',on);o.tabIndex=on?0:-1;document.getElementById(o.getAttribute('aria-controls')).hidden=!on;}});}}
+b.forEach(function(x,i){{x.addEventListener('click',function(){{sel(x);}});x.addEventListener('keydown',function(e){{var j=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:-9;if(j!==-9){{j=(j+b.length)%b.length;sel(b[j]);b[j].focus();}}}});}});}});
 </script>
 </body>
 </html>
@@ -207,19 +229,56 @@ ICONS = {
 beyond = '<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V38 C 200 8, 420 8, 640 34 S 1100 66, 1440 26 V70 Z"/></svg><section class="beyond" aria-label="Beyond research"><div class="wrap"><h2>Beyond research</h2><ul>' + "".join(
     f'<li><svg viewBox="0 0 24 24" aria-hidden="true">{v}</svg>{k}</li>' for k, v in ICONS.items()) + '</ul></div></section>'
 
+STREAMS = [
+    ("u", "U", "92", "#9DB52A", False, "Uranium", "National-scale uranium assessment",
+     "A national-scale model of where uranium occurs in India's groundwater, checked against an independent validation dataset and turned into maps of risk, population exposure and governance priority.",
+     "Paper submitted to journal; Best Paper Award, EHP NEXUS 2026"),
+    ("f", "F", "9", "#4A9CC9", False, "Fluoride", "Fluoride and spatial resolution",
+     "India-wide fluoride prediction that benchmarks deep learning models and tests how the resolution of environmental predictors (native, 500 m, 1 km, 5 km) changes what a model can see.",
+     "In progress"),
+    ("as", "As", "33", "#A8557E", False, "Arsenic", "Arsenic in the Middle Gangetic Plain",
+     "Distribution, speciation and controls on arsenic mobilisation, with explainable AI used to check that model explanations stay physically plausible.",
+     "Presented at As2024, Bhubaneswar"),
+    ("ds", "DS", "", "#E3A13B", True, "Downscaling", "Downscaling satellite predictors",
+     "A physically informed framework for moving environmental data between coarse and fine resolutions without inventing detail, piloted on CHIRPS rainfall over Punjab.",
+     "In progress"),
+]
+tabs = "".join(f'<button type="button" role="tab" id="tab-{k}" aria-controls="panel-{k}" aria-selected="{"true" if i == 0 else "false"}" tabindex="{0 if i == 0 else -1}"><span class="el{" method" if m else ""}" style="--c:{c}" aria-hidden="true">{f"<small>{z}</small>" if z else ""}<b>{sym}</b></span>{lab}</button>'
+               for i, (k, sym, z, c, m, lab, t, d, st) in enumerate(STREAMS))
+panels = "".join(f'<div class="panel" role="tabpanel" id="panel-{k}" aria-labelledby="tab-{k}"{"" if i == 0 else " hidden"}><h3>{t}</h3><p>{d}</p><span class="status">{st}</span></div>'
+                 for i, (k, sym, z, c, m, lab, t, d, st) in enumerate(STREAMS))
+
+TIMELINE = [
+    ("2026", "Teaching NRG169 and NRG176", "Principles of Remote Sensing; Principles of GIS and GNSS. MSc Geoinformatics, June–December 2026"),
+    ("2026", "First Position and Best Paper Award", "ICSSR EHP NEXUS 2026, Gautam Buddha University, 27–28 April"),
+    ("2026", "Rapporteur, National Geospatial Technology Workshop", "TERI SAS with NRSC, ISRO, 16–20 March"),
+    ("2026", "World Sustainable Development Summit 2026", "Delegate, 25–27 February"),
+    ("2026", "Water as a Commons workshop", "Water Governance Working Group with the Ostrom Workshop, 26–27 February"),
+    ("2026", "PhD comprehensive examination completed", "January; uranium paper submitted to a journal"),
+    ("2025", "Judge, TERI SAS Sustainability Hackathon", "18–19 November"),
+    ("2025", "Taught Principles of Remote Sensing practicals", "NRG169, 32 practical hours, July–December"),
+    ("2024", "As2024 conference presentation", "Arsenic in the Environment, KIIT, Bhubaneswar, 20–24 October"),
+]
+timeline = '<ol class="timeline">' + "".join(f'<li><span class="yr">{y}</span><div><h3>{t}</h3><p>{m}</p></div></li>' for y, t, m in TIMELINE) + "</ol>"
+
 hero = f"""
-<section class="hero" aria-label="Introduction" style="margin-top:0"><div class="wrap">
-  <div>
+<section class="hero" aria-label="Introduction"><div class="wrap">
+  <div class="hero-text">
+    <p class="kicker">PhD Scholar, TERI School of Advanced Studies, New Delhi</p>
     <h1>Kavya Agrawal</h1>
-    <p class="role">PhD Scholar, Department of Natural &amp; Applied Sciences<br>TERI School of Advanced Studies, New Delhi</p>
-    <p class="tag">Predicting where India's groundwater becomes unsafe to drink, and who is exposed.</p>
-    <div class="links">{PROFILE_LINKS}</div>
-    <p style="margin:1.7rem 0 0"><a class="btn" href="Kavya_Agrawal_CV.pdf">{DL}Download CV (PDF)</a></p>
+    <p class="intro-line">Environmental geoinformatics researcher using Earth observation, GIS and machine learning to predict and assess groundwater contamination across India.</p>
+    <div class="cta"><a class="btn" href="research.html">Explore research</a><a class="btn ghost" href="Kavya_Agrawal_CV.pdf">{DL}Download CV</a></div>
+    <p class="mail"><a href="mailto:{L['teri']}">{L['teri']}</a></p>
   </div>
-  <figure class="portrait">
-    <img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="537" height="716">
-  </figure>
-</div></section>"""
+  <figure class="portrait arch"><img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="537" height="716"></figure>
+</div>
+<div class="wrap"><ol class="chain" aria-label="How my research works">
+  <li><b>Observe</b><span>groundwater samples and satellite data</span></li>
+  <li><b>Model</b><span>machine learning and AutoML</span></li>
+  <li><b>Validate</b><span>independent data and spatial checks</span></li>
+  <li><b>Explain</b><span>explainable AI and environmental controls</span></li>
+  <li><b>Govern</b><span>exposure and governance priorities</span></li>
+</ol></div></section>"""
 
 home = f"""
 <ul class="glance" aria-label="At a glance">
@@ -228,11 +287,15 @@ home = f"""
   <li><a href="publications.html#conferences"><b>7</b><span>conference presentations since 2022</span></a></li>
   <li><a href="#recognition"><b>1st</b><span>Best Paper Award, EHP NEXUS 2026</span></a></li>
 </ul>
-<section style="margin-top:2.8rem"><div class="col">
+<section id="about"><h2>About</h2>
 <p>I am a PhD scholar working at the intersection of environmental systems, human activity and technology. My doctoral research focuses on large-scale prediction and risk assessment of groundwater contamination in India, integrating hydrogeochemistry and environmental geoinformatics with remote sensing, GIS and multi-source environmental data.</p>
 <p>I work across uranium, fluoride and arsenic contamination, using machine learning, deep learning and spatial modelling to understand contamination patterns, their environmental controls and where risk is highest. My broader interests include population exposure, groundwater governance, climate and cryosphere systems, environmental change and water security. I am always open to new questions, methods and collaborations.</p>
 <p class="muted small">Supervisor: Prof. Chander Kumar Singh</p>
-</div></section>
+</section>
+<section id="streams"><h2>Research streams</h2>
+<div class="tabs" data-tabs><div class="tablist" role="tablist" aria-label="Research streams">{tabs}</div>{panels}</div>
+<p class="small" style="margin-top:1rem"><a href="research.html">More on the research page</a></p>
+</section>
 <section id="recognition"><h2>Recognition</h2>
 <div class="feature">
   <div>
@@ -247,15 +310,32 @@ home = f"""
     <img src="assets/img/award-stage.jpg" alt="Inaugural session of EHP NEXUS 2026 at Gautam Buddha University" loading="lazy" width="1200" height="745">
   </div>
 </div></section>
-<section><h2>Research interests</h2>
-<p class="interests">Groundwater quality and contamination (uranium, fluoride, arsenic) · hydrogeochemistry · remote sensing and GIS · machine learning, AutoML and explainable AI · multi-resolution modelling and downscaling · population exposure and groundwater governance · cryosphere and climate · water security.</p></section>
-<section class="news"><h2>News</h2>{lst(NEWS)}</section>
+<section id="engagement"><h2>Recent engagement</h2>{timeline}
+<p class="small" style="margin-top:1rem"><a href="cv.html">The full record is in the CV</a></p></section>
 <section><h2>Currently</h2>
 <div class="now">
   <div><h3>Research</h3><p>Uranium, fluoride and arsenic in groundwater, and downscaling of environmental predictors.</p></div>
   <div><h3>Teaching</h3><p>Principles of Remote Sensing and Principles of GIS and GNSS, MSc Geoinformatics.</p></div>
   <div><h3>Service</h3><p>Judge and facilitator at Programme LEAD, the TERI SAS Sustainability Hackathon and KnoxCode.</p></div>
   <div><h3>Engagement</h3><p>World Sustainable Development Summit, Water as a Commons workshop, National Geospatial Technology workshop.</p></div>
+</div></section>
+<section id="interests"><h2>Research interests</h2>
+<ul class="chips">{"".join(f"<li>{x}</li>" for x in ["Groundwater quality", "Uranium, fluoride, arsenic", "Hydrogeochemistry", "Remote sensing and GIS", "Google Earth Engine", "Machine learning and AutoML", "Explainable AI", "Multi-resolution modelling", "Population exposure", "Groundwater governance", "Cryosphere and climate", "Water security"])}</ul></section>
+<section id="connect"><h2>Let's connect</h2>
+<div class="connect">
+  <div>
+    <p>I welcome research collaborations, teaching opportunities and interdisciplinary work across environmental AI, groundwater quality, Earth observation and environmental governance.</p>
+    <p class="addr">Department of Natural &amp; Applied Sciences<br>TERI School of Advanced Studies, Vasant Kunj Institutional Area, New Delhi 110070</p>
+    <p><a href="mailto:{L['teri']}">{L['teri']}</a><br><a href="mailto:{L['gmail']}">{L['gmail']}</a></p>
+    <p class="cta"><a class="btn" href="mailto:{L['teri']}">Email me</a><a class="btn ghost" href="Kavya_Agrawal_CV.pdf">{DL}Download CV</a></p>
+  </div>
+  <ul class="profiles">
+    <li><a href="{L['scholar']}">Google Scholar<span aria-hidden="true">↗</span></a></li>
+    <li><a href="{L['orcid']}">ORCID<span aria-hidden="true">↗</span></a></li>
+    <li><a href="{L['researchgate']}">ResearchGate<span aria-hidden="true">↗</span></a></li>
+    <li><a href="{L['linkedin']}">LinkedIn<span aria-hidden="true">↗</span></a></li>
+    <li><a href="{L['github']}">GitHub<span aria-hidden="true">↗</span></a></li>
+  </ul>
 </div></section>
 """
 page("index.html", "Kavya Agrawal", "Kavya Agrawal, PhD scholar at TERI School of Advanced Studies, New Delhi: groundwater contamination, remote sensing, GIS and machine learning.", home, pre=hero, post=beyond, mcls="home")

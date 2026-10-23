@@ -14,31 +14,36 @@
 <link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="name" href="index.html">Kavya Agrawal</a>
     <nav aria-label="Main"><ul class="nav"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="research.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="teaching.html">Teaching</a></li><li><a href="cv.html">CV</a></li></ul></nav>
+    <div class="socials" aria-label="Contact and profiles"><a class="soc" href="mailto:kavya.agrawal@terisas.ac.in" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></a><a class="soc" href="https://www.linkedin.com/in/kavya-agrawal02/" aria-label="LinkedIn" title="LinkedIn"><span>in</span></a><a class="soc" href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.5v4c1.5 1.6 3.4 2.4 5.5 2.4s4-.8 5.5-2.4v-4"/></svg></a><a class="soc" href="https://orcid.org/0009-0009-1032-2541" aria-label="ORCID" title="ORCID"><span>iD</span></a><a class="soc" href="https://www.researchgate.net/profile/Kavya-Agrawal-4" aria-label="ResearchGate" title="ResearchGate"><span>RG</span></a><a class="soc" href="https://github.com/kavyaagrawal-02" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12"/></svg></a></div>
   </div>
   <div class="wrap"><svg class="contour" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true">
 <path d="M0 20 C 150 8, 300 26, 470 14 S 800 4, 960 16 S 1130 24, 1200 12"/>
 <path d="M0 25 C 170 15, 320 28, 490 20 S 820 11, 980 22 S 1140 28, 1200 19" opacity=".6"/></svg></div>
 </header>
 <main id="main" class="home">
-<section class="hero" aria-label="Introduction" style="margin-top:0"><div class="wrap">
-  <div>
+<section class="hero" aria-label="Introduction"><div class="wrap">
+  <div class="hero-text">
+    <p class="kicker">PhD Scholar, TERI School of Advanced Studies, New Delhi</p>
     <h1>Kavya Agrawal</h1>
-    <p class="role">PhD Scholar, Department of Natural &amp; Applied Sciences<br>TERI School of Advanced Studies, New Delhi</p>
-    <p class="tag">Predicting where India's groundwater becomes unsafe to drink, and who is exposed.</p>
-    <div class="links"><a href="mailto:kavya.agrawal@terisas.ac.in">Email</a><a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en">Google Scholar</a><a href="https://orcid.org/0009-0009-1032-2541">ORCID</a>
-<a href="https://www.researchgate.net/profile/Kavya-Agrawal-4">ResearchGate</a><a href="https://www.linkedin.com/in/kavya-agrawal02/">LinkedIn</a><a href="https://github.com/kavyaagrawal-02">GitHub</a></div>
-    <p style="margin:1.7rem 0 0"><a class="btn" href="Kavya_Agrawal_CV.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0-3-3m3 3 3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Download CV (PDF)</a></p>
+    <p class="intro-line">Environmental geoinformatics researcher using Earth observation, GIS and machine learning to predict and assess groundwater contamination across India.</p>
+    <div class="cta"><a class="btn" href="research.html">Explore research</a><a class="btn ghost" href="Kavya_Agrawal_CV.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0-3-3m3 3 3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Download CV</a></div>
+    <p class="mail"><a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a></p>
   </div>
-  <figure class="portrait">
-    <img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="537" height="716">
-  </figure>
-</div></section><div class="wrap">
+  <figure class="portrait arch"><img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="537" height="716"></figure>
+</div>
+<div class="wrap"><ol class="chain" aria-label="How my research works">
+  <li><b>Observe</b><span>groundwater samples and satellite data</span></li>
+  <li><b>Model</b><span>machine learning and AutoML</span></li>
+  <li><b>Validate</b><span>independent data and spatial checks</span></li>
+  <li><b>Explain</b><span>explainable AI and environmental controls</span></li>
+  <li><b>Govern</b><span>exposure and governance priorities</span></li>
+</ol></div></section><div class="wrap">
 
 <ul class="glance" aria-label="At a glance">
   <li><a href="research.html#current"><b>3</b><span>contaminants studied: uranium, fluoride, arsenic</span></a></li>
@@ -46,12 +51,16 @@
   <li><a href="publications.html#conferences"><b>7</b><span>conference presentations since 2022</span></a></li>
   <li><a href="#recognition"><b>1st</b><span>Best Paper Award, EHP NEXUS 2026</span></a></li>
 </ul>
-<section style="margin-top:2.8rem"><div class="col">
+<section id="about" data-sec><div class="sec-label"><h2>About</h2></div><div class="sec-body">
 <p>I am a PhD scholar working at the intersection of environmental systems, human activity and technology. My doctoral research focuses on large-scale prediction and risk assessment of groundwater contamination in India, integrating hydrogeochemistry and environmental geoinformatics with remote sensing, GIS and multi-source environmental data.</p>
 <p>I work across uranium, fluoride and arsenic contamination, using machine learning, deep learning and spatial modelling to understand contamination patterns, their environmental controls and where risk is highest. My broader interests include population exposure, groundwater governance, climate and cryosphere systems, environmental change and water security. I am always open to new questions, methods and collaborations.</p>
 <p class="muted small">Supervisor: Prof. Chander Kumar Singh</p>
 </div></section>
-<section id="recognition"><h2>Recognition</h2>
+<section id="streams" data-sec><div class="sec-label"><h2>Research streams</h2></div><div class="sec-body">
+<div class="tabs" data-tabs><div class="tablist" role="tablist" aria-label="Research streams"><button type="button" role="tab" id="tab-u" aria-controls="panel-u" aria-selected="true" tabindex="0"><span class="el" style="--c:#9DB52A" aria-hidden="true"><small>92</small><b>U</b></span>Uranium</button><button type="button" role="tab" id="tab-f" aria-controls="panel-f" aria-selected="false" tabindex="-1"><span class="el" style="--c:#4A9CC9" aria-hidden="true"><small>9</small><b>F</b></span>Fluoride</button><button type="button" role="tab" id="tab-as" aria-controls="panel-as" aria-selected="false" tabindex="-1"><span class="el" style="--c:#A8557E" aria-hidden="true"><small>33</small><b>As</b></span>Arsenic</button><button type="button" role="tab" id="tab-ds" aria-controls="panel-ds" aria-selected="false" tabindex="-1"><span class="el method" style="--c:#E3A13B" aria-hidden="true"><b>DS</b></span>Downscaling</button></div><div class="panel" role="tabpanel" id="panel-u" aria-labelledby="tab-u"><h3>National-scale uranium assessment</h3><p>A national-scale model of where uranium occurs in India's groundwater, checked against an independent validation dataset and turned into maps of risk, population exposure and governance priority.</p><span class="status">Paper submitted to journal; Best Paper Award, EHP NEXUS 2026</span></div><div class="panel" role="tabpanel" id="panel-f" aria-labelledby="tab-f" hidden><h3>Fluoride and spatial resolution</h3><p>India-wide fluoride prediction that benchmarks deep learning models and tests how the resolution of environmental predictors (native, 500 m, 1 km, 5 km) changes what a model can see.</p><span class="status">In progress</span></div><div class="panel" role="tabpanel" id="panel-as" aria-labelledby="tab-as" hidden><h3>Arsenic in the Middle Gangetic Plain</h3><p>Distribution, speciation and controls on arsenic mobilisation, with explainable AI used to check that model explanations stay physically plausible.</p><span class="status">Presented at As2024, Bhubaneswar</span></div><div class="panel" role="tabpanel" id="panel-ds" aria-labelledby="tab-ds" hidden><h3>Downscaling satellite predictors</h3><p>A physically informed framework for moving environmental data between coarse and fine resolutions without inventing detail, piloted on CHIRPS rainfall over Punjab.</p><span class="status">In progress</span></div></div>
+<p class="small" style="margin-top:1rem"><a href="research.html">More on the research page</a></p>
+</div></section>
+<section id="recognition" data-sec><div class="sec-label"><h2>Recognition</h2></div><div class="sec-body">
 <div class="feature">
   <div>
     <p class="kicker">ICSSR EHP NEXUS 2026, Gautam Buddha University</p>
@@ -64,17 +73,34 @@
     <img src="assets/img/award-certificate.jpg" alt="Certificate of Excellence for first position, EHP NEXUS 2026" loading="lazy" width="1000" height="727">
     <img src="assets/img/award-stage.jpg" alt="Inaugural session of EHP NEXUS 2026 at Gautam Buddha University" loading="lazy" width="1200" height="745">
   </div>
-</div></section>
-<section><h2>Research interests</h2>
-<p class="interests">Groundwater quality and contamination (uranium, fluoride, arsenic) · hydrogeochemistry · remote sensing and GIS · machine learning, AutoML and explainable AI · multi-resolution modelling and downscaling · population exposure and groundwater governance · cryosphere and climate · water security.</p></section>
-<section class="news"><h2>News</h2><ul class="list"><li class="entry"><span class="when">Jun 2026</span><div><h3>Teaching <em>Principles of Remote Sensing</em> and <em>Principles of GIS and GNSS</em> in the MSc Geoinformatics programme.</h3></div></li><li class="entry"><span class="when">Apr 2026</span><div><h3>First Position and Best Paper Award at ICSSR EHP NEXUS 2026, Gautam Buddha University, for machine-learning-based uranium risk assessment.</h3></div></li><li class="entry"><span class="when">Mar 2026</span><div><h3>Rapporteur at the National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction (TERI SAS with NRSC, ISRO).</h3></div></li><li class="entry"><span class="when">Feb 2026</span><div><h3>Delegate at the World Sustainable Development Summit 2026.</h3></div></li><li class="entry"><span class="when">Jan 2026</span><div><h3>Completed the PhD comprehensive examination, and submitted the uranium paper to a journal.</h3></div></li></ul></section>
-<section><h2>Currently</h2>
+</div></div></section>
+<section id="engagement" data-sec><div class="sec-label"><h2>Recent engagement</h2></div><div class="sec-body"><ol class="timeline"><li><span class="yr">2026</span><div><h3>Teaching NRG169 and NRG176</h3><p>Principles of Remote Sensing; Principles of GIS and GNSS. MSc Geoinformatics, June–December 2026</p></div></li><li><span class="yr">2026</span><div><h3>First Position and Best Paper Award</h3><p>ICSSR EHP NEXUS 2026, Gautam Buddha University, 27–28 April</p></div></li><li><span class="yr">2026</span><div><h3>Rapporteur, National Geospatial Technology Workshop</h3><p>TERI SAS with NRSC, ISRO, 16–20 March</p></div></li><li><span class="yr">2026</span><div><h3>World Sustainable Development Summit 2026</h3><p>Delegate, 25–27 February</p></div></li><li><span class="yr">2026</span><div><h3>Water as a Commons workshop</h3><p>Water Governance Working Group with the Ostrom Workshop, 26–27 February</p></div></li><li><span class="yr">2026</span><div><h3>PhD comprehensive examination completed</h3><p>January; uranium paper submitted to a journal</p></div></li><li><span class="yr">2025</span><div><h3>Judge, TERI SAS Sustainability Hackathon</h3><p>18–19 November</p></div></li><li><span class="yr">2025</span><div><h3>Taught Principles of Remote Sensing practicals</h3><p>NRG169, 32 practical hours, July–December</p></div></li><li><span class="yr">2024</span><div><h3>As2024 conference presentation</h3><p>Arsenic in the Environment, KIIT, Bhubaneswar, 20–24 October</p></div></li></ol>
+<p class="small" style="margin-top:1rem"><a href="cv.html">The full record is in the CV</a></p></div></section>
+<section data-sec><div class="sec-label"><h2>Currently</h2></div><div class="sec-body">
 <div class="now">
   <div><h3>Research</h3><p>Uranium, fluoride and arsenic in groundwater, and downscaling of environmental predictors.</p></div>
   <div><h3>Teaching</h3><p>Principles of Remote Sensing and Principles of GIS and GNSS, MSc Geoinformatics.</p></div>
   <div><h3>Service</h3><p>Judge and facilitator at Programme LEAD, the TERI SAS Sustainability Hackathon and KnoxCode.</p></div>
   <div><h3>Engagement</h3><p>World Sustainable Development Summit, Water as a Commons workshop, National Geospatial Technology workshop.</p></div>
-</div></section>
+</div></div></section>
+<section id="interests" data-sec><div class="sec-label"><h2>Research interests</h2></div><div class="sec-body">
+<ul class="chips"><li>Groundwater quality</li><li>Uranium, fluoride, arsenic</li><li>Hydrogeochemistry</li><li>Remote sensing and GIS</li><li>Google Earth Engine</li><li>Machine learning and AutoML</li><li>Explainable AI</li><li>Multi-resolution modelling</li><li>Population exposure</li><li>Groundwater governance</li><li>Cryosphere and climate</li><li>Water security</li></ul></div></section>
+<section id="connect" data-sec><div class="sec-label"><h2>Let's connect</h2></div><div class="sec-body">
+<div class="connect">
+  <div>
+    <p>I welcome research collaborations, teaching opportunities and interdisciplinary work across environmental AI, groundwater quality, Earth observation and environmental governance.</p>
+    <p class="addr">Department of Natural &amp; Applied Sciences<br>TERI School of Advanced Studies, Vasant Kunj Institutional Area, New Delhi 110070</p>
+    <p><a href="mailto:kavya.agrawal@terisas.ac.in">kavya.agrawal@terisas.ac.in</a><br><a href="mailto:kavyateriuniversity@gmail.com">kavyateriuniversity@gmail.com</a></p>
+    <p class="cta"><a class="btn" href="mailto:kavya.agrawal@terisas.ac.in">Email me</a><a class="btn ghost" href="Kavya_Agrawal_CV.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0-3-3m3 3 3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Download CV</a></p>
+  </div>
+  <ul class="profiles">
+    <li><a href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en">Google Scholar<span aria-hidden="true">↗</span></a></li>
+    <li><a href="https://orcid.org/0009-0009-1032-2541">ORCID<span aria-hidden="true">↗</span></a></li>
+    <li><a href="https://www.researchgate.net/profile/Kavya-Agrawal-4">ResearchGate<span aria-hidden="true">↗</span></a></li>
+    <li><a href="https://www.linkedin.com/in/kavya-agrawal02/">LinkedIn<span aria-hidden="true">↗</span></a></li>
+    <li><a href="https://github.com/kavyaagrawal-02">GitHub<span aria-hidden="true">↗</span></a></li>
+  </ul>
+</div></div></section>
 
 </div><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V38 C 200 8, 420 8, 640 34 S 1100 66, 1440 26 V70 Z"/></svg><section class="beyond" aria-label="Beyond research"><div class="wrap"><h2>Beyond research</h2><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><path d="M10 10.5h4M10 12.5h4M11 10.5c2 0 2 2 0 2l3 3"/></svg>Old coins</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z" stroke-dasharray="2 1.6"/><rect x="8" y="6.5" width="8" height="8"/><path d="M8 17.5h8"/></svg>Stamps</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c3-1.2 6-1 9 1 3-2 6-2.2 9-1v14c-3-1.2-6-1-9 1-3-2-6-2.2-9-1z"/><path d="M12 6v14"/></svg>Historic stories</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.6"/><path d="M8.5 7l1.4-2.5h4.2L15.5 7"/></svg>Photography</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.8 8.2l-2.3 5.3-5.3 2.3 2.3-5.3z"/></svg>Travel</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 14L6.5 3.5h11L14.5 14z"/><path d="M8 9h8M12 3.5V14"/><circle cx="12" cy="17.6" r="3"/></svg>Badminton</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8.5c6 4.5 12 4.5 18 0"/><circle cx="7" cy="14.5" r="2"/><circle cx="12" cy="16" r="2"/><circle cx="17" cy="14.5" r="2"/></svg>Dance</li></ul></div></section></main>
 <footer class="site-foot"><div class="wrap">
@@ -88,6 +114,9 @@ document.querySelectorAll('.feature .photos img, .gallery img, .zoomable').forEa
 function open(){im.src=i.currentSrc||i.src;im.alt=i.alt;cap.textContent=i.alt;d.showModal();}
 i.addEventListener('click',open);i.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});
 d.addEventListener('click',function(e){if(e.target===d||e.target.classList.contains('lb-close'))d.close();});})();
+document.querySelectorAll('[data-tabs]').forEach(function(t){var b=[].slice.call(t.querySelectorAll('[role=tab]'));
+function sel(x){b.forEach(function(o){var on=o===x;o.setAttribute('aria-selected',on);o.tabIndex=on?0:-1;document.getElementById(o.getAttribute('aria-controls')).hidden=!on;});}
+b.forEach(function(x,i){x.addEventListener('click',function(){sel(x);});x.addEventListener('keydown',function(e){var j=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:-9;if(j!==-9){j=(j+b.length)%b.length;sel(b[j]);b[j].focus();}});});});
 </script>
 </body>
 </html>

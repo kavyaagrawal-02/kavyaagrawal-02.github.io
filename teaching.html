@@ -14,12 +14,13 @@
 <link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
     <a class="name" href="index.html">Kavya Agrawal</a>
     <nav aria-label="Main"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="teaching.html" aria-current="page">Teaching</a></li><li><a href="cv.html">CV</a></li></ul></nav>
+    <div class="socials" aria-label="Contact and profiles"><a class="soc" href="mailto:kavya.agrawal@terisas.ac.in" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></a><a class="soc" href="https://www.linkedin.com/in/kavya-agrawal02/" aria-label="LinkedIn" title="LinkedIn"><span>in</span></a><a class="soc" href="https://scholar.google.com/citations?user=yXQUQ6YAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.5v4c1.5 1.6 3.4 2.4 5.5 2.4s4-.8 5.5-2.4v-4"/></svg></a><a class="soc" href="https://orcid.org/0009-0009-1032-2541" aria-label="ORCID" title="ORCID"><span>iD</span></a><a class="soc" href="https://www.researchgate.net/profile/Kavya-Agrawal-4" aria-label="ResearchGate" title="ResearchGate"><span>RG</span></a><a class="soc" href="https://github.com/kavyaagrawal-02" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12"/></svg></a></div>
   </div>
   <div class="wrap"><svg class="contour" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true">
 <path d="M0 20 C 150 8, 300 26, 470 14 S 800 4, 960 16 S 1130 24, 1200 12"/>
@@ -29,9 +30,9 @@
 
 <div class="col page-head"><h1 class="page-title">Teaching</h1>
 <p class="lede">Course teaching in the MSc Geoinformatics programme at TERI School of Advanced Studies.</p></div>
-<section><h2>Courses</h2><ul class="list"><li class="entry"><span class="when">Jun–Dec 2026</span><div><h3>Principles of GIS and GNSS (NRG176)</h3><p class="meta">MSc Geoinformatics, TERI School of Advanced Studies. 4 credits, 60 hours (L-T-P 42-2-32).</p><span class="status">Course teaching</span></div></li><li class="entry"><span class="when">Jun–Dec 2026</span><div><h3>Principles of Remote Sensing (NRG169)</h3><p class="meta">MSc Geoinformatics, TERI School of Advanced Studies. 4 credits, 60 hours (L-T-P 42-2-32).</p><span class="status">Course teaching</span></div></li><li class="entry"><span class="when">Jul–Dec 2025</span><div><h3>Principles of Remote Sensing (NRG169)</h3><p class="meta">MSc Geoinformatics, TERI School of Advanced Studies. 32 practical learning hours.</p><span class="status">Course taught</span></div></li></ul></section>
-<section><h2>In the lab</h2><div class="col">
-<p>Practical sessions cover GPS and GNSS, satellite navigation, georeferencing, ArcGIS Pro, ERDAS Imagine and Landsat 8/9 imagery, with applied exercises in urban pattern, vegetation and geomorphology analysis.</p></div></section>
+<section data-sec><div class="sec-label"><h2>Courses</h2></div><div class="sec-body"><ul class="list"><li class="entry"><span class="when">Jun–Dec 2026</span><div><h3>Principles of GIS and GNSS (NRG176)</h3><p class="meta">MSc Geoinformatics, TERI School of Advanced Studies. 4 credits, 60 hours (L-T-P 42-2-32).</p><span class="status">Course teaching</span></div></li><li class="entry"><span class="when">Jun–Dec 2026</span><div><h3>Principles of Remote Sensing (NRG169)</h3><p class="meta">MSc Geoinformatics, TERI School of Advanced Studies. 4 credits, 60 hours (L-T-P 42-2-32).</p><span class="status">Course teaching</span></div></li><li class="entry"><span class="when">Jul–Dec 2025</span><div><h3>Principles of Remote Sensing (NRG169)</h3><p class="meta">MSc Geoinformatics, TERI School of Advanced Studies. 32 practical learning hours.</p><span class="status">Course taught</span></div></li></ul></div></section>
+<section data-sec><div class="sec-label"><h2>In the lab</h2></div><div class="sec-body"><div class="col">
+<p>Practical sessions cover GPS and GNSS, satellite navigation, georeferencing, ArcGIS Pro, ERDAS Imagine and Landsat 8/9 imagery, with applied exercises in urban pattern, vegetation and geomorphology analysis.</p></div></div></section>
 
 </div></main>
 <footer class="site-foot"><div class="wrap">
@@ -45,6 +46,9 @@ document.querySelectorAll('.feature .photos img, .gallery img, .zoomable').forEa
 function open(){im.src=i.currentSrc||i.src;im.alt=i.alt;cap.textContent=i.alt;d.showModal();}
 i.addEventListener('click',open);i.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});
 d.addEventListener('click',function(e){if(e.target===d||e.target.classList.contains('lb-close'))d.close();});})();
+document.querySelectorAll('[data-tabs]').forEach(function(t){var b=[].slice.call(t.querySelectorAll('[role=tab]'));
+function sel(x){b.forEach(function(o){var on=o===x;o.setAttribute('aria-selected',on);o.tabIndex=on?0:-1;document.getElementById(o.getAttribute('aria-controls')).hidden=!on;});}
+b.forEach(function(x,i){x.addEventListener('click',function(){sel(x);});x.addEventListener('keydown',function(e){var j=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:-9;if(j!==-9){j=(j+b.length)%b.length;sel(b[j]);b[j].focus();}});});});
 </script>
 </body>
 </html>
