@@ -2,15 +2,15 @@
 
 Live site: https://kavyaagrawal-02.github.io
 Repo: github.com/kavyaagrawal-02/kavyaagrawal-02.github.io (branch `main`, GitHub Pages from root, `.nojekyll`)
-Last deploy: commit 610c6f7, 23 October 2026
+Last deploy: commit 011d4a9, 23 October 2026
 
 ## 1. What the site is
 An elegant, simple, sober academic site with five pages and a downloadable PDF CV:
 - **Home** (`index.html`): teal banner with closed contour rings, name, role, buttons (Explore research, Download CV, Email), uncropped portrait; an at-a-glance strip; About; Highlights (photo cards); Research streams (tabs); Writing (2 LinkedIn articles); Recent engagement timeline; What I do; Research interests (chips); Where I would like to go next; Let's connect; a "Beyond research" band (hobbies and stories).
 - **Research**: doctoral research, current work (uranium, fluoride, downscaling, arsenic with element badges), earlier cryosphere work, future research directions, projects.
-- **Publications**: journal articles, manuscripts, conference presentations. The NEXUS photo gallery is shown directly.
+- **Publications**: journal articles, manuscripts, conference presentations. The NEXUS and As2024 photo galleries are shown directly.
 - **Teaching**: courses and an expanded "In the lab" section for NRG169 and NRG176.
-- **CV** (`cv.html` + `Kavya_Agrawal_CV.pdf`, 8 pages, A4): the complete record from the information inventory, including every skill, parameter, data source, QA/QC item, the subjects studied, coursework with credits, future interests and research keywords.
+- **CV** (`cv.html` + `Kavya_Agrawal_CV.pdf`, 9 pages, A4): the complete record from the information inventory, including every skill, parameter, data source, QA/QC item, the subjects studied, coursework with credits, future interests and research keywords.
 
 ## 2. Design decisions (locked)
 - Font: Newsreader (self-hosted WOFF in `assets/fonts`).
@@ -37,11 +37,12 @@ An elegant, simple, sober academic site with five pages and a downloadable PDF C
 ## 4. Highlights (current cards)
 1. EHP NEXUS 2026: First Position and Best Paper Award. Wide card with the talk and stage photos, uncropped.
 2. LST paper, Journal of Mountain Science 2023: shows the seasonal LST trends figure (`assets/img/lst-trends.png`).
-3. WSDS 2026 Delegate: **photo slot is waiting**.
-4. Water as a Commons with the Ostrom Workshop (Yamuna field visit): **photo slot is waiting**.
-5. WSDS 2025 Rapporteur: **photo slot is waiting** (use the pictures from her LinkedIn post).
-6. QGreenland Educator Workshop: **photo slot is waiting**.
-7. Teaching MSc Geoinformatics (wide, text tile).
+3. As2024 poster, KIIT Bhubaneswar (Oct 2024): photo at the standee (added 23 Oct 2026).
+4. WSDS 2026 Delegate: **photo slot is waiting**.
+5. Water as a Commons with the Ostrom Workshop (Yamuna field visit): **photo slot is waiting**.
+6. WSDS 2025 Rapporteur: **photo slot is waiting** (use the pictures from her LinkedIn post).
+7. QGreenland Educator Workshop: **photo slot is waiting**.
+8. Teaching MSc Geoinformatics (normal-width text tile; 8 cards fill the 3-column grid with NEXUS wide).
 
 Removed at her request: the Cherry/Stockholm card, the Map Making card, the State Child Scientist card and the NRSC-ISRO card. These items remain in the CV.
 
@@ -56,6 +57,9 @@ Removed at her request: the Cherry/Stockholm card, the Map Making card, the Stat
 | Plenary article | Writing card 2 | The picture used in that LinkedIn article |
 | LST paper (optional swap) | Highlight 2 | The figure the journal highlighted, if different from the trends plot |
 | Other events (optional) | Publications/CV galleries | Certificates and photos for any talk or workshop |
+| Cherry visit photo | Not placed yet | She sent a HEIC that cannot be converted here; needs a JPG/screenshot if she wants it. A drone (DJI Matrice + Zenmuse L1) photo was also sent; she said to leave both for now. |
+
+Done on 23 Oct 2026: certificates are shown directly under their CV/Publications entries (helpers `gal()` and `cert()` in build.py; files `assets/img/cert-*.jpg`, `as2024-*.jpg`). Corrections taken from the certificates: UAV workshop title says "in Environment and Natural Resources Management"; forest fire programme was under ISRO DMS-CB, sponsored by IIRS; NGP-DST Winter School (Level 1), Grade A; Vani English Editor 2019–20; WSDS 2025 volunteer; NRSC 2026 workshop with RRSC-North. The map award is **2nd Position, GeoPitch, World GIS Day, Amity, 23 Nov 2024** (this replaces "Map Making 2025"; she confirmed they are the same award). New items: National Science Day 2025, WRSC 2023 (IIT Bombay CSRE + IEEE GRSS), NIDM online training Feb 2022. The As2024 poster photo is shown; she approved it even though it has model numbers.
 
 Images cannot be downloaded from Google Drive or LinkedIn inside the sandbox, so they must be **attached in chat**. To fill a slot, in `_build/build.py` replace `art=slot("…","…")` with `pic=("assets/img/<file>.jpg", "<alt text>")`, or with a list of tuples for several photos. For writing cards, replace the `<div class="pic art">…</div>` with `<div class="pic"><img src="…" alt="…"></div>`.
 
