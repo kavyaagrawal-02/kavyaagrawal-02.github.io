@@ -23,7 +23,7 @@ CONTOUR = """<svg class="contour" viewBox="0 0 1200 28" preserveAspectRatio="non
 DL = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0-3-3m3 3 3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
 
-def page(fname, title, desc, body):
+def page(fname, title, desc, body, pre="", post="", mcls=""):
     cur = ' aria-current="page"'
     nav = "".join(f'<li><a href="{f}"{cur if f == fname else ""}>{n}</a></li>' for f, n in PAGES)
     html = f"""<!doctype html>
@@ -36,7 +36,7 @@ def page(fname, title, desc, body):
 <meta name="author" content="Kavya Agrawal">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://kavyaagrawal-02.github.io/assets/img/kavya-portrait-hero.jpg">
+<meta property="og:image" content="https://kavyaagrawal-02.github.io/assets/img/headshot.jpg">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
@@ -51,9 +51,9 @@ def page(fname, title, desc, body):
   </div>
   <div class="wrap">{CONTOUR}</div>
 </header>
-<main id="main"><div class="wrap">
+<main id="main" class="{mcls}">{pre}<div class="wrap">
 {body}
-</div></main>
+</div>{post}</main>
 <footer class="site-foot"><div class="wrap">
   <span class="coords">28°32′N 77°09′E, TERI School of Advanced Studies, New Delhi</span>
   <span><a href="mailto:{L['teri']}">{L['teri']}</a> &nbsp;·&nbsp; Updated October 2026</span>
@@ -64,13 +64,17 @@ def page(fname, title, desc, body):
     (ROOT / fname).write_text(html, encoding="utf-8")
 
 
-def entry(when, title, meta="", text="", methods="", status="", award=False):
-    parts = [f"<h3>{title}</h3>"]
+def entry(when, title, meta="", text="", methods="", status="", award=False, badge=None):
+    parts = []
+    if badge:
+        sym, z, col, method = badge
+        parts.append(f'<span class="el{" method" if method else ""}" style="--c:{col}" aria-hidden="true">{f"<small>{z}</small>" if z else ""}<b>{sym}</b></span>')
+    parts.append(f"<h3>{title}</h3>")
     if meta: parts.append(f'<p class="meta">{meta}</p>')
     if text: parts.append(f'<p class="desc">{text}</p>')
     if methods: parts.append(f'<p class="methods">{methods}</p>')
     if status: parts.append(f'<span class="status{" award" if award else ""}">{status}</span>')
-    return f'<li class="entry"><span class="when">{when}</span><div>{"".join(parts)}</div></li>'
+    return f'<li class="entry{" has-badge" if badge else ""}"><span class="when">{when}</span><div>{"".join(parts)}</div></li>'
 
 
 def lst(items):
@@ -120,25 +124,25 @@ EDUCATION = [
     entry("2014 – 2016", "Secondary School", "St. Francis Inter College, Hathras. CGPA 9.20."),
 ]
 CURRENT = [
-    entry("2025 – 26", "Uranium in groundwater across India",
+    entry("2025 – 26", "Uranium in groundwater across India", badge=("U","92","#9DB52A",False),
           text="A national-scale model of where uranium occurs in India's groundwater, built from groundwater observations and environmental predictors and checked against an independent validation dataset. The predictions are turned into spatial risk classes, estimates of population exposure, and governance indicators showing where monitoring and action are most needed.",
           methods="<b>Methods:</b> automated machine learning (AutoGluon), independent validation, spatial risk mapping, exposure assessment.",
           status="Paper submitted to journal; Best Paper Award, ICSSR EHP NEXUS 2026", award=False),
-    entry("2026 –", "Fluoride and the effect of spatial resolution",
+    entry("2026 –", "Fluoride and the effect of spatial resolution", badge=("F","9","#4A9CC9",False),
           text="India-wide prediction of fluoride contamination, benchmarking deep learning models and testing how the resolution of environmental predictors changes the result. Predictor stacks are built in Google Earth Engine at native resolution and at 500 m, 1 km and 5 km, keeping every groundwater observation in the data.",
           methods="<b>Methods:</b> deep learning, multi-resolution predictor extraction, 1.5 mg/L threshold.",
           status="In progress"),
-    entry("2026 –", "Downscaling and upscaling environmental predictors",
+    entry("2026 –", "Downscaling and upscaling environmental predictors", badge=("DS","","#E3A13B",True),
           text="A physically informed framework for moving satellite data between coarse and fine resolutions without inventing detail. A pilot on CHIRPS rainfall over Punjab (2013–2022) targets 5 km, 1 km and 500 m using sub-pixel fractions and conservation-based aggregation.",
           methods="<b>Methods:</b> machine learning, conservation-based aggregation; validated with Moran's I, semivariograms and aggregation consistency.",
           status="In progress"),
-    entry("2024 – 25", "Arsenic in the Middle Gangetic Plain",
+    entry("2024 – 25", "Arsenic in the Middle Gangetic Plain", badge=("As","33","#A8557E",False),
           text="The distribution, speciation and controls on arsenic mobilisation in the aquifers of the Middle Gangetic Plain, looking at geogenic and hydrogeochemical factors such as pH, iron, redox potential and sulfate.",
           methods="<b>Methods:</b> hydrogeochemistry, explainable AI (SHAP, LIME).",
           status="Presented at As2024, Bhubaneswar"),
 ]
 EARLIER = [
-    entry("2023", "Land surface temperature trends across the Indus River Basin",
+    entry("2023", "Land surface temperature trends across the Indus River Basin", badge=("LST","","#7E8FC9",True),
           text="Spatial and elevation-wise trends in daytime and nighttime land surface temperature across the Indus River Basin.",
           methods="<b>Methods:</b> Google Earth Engine (JavaScript), ArcGIS, Mann–Kendall and Theil–Sen trend analysis.",
           status="Published, Journal of Mountain Science"),
@@ -181,27 +185,63 @@ NEWS = [
     entry("Feb 2026", "Delegate at the World Sustainable Development Summit 2026."),
     entry("Jan 2026", "Completed the PhD comprehensive examination, and submitted the uranium paper to a journal."),
 ]
-home = f"""
-<div class="intro">
+ICONS = {
+    "Old coins": '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><path d="M10 10.5h4M10 12.5h4M11 10.5c2 0 2 2 0 2l3 3"/>',
+    "Stamps": '<path d="M5 3h14v18H5z" stroke-dasharray="2 1.6"/><rect x="8" y="6.5" width="8" height="8"/><path d="M8 17.5h8"/>',
+    "Historic stories": '<path d="M3 5c3-1.2 6-1 9 1 3-2 6-2.2 9-1v14c-3-1.2-6-1-9 1-3-2-6-2.2-9-1z"/><path d="M12 6v14"/>',
+    "Photography": '<rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.6"/><path d="M8.5 7l1.4-2.5h4.2L15.5 7"/>',
+    "Travel": '<circle cx="12" cy="12" r="9"/><path d="M15.8 8.2l-2.3 5.3-5.3 2.3 2.3-5.3z"/>',
+    "Badminton": '<path d="M9.5 14L6.5 3.5h11L14.5 14z"/><path d="M8 9h8M12 3.5V14"/><circle cx="12" cy="17.6" r="3"/>',
+    "Dance": '<path d="M3 8.5c6 4.5 12 4.5 18 0"/><circle cx="7" cy="14.5" r="2"/><circle cx="12" cy="16" r="2"/><circle cx="17" cy="14.5" r="2"/>',
+}
+beyond = '<section class="beyond" aria-label="Beyond research"><div class="wrap"><h2>Beyond research</h2><ul>' + "".join(
+    f'<li><svg viewBox="0 0 24 24" aria-hidden="true">{v}</svg>{k}</li>' for k, v in ICONS.items()) + '</ul></div></section>'
+
+hero = f"""
+<section class="hero" aria-label="Introduction" style="margin-top:0"><div class="wrap">
   <div>
     <h1>Kavya Agrawal</h1>
     <p class="role">PhD Scholar, Department of Natural &amp; Applied Sciences<br>TERI School of Advanced Studies, New Delhi</p>
-    <p>I am a PhD scholar working at the intersection of environmental systems, human activity and technology. My doctoral research focuses on large-scale prediction and risk assessment of groundwater contamination in India, integrating hydrogeochemistry and environmental geoinformatics with remote sensing, GIS and multi-source environmental data.</p>
-    <p>I work across uranium, fluoride and arsenic contamination, using machine learning, deep learning and spatial modelling to understand contamination patterns, their environmental controls and where risk is highest. My broader interests include population exposure, groundwater governance, climate and cryosphere systems, environmental change and water security. I am always open to new questions, methods and collaborations.</p>
-    <p class="muted small" style="margin-top:1.2rem">Supervisor: Prof. Chander Kumar Singh &nbsp;·&nbsp; Co-supervisor: Dr. Adwitiya Sinha</p>
+    <p class="tag">Predicting where India's groundwater becomes unsafe to drink, and who is exposed.</p>
     <div class="links">{PROFILE_LINKS}</div>
-    <p style="margin-top:1.6rem"><a class="btn" href="Kavya_Agrawal_CV.pdf">{DL}Download CV (PDF)</a></p>
+    <p style="margin:1.7rem 0 0"><a class="btn" href="Kavya_Agrawal_CV.pdf">{DL}Download CV (PDF)</a></p>
   </div>
   <figure class="portrait">
-    <img src="assets/img/kavya-portrait-hero.jpg" alt="Portrait of Kavya Agrawal" width="499" height="484">
-    <figcaption>{L['teri']}</figcaption>
+    <img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="560" height="700">
   </figure>
-</div>
+</div></section>"""
+
+home = f"""
+<ul class="glance" aria-label="At a glance">
+  <li><b>3</b><span>contaminants studied: uranium, fluoride, arsenic</span></li>
+  <li><b>2</b><span>journal articles, with 3 manuscripts in progress</span></li>
+  <li><b>7</b><span>conference presentations since 2022</span></li>
+  <li><b>1st</b><span>Best Paper Award, EHP NEXUS 2026</span></li>
+</ul>
+<section style="margin-top:2.8rem"><div class="col">
+<p>I am a PhD scholar working at the intersection of environmental systems, human activity and technology. My doctoral research focuses on large-scale prediction and risk assessment of groundwater contamination in India, integrating hydrogeochemistry and environmental geoinformatics with remote sensing, GIS and multi-source environmental data.</p>
+<p>I work across uranium, fluoride and arsenic contamination, using machine learning, deep learning and spatial modelling to understand contamination patterns, their environmental controls and where risk is highest. My broader interests include population exposure, groundwater governance, climate and cryosphere systems, environmental change and water security. I am always open to new questions, methods and collaborations.</p>
+<p class="muted small">Supervisor: Prof. Chander Kumar Singh &nbsp;·&nbsp; Co-supervisor: Dr. Adwitiya Sinha</p>
+</div></section>
+<section><h2>Recognition</h2>
+<div class="feature">
+  <div>
+    <p class="kicker">ICSSR EHP NEXUS 2026, Gautam Buddha University</p>
+    <h3>First Position and Best Paper Award</h3>
+    <p>At the ICSSR-sponsored national conference <em>The Nexus Imperative: Environment, Public Health and Policy for a Sustainable Future</em> (27–28 April 2026), I presented a machine-learning-based framework for uranium risk assessment, population exposure and groundwater governance, and was awarded first position for the oral presentation.</p>
+    <p class="small muted" style="margin:0">Organised by the Department of Environmental Science, SoVSAS, Gautam Buddha University, Greater Noida.</p>
+  </div>
+  <div class="photos">
+    <img class="wide" src="assets/img/award-talk.jpg" alt="Kavya presenting her uranium risk framework at EHP NEXUS 2026" loading="lazy" width="1200" height="1032">
+    <img src="assets/img/award-certificate.jpg" alt="Certificate of Excellence for first position, EHP NEXUS 2026" loading="lazy" width="1000" height="727">
+    <img src="assets/img/award-stage.jpg" alt="Inaugural session of EHP NEXUS 2026 at Gautam Buddha University" loading="lazy" width="1200" height="745">
+  </div>
+</div></section>
 <section><h2>Research interests</h2>
 <p class="interests">Groundwater quality and contamination (uranium, fluoride, arsenic) · hydrogeochemistry · remote sensing and GIS · machine learning, AutoML and explainable AI · multi-resolution modelling and downscaling · population exposure and groundwater governance · cryosphere and climate · water security.</p></section>
 <section class="news"><h2>News</h2>{lst(NEWS)}</section>
 """
-page("index.html", "Kavya Agrawal", "Kavya Agrawal, PhD scholar at TERI School of Advanced Studies, New Delhi: groundwater contamination, remote sensing, GIS and machine learning.", home)
+page("index.html", "Kavya Agrawal", "Kavya Agrawal, PhD scholar at TERI School of Advanced Studies, New Delhi: groundwater contamination, remote sensing, GIS and machine learning.", home, pre=hero, post=beyond, mcls="home")
 
 # ================================================================= RESEARCH
 research = f"""
@@ -216,9 +256,7 @@ research = f"""
 <p class="muted small">Supervisor: Prof. Chander Kumar Singh. Co-supervisor: Dr. Adwitiya Sinha. Registered February 2024; comprehensive examination completed January 2026.</p>
 </div></section>
 <section><h2>Current work</h2>{lst(CURRENT)}</section>
-<section><h2>Earlier work: climate and cryosphere</h2>{lst(EARLIER)}
-<figure class="figure col"><img src="assets/img/indus-study-area.png" alt="Study area map of the Indus River Basin showing elevation, rivers and major cities" loading="lazy" width="1022" height="739">
-<figcaption>The Indus River Basin, study area of the 2023 land surface temperature paper.</figcaption></figure></section>
+<section><h2>Earlier work: climate and cryosphere</h2>{lst(EARLIER)}</section>
 <section><h2>Questions I would like to explore</h2>{ul(EXPLORE)}</section>
 <section><h2>Projects</h2>
 <h3>Postgraduate, 2021–2023</h3>{ul(PG)}
@@ -243,9 +281,7 @@ teaching = f"""
 <p class="lede">Course teaching in the MSc Geoinformatics programme at TERI School of Advanced Studies.</p></div>
 <section><h2>Courses</h2>{lst(TEACHING)}</section>
 <section><h2>In the lab</h2><div class="col">
-<p>Practical sessions cover GPS and GNSS, satellite navigation, georeferencing, ArcGIS Pro, ERDAS Imagine and Landsat 8/9 imagery, with applied exercises in urban pattern, vegetation and geomorphology analysis.</p></div>
-<figure class="figure"><img src="assets/img/delhi-lulc.png" alt="Land use and land cover classification map of South West Delhi from Landsat 8, October 2019" loading="lazy" width="919" height="589">
-<figcaption>Land use and land cover of South West Delhi from Landsat 8 (October 2019), the kind of classification students learn in the lab.</figcaption></figure></section>
+<p>Practical sessions cover GPS and GNSS, satellite navigation, georeferencing, ArcGIS Pro, ERDAS Imagine and Landsat 8/9 imagery, with applied exercises in urban pattern, vegetation and geomorphology analysis.</p></div></section>
 """
 page("teaching.html", "Teaching, Kavya Agrawal", "Courses taught by Kavya Agrawal in the MSc Geoinformatics programme at TERI SAS.", teaching)
 
