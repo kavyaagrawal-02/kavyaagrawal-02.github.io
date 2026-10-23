@@ -127,23 +127,36 @@ MANUSCRIPTS = [
     entry("2026", "Comparing and Benchmarking Deep Learning Models for Predicting Groundwater Contamination caused by Fluoride with the effects of Spatial Resolution on Prediction", "Research paper", status="In progress"),
     entry("2026", "A Physically Informed Framework for Multi-Resolution Downscaling and Upscaling of Environmental Predictors (Satellite Data)", "Research paper", status="In progress"),
 ]
-NEXUS_MORE = '<div class="gallery"><img src="assets/img/award-talk.jpg" alt="Presenting the uranium risk framework at EHP NEXUS 2026" loading="lazy"><img src="assets/img/award-certificate.jpg" alt="Certificate of Excellence, first position for the oral presentation, EHP NEXUS 2026" loading="lazy"><img src="assets/img/award-stage.jpg" alt="Inaugural session of EHP NEXUS 2026, Gautam Buddha University" loading="lazy"></div><p class="small muted">Conference: <em>The Nexus Imperative: Environment, Public Health and Policy for a Sustainable Future</em>, organised by the Department of Environmental Science, SoVSAS, Gautam Buddha University, Greater Noida.</p>'
+def gal(*pics):
+    return '<div class="gallery">' + "".join(f'<img src="assets/img/{f}" alt="{a}" loading="lazy">' for f, a in pics) + '</div>'
+
+
+def cert(f, a):
+    return gal((f, a))
+
+
+AS2024_MORE = gal(("as2024-standee.jpg", "At the As2024 congress, KIIT Deemed to be University, Bhubaneswar"),
+                  ("as2024-poster.jpg", "Poster: distribution, speciation and controls on arsenic mobilisation in the Middle Gangetic Plain"),
+                  ("as2024-hall.jpg", "Opening session of As2024, Bhubaneswar"),
+                  ("as2024-cert-poster.jpg", "Certificate of participation for the poster presentation, As2024"),
+                  ("as2024-cert-participation.jpg", "Certificate of participation, As2024")) + '<p class="small muted">Theme: <em>Arsenic and other Pollutants, Water Security and One Health under Global Climate Change Scenario</em>. Organised by KIIT Deemed to be University with ISGSD and KTH Royal Institute of Technology, Sweden.</p>'
+NEXUS_MORE = '<div class="gallery"><img src="assets/img/award-talk.jpg" alt="Presenting the uranium risk framework at EHP NEXUS 2026" loading="lazy"><img src="assets/img/award-certificate.jpg" alt="Certificate of Excellence, first position for the oral presentation, EHP NEXUS 2026" loading="lazy"><img src="assets/img/cert-nexus-2026-participation.jpg" alt="Certificate of participation, EHP NEXUS 2026" loading="lazy"><img src="assets/img/award-stage.jpg" alt="Inaugural session of EHP NEXUS 2026, Gautam Buddha University" loading="lazy"></div><p class="small muted">Conference: <em>The Nexus Imperative: Environment, Public Health and Policy for a Sustainable Future</em>, organised by the Department of Environmental Science, SoVSAS, Gautam Buddha University, Greater Noida.</p>'
 TALKS = [
     entry("Apr 2026", "A Machine Learning-Based Framework for Uranium Risk Assessment, Population Exposure and Groundwater Governance in Urban India",
           'ICSSR EHP NEXUS 2026, Track X: AI and Predictive Analytics for Society and Environment, Gautam Buddha University, 27–28 April 2026. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7455656612595126273/">LinkedIn post</a>',
           status="First Position, oral presentation, and Best Paper Award", award=True, more=NEXUS_MORE),
     entry("Oct 2024", "Distribution, Speciation and Controls on As Mobilization in the Groundwater in Aquifers of the Middle Gangetic Plain, India",
-          "9th International Congress &amp; Exhibition on Arsenic in the Environment (As2024), KIIT Deemed to be University, Bhubaneswar, 20–24 October 2024. Poster."),
+          "9th International Congress &amp; Exhibition on Arsenic in the Environment (As2024), KIIT Deemed to be University, Bhubaneswar, 20–24 October 2024. Poster.", more=AS2024_MORE),
     entry("Nov 2022", "Problems and Prospects of Delhi's Drinking Water Supply",
           "IGU Thematic Conference on Sustainability, Future Earth and Humanities, Department of Geography, Central University of Haryana, Mahendragarh, 24–25 November 2022."),
     entry("Jul 2022", "Educational Relevance of Ramayana in Modern India",
-          "National Seminar on Promoting Human Values and Culture for Peaceful Co-Existence, Amity University Haryana, sponsored by ICPR, 22 July 2022."),
+          "National Seminar on Promoting Human Values and Culture for Peaceful Co-Existence, Amity University Haryana, sponsored by ICPR, 22 July 2022.", more=cert("cert-amity-seminar-2022.jpg", "Certificate of appreciation, National Seminar, Amity University Haryana"), more_label="Certificate"),
     entry("May 2022", "Digital Enhancement of Physical Space and Connective Turn in Tourism Industry during and Post-COVID-19 Period",
           "International Conference on Geography and the Digital: Intersections and Conflations, Department of Geography, Delhi School of Economics, University of Delhi, 23–25 May 2022."),
     entry("May 2022", "Migrant College Students during Covid Pandemic: Evidence from the Field",
           "Jamia International Conference on Education 2022, Faculty of Education, Jamia Millia Islamia, New Delhi, 6–8 May 2022."),
     entry("Apr 2022", "Migrant College Students during Covid Pandemic: Evidence from the Field",
-          "International Conference on Challenges to Disaster Risk Reduction and Resilient Habitat, Centre for Disaster Management Studies, Shaheed Bhagat Singh College, University of Delhi, 5–6 April 2022."),
+          "International Conference on Challenges to Disaster Risk Reduction and Resilient Habitat, Centre for Disaster Management Studies, Shaheed Bhagat Singh College, University of Delhi, 5–6 April 2022.", more=cert("cert-cdms-conference-2022.jpg", "Certificate of participation, CDMS international conference"), more_label="Certificate"),
 ]
 TEACHING = [
     entry("Jun–Dec 2026", "Principles of GIS and GNSS (NRG176)", "MSc Geoinformatics, TERI School of Advanced Studies. 4 credits, 60 hours (L-T-P 42-2-32).", status="Course teaching"),
@@ -309,6 +322,10 @@ HIGHLIGHTS = "".join([
        "Our peer-reviewed paper on spatial and elevation-wise daytime and nighttime LST trends, built in Google Earth Engine. The figure shows how the trends differ by season, day and night.",
        [("Read the paper", "https://doi.org/10.1007/s11629-023-8157-8")],
        pic=("assets/img/lst-trends.png", "Seasonal daytime and nighttime LST trends across the Indus River Basin, from the paper"), fit=True),
+    hl("October 2024, KIIT, Bhubaneswar", "Poster at As2024, the International Congress on Arsenic in the Environment",
+       "At the 9th International Congress and Exhibition on Arsenic in the Environment, I presented the distribution, speciation and controls on arsenic mobilisation in the aquifers of the Middle Gangetic Plain.",
+       [("Photos and certificates", "publications.html#conferences")],
+       pic=("assets/img/as2024-standee.jpg", "At the As2024 congress, Bhubaneswar")),
     hl("February 2026, Taj Palace, New Delhi", "Delegate, World Sustainable Development Summit 2026",
        "The Silver Jubilee edition of TERI's flagship summit: <em>Transformations: Vision, Voices, and Values for Sustainable Development and Climate Action</em>.",
        [("In the CV", "cv.html#rapporteur")], art=slot("WSDS", "2026, Delegate")),
@@ -324,7 +341,7 @@ HIGHLIGHTS = "".join([
        [("In the CV", "cv.html#training")], art=slot("QGreenland", "Educator workshop")),
     hl("2025 – 2026, TERI SAS", "Teaching MSc Geoinformatics",
        "Principles of Remote Sensing and Principles of GIS and GNSS, including the hands-on lab sessions.",
-       [("Teaching page", "teaching.html")], art=("MSc", "Geoinformatics"), wide=True),
+       [("Teaching page", "teaching.html")], art=("MSc", "Geoinformatics")),
 ])
 
 WRITING = f"""<div class="writing">
@@ -498,14 +515,14 @@ cvs("teaching", "Teaching", lst(TEACHING))
 cvs("projects", "Projects", f"<h3>Postgraduate, 2021–2023</h3>{ul(PG)}<h3>Undergraduate, 2018–2021</h3>{ul(UG)}<h3>Other</h3>{ul(['Working With Geospatial Datasets', 'High-Quality Research Writing'])}")
 cvs("awards", "Awards and achievements", lst([
     entry("2026", "First Position, oral presentation, and Best Paper Award", "ICSSR EHP NEXUS 2026, Gautam Buddha University."),
-    entry("2025", "2nd Rank, Map Making Competition", "Amity University."),
+    entry("Nov 2024", "2nd Position, GeoPitch: 60 Seconds of GIS Work", "MAPPIT, World GIS Day celebration, Geoscience Club, Amity Institute of Geoinformatics and Remote Sensing, Amity University Uttar Pradesh, Noida, 23 November 2024.", more=cert("cert-geopitch-2024.jpg", "Certificate of achievement, GeoPitch, World GIS Day 2024"), more_label="Certificate"),
     entry("2018", "State Child Scientist Award", "National Science Congress."),
     entry("2015 – 2018", "Consecutive top 3 ranks, English Olympiads", "British Olympiad Foundation."),
     entry("2016, 2018", "Merit Awards"),
     entry("", "20 cultural and general knowledge awards", "From various organisations, including prizes in dance."),
 ]))
 cvs("rapporteur", "Rapporteurship and policy engagement", lst([
-    entry("Mar 2026", "Rapporteur, National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction", "TERI School of Advanced Studies in collaboration with NRSC, ISRO, 16–20 March 2026."),
+    entry("Mar 2026", "Rapporteur, National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction", "TERI School of Advanced Studies with the Regional Remote Sensing Centre–North, NRSC, ISRO, 16–20 March 2026. Also a volunteer for the programme.", more=gal(("cert-nrsc-volunteer-2026.jpg", "Certificate of appreciation as a volunteer, RRSC-North, NRSC, ISRO"), ("cert-nrsc-participation-2026.jpg", "Certificate of appreciation for participating, RRSC-North, NRSC, ISRO")), more_label="Certificates"),
     entry("Feb 2026", "Delegate, World Sustainable Development Summit 2026", "Taj Palace, New Delhi, 25–27 February 2026. Transformations: Vision, Voices, and Values for Sustainable Development and Climate Action."),
     entry("Mar 2025", "Rapporteur, Ministerial Session: NDC 3.0 and Multilateralism on the Road to COP30 and COP33", 'World Sustainable Development Summit 2025, TERI. India Habitat Centre, New Delhi, 6 March 2025. <a href="https://www.linkedin.com/pulse/ndc-30-multilateralism-strategic-insights-road-cop30-cop33-agrawal-fzeic/">Session summary</a>'),
     entry("Mar 2025", "Rapporteur, High-Level Plenary on Achieving Sustainable Development through Integrated Action", 'World Sustainable Development Summit 2025, TERI. India Habitat Centre, New Delhi, 7 March 2025. <a href="https://www.linkedin.com/pulse/high-level-plenary-achieving-sustainable-development-through-agrawal-wfsxc/">Session summary</a>'),
@@ -516,7 +533,7 @@ cvs("positions", "Positions of responsibility", lst([
     entry("2025", "Judge, KnoxCode 2025, Geospatial Innovation Challenge", "Organised by GeoknoX, TERI SAS, as part of Aahwaan Fest 2025."),
     entry("2018 – 2021", "Editor-in-Chief, Geography Association", "University of Delhi."),
     entry("2018 – 2020", "Magazine Coordinator, <em>Vani</em>", "Shaheed Bhagat Singh College, University of Delhi."),
-    entry("2019", "English Editor, <em>Vani</em>", "Shaheed Bhagat Singh College, University of Delhi."),
+    entry("2019 – 20", "English Editor, <em>Vani</em>", "Magazine Committee, Shaheed Bhagat Singh College, University of Delhi.", more=cert("cert-vani-editor-2019.jpg", "Certificate of appreciation, English Editor, Magazine Committee 2019–20"), more_label="Certificate"),
 ]))
 cvs("workshops", "Workshops, seminars and summits attended", lst([
     entry("Feb 2026", "Water as a Commons workshop, Water Governance Working Group", "With the Ostrom Workshop, Indiana University Bloomington and IU India Gateway, 26–27 February 2026; included a Yamuna River field visit with INTACH Delhi."),
@@ -527,15 +544,18 @@ cvs("workshops", "Workshops, seminars and summits attended", lst([
     entry("Sep 2025", "Science Summit 2025: Marine Resources for Sustainable Development", "16 September 2025."),
     entry("Aug 2025", "QGreenland Educator Workshop", "Virtual, 5–7 August 2025. Developing educational activities with QGreenland data."),
     entry("Jul 2025", "Roots to Resilience Seminar", "TERI SAS with UNEP, UNESCO and Akashvani, 25 July 2025."),
-    entry("Mar 2025", "World Sustainable Development Summit 2025", "New Delhi, 5–7 March 2025. Partnerships for Accelerating Sustainable Development and Climate Solutions."),
+    entry("Mar 2025", "World Sustainable Development Summit 2025", "New Delhi, 5–7 March 2025. Partnerships for Accelerating Sustainable Development and Climate Solutions. Rapporteur and volunteer.", more=cert("cert-wsds2025-volunteer.jpg", "Certificate of appreciation as a volunteer, WSDS 2025"), more_label="Certificate"),
+    entry("Feb 2025", "National Science Day 2025", "Vigyan Bhawan, New Delhi, 28 February 2025. <em>Empowering Indian Youth for Global Leadership in Science and Innovation for Viksit Bharat</em>, Department of Science and Technology, Government of India.", more=cert("cert-science-day-2025.jpg", "Certificate of participation, National Science Day 2025"), more_label="Certificate"),
     entry("Oct 2024", "Lecture by Professor John A. Cherry on groundwater and sustainable development", "2020 Stockholm Water Prize laureate, 24 October 2024. Prof. Cherry also spent four hours at the Analytical and Geochemistry Laboratory, TERI SAS, discussing the lab's current and future work."),
+    entry("2023", "Workshop on Remote Sensing of Cryosphere (WRSC 2023)", "Three-day workshop, Centre of Studies in Resources Engineering, IIT Bombay, with the IEEE GRSS Bombay Chapter.", more=cert("cert-wrsc-2023.jpg", "Certificate of participation, WRSC 2023"), more_label="Certificate"),
     entry("", "Climate Skills: Seeds for Transition", "TERI SAS and TERI with British Council and HSBC Bank."),
 ]))
 cvs("training", "Training, capacity building and schools", lst([
     entry("Mar 2026", "National Workshop on Geospatial Technology for Climate Action, Sustainability and Disaster Risk Reduction", "TERI SAS in collaboration with NRSC, ISRO, 16–20 March 2026. Participant, volunteer and rapporteur."),
-    entry("Dec 2024", "Capacity Building Workshop on UAV/Drone Applications in Agriculture and Natural Resource Management", "TERI SAS with IIT BHU, IIT Roorkee, Namami Gange, Hokkaido University, GLP Earth, GLP Japan, Abhipsa Foundation and Kambil, 10–12 December 2024."),
-    entry("Nov – Dec 2024", "21-day Winter School Capacity Building Program in Geospatial Science and Technology", "Amity University, Noida, supported by the National Geospatial Program, DST, Government of India, 18 November – 7 December 2024. Included a visit to Esri India."),
-    entry("Mar 2024", "Harnessing Geospatial Technology for Forest Fire Disaster Management: Mapping, Monitoring and Mitigation", "One-week capacity building programme, Amity University, Noida, 11–15 March 2024."),
+    entry("Dec 2024", "Capacity Building Workshop on UAV/Drone Applications in Environment and Natural Resources Management: A Hands-on Training Program", "Three days, TERI SAS with IIT BHU, IIT Roorkee, Namami Gange, Hokkaido University, Global Land Programme, GLP Japan, GuruJal (Abhipsa Foundation) and Kambil, 10–12 December 2024.", more=cert("cert-uav-workshop-2024.jpg", "Certificate of completion, UAV/Drone workshop, TERI SAS"), more_label="Certificate"),
+    entry("Nov – Dec 2024", "NGP-DST Winter School on Geospatial Technologies (Level 1)", "21-day capacity building programme, Amity School of Natural Resources and Sustainable Development, Amity University, Noida, supported by the National Geospatial Programme, DST, Government of India, 18 November – 7 December 2024. Grade A. Included a visit to Esri India.", more=cert("cert-ngp-winter-school-2024.jpg", "Certificate, NGP-DST Winter School on Geospatial Technologies"), more_label="Certificate"),
+    entry("Mar 2024", "Harnessing Geospatial Technology for Forest Fire Disaster Management: Mapping, Monitoring and Mitigation", "One-week capacity building programme under the ISRO Disaster Management Support Capacity Building (DMS-CB) Programme, sponsored by IIRS, ISRO, Dehradun. Amity School of Natural Resources and Sustainable Development, Amity University, Noida, 11–15 March 2024.", more=cert("cert-forest-fire-2024.jpg", "Certificate, forest fire disaster management programme, Amity University"), more_label="Certificate"),
+    entry("Feb 2022", "Disaster Management Plans to Enhance Resilience of Institutional Buildings", "Online training, National Institute of Disaster Management, Ministry of Home Affairs, with the Centre for Disaster Management Studies, Shaheed Bhagat Singh College, 23–25 February 2022.", more=cert("cert-nidm-2022.jpg", "Certificate, NIDM online training"), more_label="Certificate"),
 ]))
 SK = [
     ("Technical skills", ["GIS and remote sensing methods and techniques", "ArcGIS / ArcGIS Pro", "QGIS", "Google Earth / Google Earth Engine", "ERDAS / ERDAS Imagine", "Python", "JavaScript for Google Earth Engine", "pandas", "Machine learning, deep learning and automated machine learning", "AutoGluon", "Random Forest", "LightGBM", "SHAP and LIME explainable AI", "Spatial data analysis and visualisation", "Time-series modelling and trend analysis", "Mann–Kendall trend testing and Theil–Sen slope", "Remote-sensing image enhancement and feature extraction", "Orthorectification and mosaicking", "Satellite-image acquisition, processing and visualisation", "DEM processing"]),
