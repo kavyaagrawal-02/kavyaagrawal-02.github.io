@@ -2,7 +2,7 @@
 
 Live site: https://kavyaagrawal-02.github.io
 Repo: github.com/kavyaagrawal-02/kavyaagrawal-02.github.io (branch `main`, GitHub Pages from root, `.nojekyll`)
-Last deploy: commit 011d4a9, 23 October 2026
+Last deploy: commit 3ba5b54, 23 October 2026
 
 ## 1. What the site is
 An elegant, simple, sober academic site with five pages and a downloadable PDF CV:
@@ -83,3 +83,12 @@ Source of truth: `_build/build.py` (all content and page templates) and `assets/
 - Ask or confirm key choices before big multi-step work, and offer a 2–3 line plan first.
 - Give concise answers, one step at a time.
 - She is new to GitHub, so explain any steps she needs to do herself.
+
+## 9. Refresh of 23 October 2026 (second round)
+- Header: real brand logos (Simple Icons / Font Awesome paths in `_build/brand_icons.json`) in brand colours; a "KA" monogram in contour rings comes first, linking home. Favicons (`favicon-32/48.png`, `apple-touch-icon.png`) are rendered from the same monogram.
+- Rose accent is now `#B4527A` (a little pinker). More colour: tinted chips, alternating timeline dots, coloured card tops. Blue contours and the blue header are unchanged (she loves them).
+- Highlights: 2 featured cards (NEXUS, As2024) with photo sliders, then 6 equal cards (LST, WSDS 2025, QGreenland, WSDS 2026, Ostrom, Teaching). Every card has a logo strip on top; logos are cropped from her certificates (`assets/img/logos/`), and the IU trident comes from Indiana University's rivet-source repo.
+- "On LinkedIn" section embeds the NEXUS and WSDS 2025 posts by iframe (`linkedin.com/embed/feed/update/urn:li:activity:…`). If an embed stays blank, use LinkedIn's "Embed this post" code (urn:li:share or ugcPost) instead.
+- Certificates: one per event, the cleanest version only. Photographed ones are perspective-corrected (helper `scan.py` logic: OpenCV quad detection or hand-picked corners). NRSC: volunteer certificate under Rapporteur, participation certificate under Training.
+- "What I do" is renamed "Recently". Future directions: history and archaeology from space (leading block), cryosphere of HMA and the poles (permafrost, glaciers/ice, snow), climate change, groundwater policy in India.
+- Pending: pictures from the two LinkedIn articles (they cannot be fetched; she would need to attach them).
