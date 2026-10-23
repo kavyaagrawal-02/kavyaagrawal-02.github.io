@@ -58,13 +58,21 @@ def page(fname, title, desc, body, pre="", post="", mcls=""):
   <span class="coords">28°32′N 77°09′E, TERI School of Advanced Studies, New Delhi</span>
   <span><a href="mailto:{L['teri']}">{L['teri']}</a> &nbsp;·&nbsp; Updated October 2026</span>
 </div></footer>
+<dialog class="lightbox" id="lightbox"><button type="button" class="lb-close" aria-label="Close">×</button><img alt=""><p></p></dialog>
+<script>
+(function(){{var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img'),cap=d.querySelector('p');
+document.querySelectorAll('.feature .photos img, .gallery img, .zoomable').forEach(function(i){{i.tabIndex=0;i.setAttribute('role','button');
+function open(){{im.src=i.currentSrc||i.src;im.alt=i.alt;cap.textContent=i.alt;d.showModal();}}
+i.addEventListener('click',open);i.addEventListener('keydown',function(e){{if(e.key==='Enter'||e.key===' '){{e.preventDefault();open();}}}});}});
+d.addEventListener('click',function(e){{if(e.target===d||e.target.classList.contains('lb-close'))d.close();}});}})();
+</script>
 </body>
 </html>
 """
     (ROOT / fname).write_text(html, encoding="utf-8")
 
 
-def entry(when, title, meta="", text="", methods="", status="", award=False, badge=None):
+def entry(when, title, meta="", text="", methods="", status="", award=False, badge=None, more="", more_label="Photos and certificate"):
     parts = []
     if badge:
         sym, z, col, method = badge
@@ -74,6 +82,7 @@ def entry(when, title, meta="", text="", methods="", status="", award=False, bad
     if text: parts.append(f'<p class="desc">{text}</p>')
     if methods: parts.append(f'<p class="methods">{methods}</p>')
     if status: parts.append(f'<span class="status{" award" if award else ""}">{status}</span>')
+    if more: parts.append(f'<details class="more"><summary>{more_label}</summary><div class="more-body">{more}</div></details>')
     return f'<li class="entry{" has-badge" if badge else ""}"><span class="when">{when}</span><div>{"".join(parts)}</div></li>'
 
 
@@ -94,10 +103,11 @@ MANUSCRIPTS = [
     entry("2026", "Comparing and Benchmarking Deep Learning Models for Predicting Groundwater Contamination caused by Fluoride with the effects of Spatial Resolution on Prediction", "Research paper", status="In progress"),
     entry("2026", "A Physically Informed Framework for Multi-Resolution Downscaling and Upscaling of Environmental Predictors (Satellite Data)", "Research paper", status="In progress"),
 ]
+NEXUS_MORE = '<div class="gallery"><img src="assets/img/award-talk.jpg" alt="Presenting the uranium risk framework at EHP NEXUS 2026" loading="lazy"><img src="assets/img/award-certificate.jpg" alt="Certificate of Excellence, first position for the oral presentation, EHP NEXUS 2026" loading="lazy"><img src="assets/img/award-stage.jpg" alt="Inaugural session of EHP NEXUS 2026, Gautam Buddha University" loading="lazy"></div><p class="small muted">Conference: <em>The Nexus Imperative: Environment, Public Health and Policy for a Sustainable Future</em>, organised by the Department of Environmental Science, SoVSAS, Gautam Buddha University, Greater Noida.</p>'
 TALKS = [
     entry("Apr 2026", "Machine-Learning-Based Uranium Risk Assessment, Population Exposure and Groundwater Governance",
           "ICSSR EHP NEXUS 2026, Track 10: AI and Predictive Analytics, Gautam Buddha University, 27–28 April 2026.",
-          status="First Position, oral presentation, and Best Paper Award", award=True),
+          status="First Position, oral presentation, and Best Paper Award", award=True, more=NEXUS_MORE),
     entry("Oct 2024", "Distribution, Speciation and Controls on As Mobilization in the Groundwater in Aquifers of the Middle Gangetic Plain, India",
           "9th International Congress &amp; Exhibition on Arsenic in the Environment (As2024), KIIT Deemed to be University, Bhubaneswar, 20–24 October 2024. Poster."),
     entry("Nov 2022", "Problems and Prospects of Delhi's Drinking Water Supply",
@@ -194,7 +204,7 @@ ICONS = {
     "Badminton": '<path d="M9.5 14L6.5 3.5h11L14.5 14z"/><path d="M8 9h8M12 3.5V14"/><circle cx="12" cy="17.6" r="3"/>',
     "Dance": '<path d="M3 8.5c6 4.5 12 4.5 18 0"/><circle cx="7" cy="14.5" r="2"/><circle cx="12" cy="16" r="2"/><circle cx="17" cy="14.5" r="2"/>',
 }
-beyond = '<section class="beyond" aria-label="Beyond research"><div class="wrap"><h2>Beyond research</h2><ul>' + "".join(
+beyond = '<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V38 C 200 8, 420 8, 640 34 S 1100 66, 1440 26 V70 Z"/></svg><section class="beyond" aria-label="Beyond research"><div class="wrap"><h2>Beyond research</h2><ul>' + "".join(
     f'<li><svg viewBox="0 0 24 24" aria-hidden="true">{v}</svg>{k}</li>' for k, v in ICONS.items()) + '</ul></div></section>'
 
 hero = f"""
@@ -207,23 +217,23 @@ hero = f"""
     <p style="margin:1.7rem 0 0"><a class="btn" href="Kavya_Agrawal_CV.pdf">{DL}Download CV (PDF)</a></p>
   </div>
   <figure class="portrait">
-    <img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="560" height="700">
+    <img src="assets/img/headshot.jpg" alt="Portrait of Kavya Agrawal" width="537" height="716">
   </figure>
 </div></section>"""
 
 home = f"""
 <ul class="glance" aria-label="At a glance">
-  <li><b>3</b><span>contaminants studied: uranium, fluoride, arsenic</span></li>
-  <li><b>2</b><span>journal articles, with 3 manuscripts in progress</span></li>
-  <li><b>7</b><span>conference presentations since 2022</span></li>
-  <li><b>1st</b><span>Best Paper Award, EHP NEXUS 2026</span></li>
+  <li><a href="research.html#current"><b>3</b><span>contaminants studied: uranium, fluoride, arsenic</span></a></li>
+  <li><a href="publications.html#articles"><b>2</b><span>journal articles, with 3 manuscripts in progress</span></a></li>
+  <li><a href="publications.html#conferences"><b>7</b><span>conference presentations since 2022</span></a></li>
+  <li><a href="#recognition"><b>1st</b><span>Best Paper Award, EHP NEXUS 2026</span></a></li>
 </ul>
 <section style="margin-top:2.8rem"><div class="col">
 <p>I am a PhD scholar working at the intersection of environmental systems, human activity and technology. My doctoral research focuses on large-scale prediction and risk assessment of groundwater contamination in India, integrating hydrogeochemistry and environmental geoinformatics with remote sensing, GIS and multi-source environmental data.</p>
 <p>I work across uranium, fluoride and arsenic contamination, using machine learning, deep learning and spatial modelling to understand contamination patterns, their environmental controls and where risk is highest. My broader interests include population exposure, groundwater governance, climate and cryosphere systems, environmental change and water security. I am always open to new questions, methods and collaborations.</p>
-<p class="muted small">Supervisor: Prof. Chander Kumar Singh &nbsp;·&nbsp; Co-supervisor: Dr. Adwitiya Sinha</p>
+<p class="muted small">Supervisor: Prof. Chander Kumar Singh</p>
 </div></section>
-<section><h2>Recognition</h2>
+<section id="recognition"><h2>Recognition</h2>
 <div class="feature">
   <div>
     <p class="kicker">ICSSR EHP NEXUS 2026, Gautam Buddha University</p>
@@ -240,12 +250,19 @@ home = f"""
 <section><h2>Research interests</h2>
 <p class="interests">Groundwater quality and contamination (uranium, fluoride, arsenic) · hydrogeochemistry · remote sensing and GIS · machine learning, AutoML and explainable AI · multi-resolution modelling and downscaling · population exposure and groundwater governance · cryosphere and climate · water security.</p></section>
 <section class="news"><h2>News</h2>{lst(NEWS)}</section>
+<section><h2>Currently</h2>
+<div class="now">
+  <div><h3>Research</h3><p>Uranium, fluoride and arsenic in groundwater, and downscaling of environmental predictors.</p></div>
+  <div><h3>Teaching</h3><p>Principles of Remote Sensing and Principles of GIS and GNSS, MSc Geoinformatics.</p></div>
+  <div><h3>Service</h3><p>Judge and facilitator at Programme LEAD, the TERI SAS Sustainability Hackathon and KnoxCode.</p></div>
+  <div><h3>Engagement</h3><p>World Sustainable Development Summit, Water as a Commons workshop, National Geospatial Technology workshop.</p></div>
+</div></section>
 """
 page("index.html", "Kavya Agrawal", "Kavya Agrawal, PhD scholar at TERI School of Advanced Studies, New Delhi: groundwater contamination, remote sensing, GIS and machine learning.", home, pre=hero, post=beyond, mcls="home")
 
 # ================================================================= RESEARCH
 research = f"""
-<div class="col">
+<div class="col page-head">
 <h1 class="page-title">Research</h1>
 <p class="lede">How far can we predict groundwater contamination across a country as large and varied as India, and what do those predictions mean for the people who drink the water?</p>
 </div>
@@ -253,9 +270,9 @@ research = f"""
 <div class="col">
 <p><em>Development of an Adaptable Machine Learning Based Framework for Multi-Contaminant Prediction</em></p>
 <p>My PhD builds a national-scale framework for predicting groundwater contamination and assessing its risk. It combines groundwater observations and hydrochemistry with remote sensing and GIS layers on climate, hydrology, terrain, soil, geology, land use, human modification and population. The aims run from prediction and spatial risk mapping to testing uncertainty and robustness, understanding environmental controls, estimating exposure and supporting governance decisions.</p>
-<p class="muted small">Supervisor: Prof. Chander Kumar Singh. Co-supervisor: Dr. Adwitiya Sinha. Registered February 2024; comprehensive examination completed January 2026.</p>
+<p class="muted small">Supervisor: Prof. Chander Kumar Singh. Registered February 2024; comprehensive examination completed January 2026.</p>
 </div></section>
-<section><h2>Current work</h2>{lst(CURRENT)}</section>
+<section id="current"><h2>Current work</h2>{lst(CURRENT)}</section>
 <section><h2>Earlier work: climate and cryosphere</h2>{lst(EARLIER)}</section>
 <section><h2>Questions I would like to explore</h2>{ul(EXPLORE)}</section>
 <section><h2>Projects</h2>
@@ -266,18 +283,18 @@ page("research.html", "Research, Kavya Agrawal", "Groundwater contamination pred
 
 # ================================================================= PUBLICATIONS
 publications = f"""
-<div class="col"><h1 class="page-title">Publications</h1>
+<div class="col page-head"><h1 class="page-title">Publications</h1>
 <p class="lede">Journal articles, manuscripts and conference presentations, newest first.</p>
 <div class="links"><a href="{L['scholar']}">Google Scholar</a><a href="{L['orcid']}">ORCID 0009-0009-1032-2541</a><a href="{L['researchgate']}">ResearchGate</a></div></div>
-<section><h2>Journal articles</h2>{lst(PUBS)}</section>
-<section><h2>Manuscripts</h2>{lst(MANUSCRIPTS)}</section>
-<section><h2>Conference presentations</h2>{lst(TALKS)}</section>
+<section id="articles"><h2>Journal articles</h2>{lst(PUBS)}</section>
+<section id="manuscripts"><h2>Manuscripts</h2>{lst(MANUSCRIPTS)}</section>
+<section id="conferences"><h2>Conference presentations</h2>{lst(TALKS)}</section>
 """
 page("publications.html", "Publications, Kavya Agrawal", "Journal articles, manuscripts and conference presentations by Kavya Agrawal.", publications)
 
 # ================================================================= TEACHING
 teaching = f"""
-<div class="col"><h1 class="page-title">Teaching</h1>
+<div class="col page-head"><h1 class="page-title">Teaching</h1>
 <p class="lede">Course teaching in the MSc Geoinformatics programme at TERI School of Advanced Studies.</p></div>
 <section><h2>Courses</h2>{lst(TEACHING)}</section>
 <section><h2>In the lab</h2><div class="col">
@@ -296,7 +313,7 @@ def cvs(id_, title, body):
 cvs("education", "Education", lst(EDUCATION))
 cvs("doctoral", "Doctoral research", lst([
     entry("Thesis", "Development of an Adaptable Machine Learning Based Framework for Multi-Contaminant Prediction"),
-    entry("Supervisors", "Prof. Chander Kumar Singh (supervisor); Dr. Adwitiya Sinha (co-supervisor)"),
+    entry("Supervisor", "Prof. Chander Kumar Singh"),
     entry("Status", "Full-time. Registered 1 February 2024. Comprehensive examination completed 28 January 2026."),
     entry("Coursework", "Research and Publication Ethics (RPR275), A; Research Methodology (RPR271), A; Environmental Statistics (NRE115), A; Digital Image Processing &amp; Information Extraction (NRG172), A"),
 ]))
@@ -371,7 +388,7 @@ cvs("contact", "Contact", f"""<p>Department of Natural &amp; Applied Sciences, T
 
 toc = "".join(f'<li><a href="#{i}">{t}</a></li>' for i, t, _ in CV_SECTIONS)
 cv = f"""
-<div class="cv-head">
+<div class="cv-head page-head">
   <div><h1 class="page-title" style="margin-bottom:.2rem">Curriculum Vitae</h1>
   <p class="muted" style="margin:0">Kavya Agrawal, PhD Scholar, TERI School of Advanced Studies, New Delhi</p>
   <p class="print-only muted" style="margin:.2rem 0 0">{L['teri']} · {L['gmail']} · kavyaagrawal-02.github.io</p></div>

@@ -212,3 +212,93 @@ main.home { padding-bottom: 0; }
   .beyond ul { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 1.6rem; }
 }
 @media print { .el, .hero, .beyond, .glance, .feature { display: none !important; } .entry.has-badge > div { display: block; } }
+
+/* ================= v3: softer, flowing ================= */
+.site-head { border-top: 0; }
+.btn { border-radius: 999px; padding: .5rem 1.15rem; }
+.status { border-radius: 999px; padding: 0 .6rem; }
+
+/* hero: an inset, rounded panel; calmer type and fainter contours */
+.hero { max-width: 1100px; margin: .4rem auto 0; border-radius: 28px; overflow: hidden;
+  background: linear-gradient(120deg, rgba(15,59,71,.55), rgba(15,59,71,.25)), url("img/contours.svg") center / cover no-repeat, var(--lagoon); }
+.hero .wrap { padding-block: 3rem 4.6rem; grid-template-columns: minmax(0, 1fr) 240px; }
+.hero h1 { font-size: clamp(2.3rem, 5vw, 3.1rem); }
+.hero .role { font-size: 1.08rem; }
+.hero .tag { font-size: 1.12rem; color: #EBC27E; }
+.hero .portrait img { aspect-ratio: auto; object-fit: contain; border-radius: 18px; box-shadow: 0 18px 40px rgba(0,0,0,.28); outline: 1.5px solid rgba(227,161,59,.85); outline-offset: 7px; }
+
+/* at a glance: soft card, each figure links onward */
+.glance { border-radius: 18px; box-shadow: 0 14px 36px rgba(15,59,71,.10); overflow: hidden; max-width: 940px; margin-inline: auto; }
+.glance a { display: block; color: inherit; text-decoration: none; padding: 1.1rem 1.3rem; height: 100%; transition: background .2s; }
+.glance li { padding: 0; }
+.glance a:hover { background: var(--soft); }
+.glance a:focus-visible { outline-offset: -3px; }
+
+/* inner-page headers: tinted panel with contour lines */
+.page-head { max-width: none; background: var(--soft) url("img/contours-soft.svg") right center / cover no-repeat; border-radius: 24px; padding: 2.4rem 2.4rem 2.2rem; }
+.page-head .lede { max-width: 36em; }
+.cv-head.page-head { align-items: center; }
+.cv-head.page-head + .toc { margin-top: 1rem; }
+
+/* section headings: a small gold contour mark instead of a hard rule */
+section > h2 { border-bottom-color: var(--line); display: flex; align-items: center; gap: .6rem; }
+section > h2::after { display: none; }
+section > h2::before { content: ""; width: 26px; height: 14px; flex: none; background: var(--gold);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 14'%3E%3Cpath d='M1 4 C7 0,12 8,25 3 M1 9 C8 5,13 13,25 8 M5 13 C10 11,16 15,22 12' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 14'%3E%3Cpath d='M1 4 C7 0,12 8,25 3 M1 9 C8 5,13 13,25 8 M5 13 C10 11,16 15,22 12' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+
+/* entries: soft hover band */
+.entry { padding-inline: .7rem; margin-inline: -.7rem; border-radius: 10px; border-bottom-color: var(--line); transition: background .2s; }
+.entry:hover { background: var(--soft); }
+.el { border-radius: 8px; }
+
+/* expandable details on entries */
+.more { margin-top: .6rem; }
+.more summary { cursor: pointer; color: var(--accent); font-size: .98rem; list-style: none; display: inline-flex; align-items: center; gap: .4rem; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::before { content: "+"; display: inline-grid; place-items: center; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 1px solid currentColor; font-size: .85rem; line-height: 1; }
+.more[open] summary::before { content: "−"; }
+.more-body { margin-top: .8rem; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin-bottom: .6rem; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; cursor: zoom-in; }
+
+/* recognition feature */
+.feature { border-left: 0; border-radius: 22px; background: linear-gradient(135deg, var(--soft), color-mix(in srgb, var(--gold) 10%, var(--bg))); }
+.feature .photos img { border-radius: 12px; cursor: zoom-in; }
+
+/* currently */
+.now { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.now > div { background: var(--soft); border-radius: 16px; padding: 1.1rem 1.3rem; }
+.now h3 { font-size: 1.02rem; font-weight: 600; color: var(--accent); margin-bottom: .25rem; }
+.now p { margin: 0; font-size: 1rem; }
+
+/* wave into the beyond band, soft footer */
+.wave { display: block; width: 100%; height: 64px; margin-top: 4.5rem; fill: var(--lagoon); }
+.beyond { margin-top: -1px; }
+.beyond svg { stroke: #EBC27E; }
+.site-foot { border-top: 0; background: var(--soft) url("img/contours-foot.svg") center / cover no-repeat; }
+main.home + .site-foot { background-color: var(--soft); }
+
+/* misc softening */
+.toc { border-radius: 16px; }
+.figure img { border-radius: 12px; }
+.portrait img { border-radius: 14px; }
+
+/* lightbox */
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 1100px); max-height: 92vh; }
+.lightbox::backdrop { background: rgba(8,24,30,.82); }
+.lightbox img { max-width: 100%; max-height: 82vh; width: auto; border-radius: 12px; display: block; margin: 0 auto; }
+.lightbox p { color: #EAF2F3; text-align: center; margin: .7rem 0 0; font-size: .98rem; }
+.lb-close { position: fixed; top: 16px; right: 20px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #111; font: 1.5rem/1 var(--serif); cursor: pointer; }
+
+@media (max-width: 760px) {
+  .hero { margin-inline: 12px; border-radius: 22px; }
+  .hero .wrap { padding-block: 2rem 4rem; grid-template-columns: minmax(0, 1fr); }
+  .hero .portrait { max-width: 220px; }
+  .page-head { padding: 1.6rem 1.3rem; border-radius: 18px; }
+  .now, .gallery { grid-template-columns: minmax(0, 1fr); }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wave { height: 40px; }
+  .entry { padding-inline: .5rem; margin-inline: -.5rem; }
+}
+@media print { .page-head { background: none; padding: 0; } section > h2::before, .more, .wave { display: none !important; } .entry { margin: 0; padding-inline: 0; } }
