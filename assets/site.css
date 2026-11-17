@@ -315,8 +315,8 @@ section > h3 { font-size: 1.08rem; font-weight: 600; margin: 1.6rem 0 .3rem; }
   .entry p { margin-top: 0; }
   .entry.has-badge > div { display: block; }
   .desc, .methods { font-size: 9.5pt; margin-top: 1pt; }
-  .dots { font-size: 9.5pt; }
-  .dots li { break-inside: avoid; }
+  .dotlist { font-size: 9.5pt; }
+  .dotlist li { break-inside: avoid; }
   .status { border: 0; padding: 0; margin: 1pt 0 0; font-style: italic; font-size: 9.5pt; }
   .page-title { font-size: 22pt; margin-bottom: 2pt; color: #111; }
   .print-only { display: block !important; }
@@ -377,9 +377,9 @@ section > h3 { font-size: 1.08rem; font-weight: 600; margin: 1.6rem 0 .3rem; }
 @media (max-width: 760px) { .labs { grid-template-columns: minmax(0, 1fr); } }
 
 /* full CV lists */
-.dots { list-style: none; margin: .3rem 0 .9rem; padding: 0; display: flex; flex-wrap: wrap; gap: .1rem 0; }
-.dots li { font-size: .98rem; }
-.dots li:not(:last-child)::after { content: "·"; color: var(--blue); margin: 0 .5rem; }
+.dotlist { list-style: none; margin: .3rem 0 .9rem; padding: 0; display: flex; flex-wrap: wrap; gap: .1rem 0; }
+.dotlist li { font-size: .98rem; }
+.dotlist li:not(:last-child)::after { content: "·"; color: var(--blue); margin: 0 .5rem; }
 section > h3 { margin-top: 1rem; }
 @media print { .future > div { border: 0; padding: 0; } .hl, .article { break-inside: avoid; } }
 .hl .pic.stack { flex-direction: column; gap: 6px; justify-content: flex-start; background: var(--bg); }
