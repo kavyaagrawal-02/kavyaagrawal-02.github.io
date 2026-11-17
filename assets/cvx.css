@@ -1,0 +1,19 @@
+/* Shared CV layout (site page and PDF). Colours fall back to neutral values when the site variables are absent. */
+.cvx { line-height: 1.42; }
+.cvx .cvsec { margin: 0 0 1.6rem; }
+.cvx .row { display: grid; grid-template-columns: 10.6rem minmax(0,1fr) 14rem; gap: 0 1.2rem; padding: .35rem 0; }
+.cvx .when { color: var(--muted, #666); font-size: .92em; }
+.cvx .side { color: var(--muted, #666); font-size: .9em; text-align: right; }
+.cvx .inst { display: block; }
+.cvx .sub { display: block; }
+.cvx .bul { margin: .2rem 0 0; padding-left: 1.1rem; }
+.cvx .bul li { margin: 0 0 .32rem; }
+.cvx .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.2rem; align-items: start; }
+.cvx .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.6rem; align-items: start; }
+.cvx .span { color: var(--muted, #666); font-size: .88em; margin: 0 0 .3rem; }
+.cvx .summary { margin: 0; text-align: justify; }
+@media screen and (max-width: 720px) {
+  .cvx .row { grid-template-columns: 1fr; gap: .1rem; }
+  .cvx .side { text-align: left; }
+  .cvx .cols2, .cvx .cols3 { grid-template-columns: 1fr; }
+}
